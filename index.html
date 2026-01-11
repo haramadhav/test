@@ -1,408 +1,789 @@
 <!DOCTYPE html>
-<!-- ==============================
-	I used this template and changed a few items around. ThanKU KeenThemes!
-    Project:        Metronic "Aircv" Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
-    Version:        1.0
-    Author:         KeenThemes
-    Primary use:    Corporate, Business Themes.
-    Email:          support@keenthemes.com
-    Follow:         http://www.twitter.com/keenthemes
-    Like:           http://www.facebook.com/keenthemes
-    Website:        http://www.keenthemes.com
-    Premium:        Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-================================== -->
-<html lang="en" class="no-js">
-    <!-- BEGIN HEAD -->
-    <head>
-        <meta charset="utf-8"/>
-        <title>Hara Madhav</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="" name="description"/>
-        <meta content="" name="author"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Hara Madhav Talasila | Engineering Portfolio</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2245%22 stroke=%22%2300f3ff%22 stroke-width=%225%22 fill=%22none%22/><circle cx=%2250%22 cy=%2250%22 r=%2225%22 stroke=%22%230aff0a%22 stroke-width=%223%22 fill=%22none%22/><line x1=%2250%22 y1=%2250%22 x2=%2290%22 y2=%2220%22 stroke=%22%2300f3ff%22 stroke-width=%224%22/></svg>">
 
-        <!-- GLOBAL MANDATORY STYLES -->
-        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
-        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CORE VARIABLES --- */
+        :root {
+            --bg-color: #020406;
+            --card-bg: rgba(16, 20, 24, 0.85);
+            --accent-cyan: #00f3ff;
+            --accent-green: #0aff0a;
+            --accent-amber: #ffaa00;
+            --accent-red: #ff3333;
+            --accent-purple: #d946ef;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --font-mono: 'Consolas', 'Courier New', monospace;
+            --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        }
 
-        <!-- PAGE LEVEL PLUGIN STYLES -->
-        <link href="css/animate.css" rel="stylesheet">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            line-height: 1.6;
+            /* HIDE DEFAULT CURSOR on desktop */
+            cursor: none; 
+        }
 
-        <!-- THEME STYLES -->
-        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+        /* Hide default hand cursor on links so our custom one shows */
+        a, button, .btn { cursor: none; }
 
-        <!-- Favicon -->
-        <link rel="shortcut icon" type="image/png" href="img/h_favicon.png"/>
-		
-    </head>
-    <!-- END HEAD -->
+        /* --- CANVASES --- */
+        /* 1. Background (Bits, Dots, Lines) - Behind Text */
+        #bg-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1; 
+        }
 
-    <!-- BODY -->
-    <body id="body" data-spy="scroll" data-target=".header">
+        /* 2. Cursor (Radar Reticle) - On Top of Text */
+        #cursor-canvas {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 9999; /* Very high to be on top */
+            pointer-events: none; /* Critical: lets clicks pass through */
+        }
 
-        <!--========== HEADER ==========-->
-        <header class="header navbar-fixed-top">
-            <!-- Navbar -->
-            <nav class="navbar" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="menu-container js_nav-item">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="toggle-icon"></span>
-                        </button>
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3, h4 { color: #fff; margin-bottom: 0.5rem; letter-spacing: 0.5px; font-weight: 700; }
+        a { text-decoration: none; color: var(--accent-cyan); transition: 0.3s; }
+        a:hover { color: var(--accent-green); text-shadow: 0 0 8px var(--accent-green); }
+        
+        .section-padding { padding: 5rem 2rem; max-width: 1300px; margin: 0 auto; }
+        .mono-text { font-family: var(--font-mono); color: var(--accent-cyan); font-size: 0.9rem; }
+        
+        /* --- SECTION HEADERS --- */
+        .section-header {
+            margin-bottom: 3rem;
+            border-left: 4px solid var(--accent-cyan);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .section-header h2 { font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0.2rem; }
+        .section-header p { color: var(--text-muted); font-family: var(--font-mono); font-size: 0.9rem; letter-spacing: 1px; }
 
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a class="logo-wrap" href="#body">
-                                <img class="logo-img logo-img-main" src="img/logo.png" alt="HARA">
-                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="HARA">
-                            </a>
-                        </div>
-                        <!-- End Logo -->
-                    </div>
+        /* --- HERO --- */
+        header {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 60%);
+        }
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse nav-collapse">
-                        <div class="menu-container">
-                            <ul class="nav navbar-nav navbar-nav-right">
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">Intro</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Experience</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Works</a></li>
-                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact/Meet</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Navbar Collapse -->
-                </div>
-            </nav>
-            <!-- Navbar -->
-        </header>
-        <!--========== END HEADER ==========-->
+        h1.name-title {
+            font-size: 4.5rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            background: linear-gradient(120deg, #fff, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
 
-        <!--========== SLIDER ==========-->
-        <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/banana_leaf.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="promo-block-divider">
-                            <h1 class="promo-block-title"> Dr. Talasila <br/>  <br/> Hara Madhav </h1>
-                            <p class="promo-block-text">Full-stack Electrical Engineer &amp; Researcher <br/> [Theory, Hardware, Software] </p>
-                        </div>
-                        <ul class="list-inline">
-							<!--<li><a href="" class="social-icons"><i class="icon-social-linkedin"></i></a></li> -->
-							<li><a target="_blank" rel="noopener noreferrer" href="https://linkedin.com/in/haramadhav" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
-							<li><a target="_blank" rel="noopener noreferrer" href="https://cresis.ku.edu/people/hara-madhav-talasila" class="social-icons"><i class="icon-organization"></i></a></li>
-                            <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/hara_madhav/" class="social-icons"><i class="icon-social-instagram"></i></a></li>
-							<li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/talasilaharamadhav" class="social-icons"><i class="icon-social-facebook"></i></a></li>
-                            <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/haramadhav" class="social-icons"><i class="icon-social-github"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!--========== SLIDER ==========-->
+        .marquee-container {
+            width: 100vw;
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            padding: 8px 0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            white-space: nowrap;
+        }
 
-        <!--========== PAGE LAYOUT ==========-->
-        <!-- About -->
-        <div id="about">
-            <div class="container content-lg">
-                <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
-                        <div class="text-right sm-text-left">
-                            <h2 class="margin-b-0">Intro</h2>
-                            <p>Just a small sample!</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-8 col-sm-offset-1">
-                        <div class="margin-b-60">
-                            <p>Greetings!!! and welcome to a version of my social face</p>
-							<p>Hi, I am Hara. I got my Ph.D. in Electrical Engineering from the University of Kansas in May 2025. I present a few of my interests, quantified, for starters. </p>
-                            <p>Bon appetite! </p>
-                        </div>
+        .marquee-content {
+            display: inline-block;
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            font-size: 1rem;
+            animation: marquee 30s linear infinite;
+        }
 
-                        <!-- Progress Box -->
-                        <div class="progress-box">
-                            <h5>Learning - side effect of 29+ years of school<span class="color-heading pull-right">90%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>If I hear the word 'Radar'<span class="color-heading pull-right">99%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="99"></div>
-                            </div>
-                        </div>
-						<div class="progress-box">
-                            <h5>Cooking - mostly the items from SouthEast central coast of India<span class="color-heading pull-right">50%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
-                            </div>
-                        </div>
-						<div class="progress-box">
-                            <h5>Talking - includes soft and strong humor<span class="color-heading pull-right">80%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>Plants - garden or farm<span class="color-heading pull-right">100%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="100"></div>
-                            </div>
-                        </div>
-                        <div class="progress-box">
-                            <h5>Hiking - I can do this all day!<span class="color-heading pull-right">50%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
-                            </div>
-                        </div>
-						<div class="progress-box">
-                            <h5>Weight lifting - I plan to lift Mjölnir one day<span class="color-heading pull-right">42.3%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="42.3"></div>
-                            </div>
-                        </div>
-						<div class="progress-box">
-                            <h5>Programming - %% hara.m %% ice_peak_MATLAB = membrane(1,161);<span class="color-heading pull-right">99%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="99"></div>
-                            </div>
-                        </div>
-						<div class="progress-box">
-                            <h5>Climate Change - I start like Bernie but Hulk takes over<span class="color-heading pull-right">10%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-color-base" role="progressbar" data-width="10"></div>
-                            </div>
-                        </div>
-                        <!-- End Progress Box -->
-                    </div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End About -->
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        <!-- Experience -->
-        <div id="experience">
-            <div class="bg-color-sky-light" data-auto-height="true">
-                <div class="container content-lg">
-                    <div class="row">
-                        <div class="col-sm-3 sm-margin-b-30">
-                            <div class="text-right sm-text-left">
-                                <h2 class="margin-b-0"><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/haramadhav/">Experience [LinkedIn]</a></h2>
-                                <p>It's Radar Science</p>
-								<p><h5>11 years @<a target="_blank" rel="noopener noreferrer" href="https://cresis.ku.edu/">CReSIS</a> </h5></p>
-								<p><h5>A few weeks @<a target="_blank" rel="noopener noreferrer" href="https://ainstein.ai/">Ainstein</a> </h5></p>
-								<p><h5>A few months @<a target="_blank" rel="noopener noreferrer" href="http://ece.rvrjcce.ac.in/ece_research.php/">Antenna Res. Lab</a> </h5></p>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-sm-offset-1">
-                            <div class="row row-space-2 margin-b-4">
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon color-white icon-trophy"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3 class="color-white">[PhD] Signal and Data Processing</h3>
-                                            <p class="color-white margin-b-5"><h5 class="color-white">Team Radar Software!</h5></p><p class="color-white margin-b-5">Devised radiometric calibration solution for radar depth sounders from target signatures.<br/>And 5 more innovative works!<br/>Advisor = Dr. John Paden</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://ieeexplore.ieee.org/document/11031479" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-								<div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-star"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>Engineering Intern</h3>
-                                            <p class="margin-b-5"><h5>Team Radar Software!</h5></p><p></p><p>Created a new MATLAB toolbox for advanced signal processing of proof-of-concept automotive radars at Ainstein</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://ainstein.ai/" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-								<div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-plane"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>Research Engineer</h3>
-                                            <p class="margin-b-5"><h5>Team Radar Hardware!</h5></p><p></p><p>Radar Hardware Lead - spearheaded three NASA Operation IceBridge airborne campaigns to Arctic and Antarctic.<br/>I am a tiny part of the NASA Operation IceBridge (OIB) - the 'largest airborne survey of Earth's polar ice ever'.<br/>Supervisor = Dr. Fernando Rodriguez-Morales</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://espo.nasa.gov/oib/person/Hara_Madhav_Talasila" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-badge"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>[Masters] Radar Engineering</h3>
-                                            <p class="margin-b-5"><h5>Team Radar Hardware!</h5></p><p>Developed a modular x16 frequency multiplier chain, cutting-edge filter designs from VHF to V-band, and integrated the NASA Global Hawk Snow Radar.<br/>Advisor = Dr. Fernando Rodriguez-Morales<br/>Ping me if you actually read it.</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://kuscholarworks.ku.edu/handle/1808/24131" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-                            </div>
-                            <!--// end row -->
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
-            </div>
-        </div>
-        <!-- End Experience -->
+        .btn {
+            padding: 12px 35px;
+            font-family: var(--font-mono);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: rgba(0, 243, 255, 0.05);
+            transition: 0.3s;
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            z-index: 10;
+        }
 
-        <!-- Work -->
-        <div id="work">
-            <div class="container content-lg">
-                <div class="row">
-                    <div class="col-sm-3 sm-margin-b-30">
-                        <div class="text-right sm-text-left">
-                            <h2 class="margin-b-0">Works</h2>
-                            <p>Will upload soon... ThanKU for your patience :-)</p>
-                        </div>
-                    </div>
-					
-					<div class="col-sm-8 col-sm-offset-1">
-                            <div class="row row-space-2 margin-b-4">
-							
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-globe"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>NSIDC portal</h3>
-                                            <p class="margin-b-5"><h5>Radar Data Products</h5></p><p class="margin-b-5">Snow Radar data products for Operation IceBridge Spring 2017, 2018, and 2019 deployments to Greenland (and a few Arctic regions)</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://nsidc.org/data/data-access-tool/IRSNO1B/versions/2" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-                                <div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-doc"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>Microwave Journal</h3>
-                                            <p class="margin-b-5"><h5>Alumina Filters</h5></p><p class="margin-b-5">Nice tutorial on a simple CAD+CAM design process. First-Pass Design of Ultra-Wideband Microwave and mmWave Filters for Multistage Frequency Multiplication.</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="https://www.microwavejournal.com/articles/33074-first-pass-design-of-ultra-wideband-microwave-and-mmwave-filters-for-multistage-frequency-multiplication" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-								<div class="col-md-4 md-margin-b-4">
-                                    <div class="service wow zoomIn" data-height="height" data-wow-duration=".6" data-wow-delay=".2s">
-                                        <div class="service-element">
-                                            <i class="service-icon icon-note"></i>
-                                        </div>
-                                        <div class="service-info">
-                                            <h3>Miscellaneous</h3>
-                                            <p class="margin-b-5"><h5>Designs+Fabs</h5></p><p class="margin-b-5">Altium schematics and layouts for PCBs (RF+MW+Power), HFSS and ADS Electromagnetic simulation workspaces.</p>
-                                        </div>
-                                        <a target="_blank" rel="noopener noreferrer" href="#contact" class="content-wrapper-link"></a>    
-                                    </div>
-                                </div>
-								
-							</div>
-						</div>
-					</div>
-                </div>
-                <!--// end row -->
-            </div>
-        </div>
-        <!-- End Work -->
+        .btn:hover { background: var(--accent-cyan); color: #000; box-shadow: 0 0 30px rgba(0, 243, 255, 0.4); }
+
+        /* --- HIGHLIGHTS / STATS GRID --- */
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: -4rem;
+            margin-bottom: 4rem;
+            z-index: 2;
+            position: relative;
+        }
+
+        .highlight-card {
+            background: rgba(10, 10, 10, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .highlight-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.15);
+        }
+
+        .highlight-num { font-size: 2.5rem; font-weight: 800; color: #fff; }
+        .highlight-label { font-size: 0.8rem; font-family: var(--font-mono); color: var(--accent-cyan); text-transform: uppercase; margin-top: 5px; letter-spacing: 1px; }
+
+        /* --- TECHNICAL ARSENAL --- */
+        .arsenal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .arsenal-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .arsenal-card:hover { border-color: var(--accent-cyan); transform: translateY(-5px); }
+        .arsenal-card::after {
+            content: ''; position: absolute; top:0; right:0; width: 30px; height: 30px;
+            background: linear-gradient(to bottom left, rgba(0,243,255,0.2) 50%, transparent 50%);
+        }
+
+        .tech-icon { font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem; display: block; }
+        
+        .tag-container { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag {
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 2px;
+            border-left: 2px solid var(--accent-cyan);
+        }
+
+        /* --- TIMELINE --- */
+        .timeline { border-left: 2px solid rgba(255,255,255,0.1); margin-left: 20px; padding-left: 30px; }
+        .timeline-item { position: relative; margin-bottom: 3rem; }
+        .timeline-dot {
+            position: absolute; left: -39px; top: 5px;
+            width: 16px; height: 16px; background: var(--bg-color);
+            border: 2px solid var(--accent-green); border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-green);
+        }
+        .date-label { font-family: var(--font-mono); color: var(--accent-green); font-size: 0.85rem; margin-bottom: 5px; display: block; }
+
+        /* --- IMPACT & LEADERSHIP (6-GRID) --- */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .impact-card {
+            background: linear-gradient(145deg, rgba(20,25,30,0.9), rgba(10,10,10,0.95));
+            padding: 2rem;
+            border-left: 4px solid var(--accent-amber);
+            position: relative;
+            transition: 0.3s;
+            z-index: 1;
+        }
+
+        .impact-card:hover { transform: translateY(-3px); background: linear-gradient(145deg, rgba(25,30,35,0.9), rgba(15,15,15,0.95)); }
+        
+        .impact-card.tech-lead { border-color: var(--accent-amber); }
+        .impact-card.org-lead { border-color: var(--accent-cyan); }
+        .impact-card.service { border-color: var(--accent-green); }
+        .impact-card.humanitarian { border-color: var(--accent-red); }
+        .impact-card.teaching { border-color: var(--accent-purple); }
+        .impact-card.research { border-color: #fff; }
+
+        .impact-icon { 
+            position: absolute; top: 1.5rem; right: 1.5rem; 
+            font-size: 2rem; color: rgba(255,255,255,0.08); 
+        }
+
+        .impact-list { list-style: none; padding: 0; color: var(--text-muted); font-size: 0.9rem; }
+        .impact-list li { margin-bottom: 8px; display: flex; align-items: flex-start; }
+        .impact-list li i { margin-right: 10px; margin-top: 5px; font-size: 0.7rem; opacity: 0.8; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #000;
+            padding: 4rem 2rem;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        /* --- RESPONSIVE / TOUCH FALLBACK --- */
+        @media (max-width: 768px), (pointer: coarse) {
+            h1.name-title { font-size: 2.5rem; }
+            .section-padding { padding: 3rem 1.5rem; }
+            .highlights-grid { margin-top: 0; }
             
-        <!-- Contact -->
-        <div id="contact">
-            <div class="bg-color-sky-light">
-                <div class="container content-lg">
-                    <div class="row">
-                        <div class="col-sm-3 sm-margin-b-30">
-                            <div class="text-right sm-text-left">
-                                <h2 class="margin-b-0"><a href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ3JLFk0MVFOnJ8wDmAf9FhKZkJPvRmECHD6cCY=">Contact/Meet</a></h2>
-                                <p>Hire me! I am available.</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 col-sm-offset-1">
-                            <div class="row">
-                                <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5>Google Meet</h5>
-                                    <a href="https://calendar.google.com/calendar/u/0/appointments/AcZssZ3JLFk0MVFOnJ8wDmAf9FhKZkJPvRmECHD6cCY=">Book a time!</a>
-                                </div>
-				    <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5>Location</h5>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/2335+Irving+Hill+Rd,+Lawrence,+KS+66045/@38.9521914,-95.2663241,17z/">2335 Irving Hill Rd, Rm-318, Lawrence, Kansas</a>
-                                </div>
-					<div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5>Web</h5>
-                                    <a target="_blank" rel="noopener noreferrer" href="https://haramadhav.com/">HaraMadhav.com</a>
-                                </div>
-                                
-                                <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5>Personal Email</h5>
-                                    <a href="mailto:hara.madhav.talasila@gmail.com">hara.madhav.talasila@gmail.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--// end row -->
-                </div>
+            /* Restore default cursor on mobile/touch */
+            body { cursor: auto; }
+            a, button, .btn { cursor: pointer; }
+            
+            /* Hide the cursor canvas on mobile, keep bg canvas */
+            #cursor-canvas { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="bg-canvas"></canvas>
+
+    <canvas id="cursor-canvas"></canvas>
+
+    <nav style="position: absolute; top: 20px; right: 30px; z-index: 100; font-family: var(--font-mono);">
+        <a href="https://linkedin.com/in/haramadhav" target="_blank" style="margin-left: 15px;"><i class="fab fa-linkedin"></i> LINKEDIN</a>
+        <a href="https://github.com/haramadhav" target="_blank" style="margin-left: 15px;"><i class="fab fa-github"></i> GITHUB</a>
+    </nav>
+
+    <header>
+        <div class="mono-text" style="margin-bottom: 10px;">&lt;user: dr_talasila /&gt;</div>
+        <h1 class="name-title">Dr. Hara Madhav Talasila</h1>
+        
+        <div class="marquee-container">
+            <div class="marquee-content">
+                PRINCIPAL RESEARCH ENGINEER &nbsp;///&nbsp; SCIENTIFIC COMPUTING ARCHITECT &nbsp;///&nbsp; RADAR SYSTEMS LEAD &nbsp;///&nbsp; AI & SIGNAL PROCESSING &nbsp;///&nbsp; POLAR FIELD DEPLOYMENT &nbsp;///&nbsp; EDUCATOR & MENTOR &nbsp;///&nbsp; FULL-STACK HARDWARE & SOFTWARE &nbsp;///&nbsp;
+                PRINCIPAL RESEARCH ENGINEER &nbsp;///&nbsp; SCIENTIFIC COMPUTING ARCHITECT &nbsp;///&nbsp; RADAR SYSTEMS LEAD &nbsp;///&nbsp; AI & SIGNAL PROCESSING &nbsp;///&nbsp; POLAR FIELD DEPLOYMENT &nbsp;///&nbsp; EDUCATOR & MENTOR &nbsp;///&nbsp; FULL-STACK HARDWARE & SOFTWARE &nbsp;///&nbsp;
             </div>
         </div>
-        <!-- End Contact -->
-        <!--========== END PAGE LAYOUT ==========-->
 
-        <!--========== FOOTER ==========-->
-        <footer class="footer">
-            <div class="content container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <img class="footer-logo" src="img/logo-dark.png" alt="HARA">
-                    </div>
-                    <div class="col-xs-6 text-right sm-text-left">
-                        <p class="margin-b-0">ThanKU</p>
-						<p class="margin-b-0">for this template</p>
-						<a  target="_blank" rel="noopener noreferrer" href="http://keenthemes.com/preview/aircv/">Aircv, KeenThemes</a>
-                    </div>
-                </div>
-                <!--// end row -->
+        <p style="max-width: 700px; font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">
+            A full-stack engineer bridging the gap between hardware physics and scalable software. 
+            Designing <strong>RF circuits</strong> for NASA drones, architecting <strong>petabyte-scale data pipelines</strong> for NSF, 
+            and <strong>teaching</strong> the next generation of engineers.
+        </p>
+
+        <div>
+            <a href="#arsenal" class="btn">Technical Arsenal</a>
+            <a href="#experience" class="btn" style="border-color: #fff; color: #fff;">Experience</a>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-num">12+</div>
+                <div class="highlight-label">Years R&D (CReSIS)</div>
             </div>
-        </footer>
-        <!--========== END FOOTER ==========-->
+            <div class="highlight-card">
+                <div class="highlight-num">4</div>
+                <div class="highlight-label">Polar Campaigns</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-num">3</div>
+                <div class="highlight-label">NASA Platforms</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-num">14+</div>
+                <div class="highlight-label">Publications</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-num">100%</div>
+                <div class="highlight-label">Mission Success</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Back To Top -->
-        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+    <section class="section-padding" id="arsenal">
+        <div class="section-header">
+            <h2>Technical Arsenal</h2>
+            <p>COMPREHENSIVE ENGINEERING CAPABILITIES</p>
+        </div>
 
-        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-        <!-- CORE PLUGINS -->
-        <script src="vendor/jquery.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <div class="arsenal-grid">
+            
+            <div class="arsenal-card">
+                <i class="fas fa-terminal tech-icon"></i>
+                <h3>Scientific Computing</h3>
+                <p class="text-muted">High-throughput algorithms for massive datasets.</p>
+                <div class="tag-container">
+                    <span class="tag">MATLAB (Expert)</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">C/C++</span>
+                    <span class="tag">Parallel Computing</span>
+                    <span class="tag">Big Data Pipelines</span>
+                    <span class="tag">Bash/Shell</span>
+                </div>
+            </div>
 
-        <!-- PAGE LEVEL PLUGINS -->
-        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
-        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
-        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
-        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
-        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
-        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
-        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+            <div class="arsenal-card">
+                <i class="fas fa-brain tech-icon"></i>
+                <h3>AI & Machine Learning</h3>
+                <p class="text-muted">Deep learning for computer vision & signal analysis.</p>
+                <div class="tag-container">
+                    <span class="tag">PyTorch / TensorFlow</span>
+                    <span class="tag">CNN / LSTM</span>
+                    <span class="tag">Semantic Segmentation</span>
+                    <span class="tag">Computer Vision</span>
+                    <span class="tag">Neural Networks</span>
+                    <span class="tag">Data Augmentation</span>
+                </div>
+            </div>
 
-        <!-- PAGE LEVEL SCRIPTS -->
-        <script src="js/layout.min.js" type="text/javascript"></script>
-        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
-        <script src="js/components/masonry.min.js" type="text/javascript"></script>
-        <script src="js/components/wow.min.js" type="text/javascript"></script>
-    </body>
-    <!-- END BODY -->
+            <div class="arsenal-card">
+                <i class="fas fa-microchip tech-icon"></i>
+                <h3>RF & Microwave</h3>
+                <p class="text-muted">Circuit design from VHF to V-band (mmWave).</p>
+                <div class="tag-container">
+                    <span class="tag">Ansys HFSS / CST</span>
+                    <span class="tag">ADS / Genesys</span>
+                    <span class="tag">PCB Design (Altium)</span>
+                    <span class="tag">Spectrum Analysis</span>
+                    <span class="tag">EMI/EMC</span>
+                    <span class="tag">Antenna Theory</span>
+                </div>
+            </div>
+
+            <div class="arsenal-card">
+                <i class="fas fa-bolt tech-icon"></i>
+                <h3>Digital & Embedded</h3>
+                <p class="text-muted">FPGA integration and instrumentation controls.</p>
+                <div class="tag-container">
+                    <span class="tag">FPGA (Xilinx/Vivado)</span>
+                    <span class="tag">Instrumentation (I&C)</span>
+                    <span class="tag">System Integration</span>
+                    <span class="tag">Microcontrollers</span>
+                    <span class="tag">Signal Processing</span>
+                    <span class="tag">Low-level Assembly</span>
+                </div>
+            </div>
+
+            <div class="arsenal-card">
+                <i class="fas fa-plane tech-icon"></i>
+                <h3>Field Operations</h3>
+                <p class="text-muted">Mission-critical deployment in extreme environments.</p>
+                <div class="tag-container">
+                    <span class="tag">NASA Operation IceBridge</span>
+                    <span class="tag">Arctic/Antarctic Logistics</span>
+                    <span class="tag">Safety Leadership</span>
+                    <span class="tag">UAV/Drone Payloads</span>
+                    <span class="tag">Commissioning</span>
+                    <span class="tag">Asset Mgmt</span>
+                </div>
+            </div>
+
+            <div class="arsenal-card">
+                <i class="fas fa-vr-cardboard tech-icon"></i>
+                <h3>Digital Twin & Sim</h3>
+                <p class="text-muted">Physics-based forward modeling and simulators.</p>
+                <div class="tag-container">
+                    <span class="tag">System Modeling</span>
+                    <span class="tag">Digital Twins</span>
+                    <span class="tag">3D Simulation</span>
+                    <span class="tag">Synthetic Data Gen</span>
+                    <span class="tag">Geometry/Geophysics</span>
+                    <span class="tag">Remote Sensing</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" id="experience">
+        <div class="section-header">
+            <h2>Mission History</h2>
+        </div>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">May 2025 - Present</span>
+                <h3>Researcher</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | Algorithms & Data Analytics</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Initiated production of the first radiometrically calibrated radar dataset for the Greenland ice sheet. Leading parallel processing routines for inter-season calibration.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">Jan 2019 - May 2025</span>
+                <h3>Graduate Research Assistant (PhD)</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | University of Kansas</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Led "Radiometric Calibration" initiative. Created 3D Digital Twin radar simulator for NSF EarthCube Open Polar Radar. Analyzed crossover data for massive polar datasets.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">Jan 2025 - May 2025</span>
+                <h3>Graduate Teaching Assistant (GTA)</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">University of Kansas</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Instructed laboratory sessions and mentored students in electrical engineering fundamentals, emphasizing safety protocols and practical instrumentation skills.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">Summer 2021</span>
+                <h3>Radar Systems Engineering Intern</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">Ainstein AI | Autonomous Sensing</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Developed MATLAB Signal Processing Toolbox for automotive MIMO radars. Automated data pipelines for CFAR detection and beamforming.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">2017 - 2018</span>
+                <h3>Research Engineer & Hardware Lead</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | NASA Operation IceBridge</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Managed radar payloads on P-3B and DC-8 aircraft. Deployed to Arctic/Antarctic regions. Achieved 100% mission success rate for dual-deployment logistics.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">2014 - 2017</span>
+                <h3>Graduate Research Assistant (MS)</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | RF System Design</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Designed modular frequency multiplier chains for NASA Global Hawk Snow Radar. Optimized SWaP for UAV deployment and validated filters at NIST.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="date-label">2013 - 2014</span>
+                <h3>Student Researcher</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">Acharya Nagarjuna University</h4>
+                <p style="margin-top: 10px; color: #bbb;">
+                    Project: Performance Analysis of Patch Antenna Configurations. Conducted simulation and analysis of microstrip patch antennas for various communication bands.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="section-header">
+            <h2>Impact & Leadership</h2>
+            <p>SERVICE, MENTORSHIP, & OPERATIONS</p>
+        </div>
+
+        <div class="impact-grid">
+            
+            <div class="impact-card tech-lead">
+                <i class="fas fa-fighter-jet impact-icon"></i>
+                <h3>Field Command</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Mission-critical deployment leadership.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:var(--accent-amber);"></i> Hardware Lead: NASA Operation IceBridge (3 Campaigns).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-amber);"></i> Payload Integration Manager (P-3B & DC-8).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-amber);"></i> "Team of the Year" Nominee (Logistics).</li>
+                </ul>
+            </div>
+
+            <div class="impact-card org-lead">
+                <i class="fas fa-users-cog impact-icon"></i>
+                <h3>Organization Lead</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Guiding teams and governance.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:var(--accent-cyan);"></i> Founder & President: Think Tank Mini (Student Org).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-cyan);"></i> University & Student Senator (KU).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-cyan);"></i> Safety Lead ("Nobody Gets Hurt" Culture).</li>
+                </ul>
+            </div>
+
+            <div class="impact-card service">
+                <i class="fas fa-book-reader impact-icon"></i>
+                <h3>Technical Service</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Peer review and scientific integrity.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:var(--accent-green);"></i> Reviewer: IEEE Transactions on Radar Systems.</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-green);"></i> Reviewer: Elsevier Remote Sensing Apps.</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-green);"></i> IEEE Learning Network Course Reviewer.</li>
+                </ul>
+            </div>
+
+            <div class="impact-card humanitarian">
+                <i class="fas fa-medkit impact-icon"></i>
+                <h3>Humanitarian Ops</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Emergency response and community aid.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:var(--accent-red);"></i> Active Deployable CERT Responder.</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-red);"></i> Blood Donor Ambassador (Red Cross).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-red);"></i> BeMyEyes Responder (Visual Assistance).</li>
+                </ul>
+            </div>
+
+            <div class="impact-card teaching">
+                <i class="fas fa-chalkboard-teacher impact-icon"></i>
+                <h3>Mentorship</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Educating the next generation.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:var(--accent-purple);"></i> Graduate Teaching Assistant (Lab/Safety).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-purple);"></i> Mentored Emerging Scholars (Hardware/Soft).</li>
+                    <li><i class="fas fa-circle" style="color:var(--accent-purple);"></i> Curriculum Development (Student-Centric).</li>
+                </ul>
+            </div>
+
+            <div class="impact-card research">
+                <i class="fas fa-lightbulb impact-icon"></i>
+                <h3>Research Innovation</h3>
+                <p style="color: #aaa; font-size: 0.95rem; margin-top: 10px; margin-bottom: 15px;">
+                    Driving the cutting edge.
+                </p>
+                <ul class="impact-list">
+                    <li><i class="fas fa-circle" style="color:#fff;"></i> Initiated Greenland Radiometric Calibration.</li>
+                    <li><i class="fas fa-circle" style="color:#fff;"></i> 3 First-Author IEEE Oral Presentations.</li>
+                    <li><i class="fas fa-circle" style="color:#fff;"></i> Pioneered Digital Twin for Open Polar Radar.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h2 style="color: #fff;">Dr. Hara Madhav Talasila</h2>
+        <p style="color: #666; margin-bottom: 2rem;">Overland Park, Kansas, USA</p>
+        <div style="font-size: 1.5rem;">
+            <a href="https://linkedin.com/in/haramadhav" style="margin: 0 15px;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/haramadhav" style="margin: 0 15px;"><i class="fab fa-github"></i></a>
+            <a href="mailto:hara.madhav.talasila@gmail.com" style="margin: 0 15px;"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="color: #444; font-size: 0.8rem; margin-top: 2rem;">&copy; 2026 Hara Madhav Talasila. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Setup Dual Canvases
+        const bgCanvas = document.getElementById('bg-canvas');
+        const bgCtx = bgCanvas.getContext('2d');
+        const cursorCanvas = document.getElementById('cursor-canvas');
+        const cursorCtx = cursorCanvas.getContext('2d');
+
+        let width, height;
+        let particles = [];
+        let mouse = { x: -500, y: -500 }; // Initialize off-screen
+
+        // Resize
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            
+            bgCanvas.width = width;
+            bgCanvas.height = height;
+            cursorCanvas.width = width;
+            cursorCanvas.height = height;
+
+            initParticles();
+        }
+        window.addEventListener('resize', resize);
+        
+        // Track Mouse
+        window.addEventListener('mousemove', e => { 
+            mouse.x = e.clientX; 
+            mouse.y = e.clientY; 
+        });
+
+        // --- PARTICLE LOGIC (Layer 1) ---
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+            
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.type = Math.random() > 0.8 ? 'bit' : 'dot'; 
+                this.val = Math.random() > 0.5 ? '1' : '0';
+                this.size = Math.random() * 2;
+                this.alpha = Math.random() * 0.3 + 0.1; // Base alpha
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Wrap screen
+                if(this.x < 0) this.x = width;
+                if(this.x > width) this.x = 0;
+                if(this.y < 0) this.y = height;
+                if(this.y > height) this.y = 0;
+
+                // React to mouse (Electromagnetic push)
+                const dx = this.x - mouse.x;
+                const dy = this.y - mouse.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                
+                // If near mouse, increase alpha and slight push
+                if(dist < 150) {
+                    this.alpha = 1; 
+                } else {
+                    if(this.alpha > 0.2) this.alpha -= 0.02;
+                }
+            }
+
+            draw() {
+                bgCtx.globalAlpha = this.alpha;
+                
+                if(this.type === 'bit') {
+                    bgCtx.font = '12px monospace';
+                    bgCtx.fillStyle = '#0aff0a'; 
+                    bgCtx.fillText(this.val, this.x, this.y);
+                } else {
+                    bgCtx.beginPath();
+                    bgCtx.arc(this.x, this.y, this.size, 0, Math.PI*2);
+                    bgCtx.fillStyle = '#00f3ff'; 
+                    bgCtx.fill();
+                }
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            // Calc density
+            const count = Math.floor((width * height) / 12000);
+            for(let i=0; i<count; i++) particles.push(new Particle());
+        }
+
+        // --- DRAW CURSOR (Layer 2) ---
+        function drawCursor(time) {
+            cursorCtx.clearRect(0, 0, width, height);
+
+            const x = mouse.x;
+            const y = mouse.y;
+
+            // 1. Center Dot
+            cursorCtx.globalAlpha = 1;
+            cursorCtx.fillStyle = '#0aff0a';
+            cursorCtx.beginPath();
+            cursorCtx.arc(x, y, 3, 0, Math.PI * 2);
+            cursorCtx.fill();
+
+            // 2. Rotating Target Rings
+            const angle = time / 500;
+            cursorCtx.strokeStyle = '#00f3ff';
+            cursorCtx.lineWidth = 2;
+            
+            // Ring 1
+            cursorCtx.beginPath();
+            cursorCtx.arc(x, y, 20, angle, angle + 1.5); 
+            cursorCtx.stroke();
+            cursorCtx.beginPath();
+            cursorCtx.arc(x, y, 20, angle + Math.PI, angle + Math.PI + 1.5);
+            cursorCtx.stroke();
+
+            // 3. Crosshairs
+            cursorCtx.lineWidth = 1;
+            cursorCtx.strokeStyle = 'rgba(0, 243, 255, 0.5)';
+            cursorCtx.beginPath();
+            cursorCtx.moveTo(x - 30, y); cursorCtx.lineTo(x - 10, y);
+            cursorCtx.moveTo(x + 30, y); cursorCtx.lineTo(x + 10, y);
+            cursorCtx.moveTo(x, y - 30); cursorCtx.lineTo(x, y - 10);
+            cursorCtx.moveTo(x, y + 30); cursorCtx.lineTo(x, y + 10);
+            cursorCtx.stroke();
+
+            // 4. Scanning Radar Line
+            cursorCtx.beginPath();
+            cursorCtx.strokeStyle = 'rgba(10, 255, 10, 0.3)';
+            cursorCtx.moveTo(x, y);
+            const scanAngle = time / 150; 
+            cursorCtx.lineTo(x + Math.cos(scanAngle) * 100, y + Math.sin(scanAngle) * 100);
+            cursorCtx.stroke();
+        }
+
+        // --- ANIMATION LOOP ---
+        function animate() {
+            // Clear Layer 1
+            bgCtx.clearRect(0, 0, width, height);
+            
+            const time = Date.now();
+
+            // 1. Draw Background Particles (Layer 1)
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            // 2. Draw Connections (Layer 1) - Constellation effect
+            bgCtx.globalAlpha = 0.15;
+            bgCtx.strokeStyle = '#00f3ff';
+            bgCtx.lineWidth = 1;
+            bgCtx.beginPath();
+            
+            particles.forEach(p1 => {
+                const dx = p1.x - mouse.x;
+                const dy = p1.y - mouse.y;
+                const dist = Math.sqrt(dx*dx + dy*dy);
+                
+                // Only connect to mouse if close
+                if (dist < 200) {
+                    bgCtx.moveTo(p1.x, p1.y);
+                    bgCtx.lineTo(mouse.x, mouse.y);
+                }
+            });
+            bgCtx.stroke();
+
+            // 3. Draw Foreground Cursor (Layer 2)
+            drawCursor(time);
+
+            requestAnimationFrame(animate);
+        }
+
+        // Initialize
+        resize();
+        animate();
+    </script>
+</body>
 </html>
