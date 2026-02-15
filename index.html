@@ -18,6 +18,7 @@
     <meta property="og:description" content="Bridging the gap between hardware physics and scalable software. Expert in Radar Systems, HPC, and Applied AI.">
     <meta property="og:url" content="https://haramadhav.com">
     <meta property="og:site_name" content="Dr. Hara Madhav Talasila">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dr. Hara Madhav Talasila | Principal Research Engineer">
     <meta name="twitter:description" content="Full-stack research engineer: RF Hardware, Scientific Computing, and Polar Operations.">
@@ -48,8 +49,9 @@
     <style>
         /* --- CORE VARIABLES --- */
         :root {
-            --bg-color: #020406;
-            --card-bg: rgba(16, 20, 24, 0.85);
+            /* Lightened background for better visibility */
+            --bg-color: #0b1015; 
+            --card-bg: rgba(20, 26, 33, 0.85);
             --accent-cyan: #00f3ff;
             --accent-green: #0aff0a;
             --accent-amber: #ffaa00;
@@ -69,15 +71,13 @@
             font-family: var(--font-sans);
             overflow-x: hidden;
             line-height: 1.6;
-            /* HIDE DEFAULT CURSOR on desktop */
-            cursor: none; 
+            cursor: none; /* Hide default cursor */
         }
 
-        /* Hide default hand cursor on links so our custom one shows */
+        /* Hide default hand cursor on links */
         a, button, .btn { cursor: none; }
 
         /* --- CANVASES --- */
-        /* 1. Background (Bits, Dots, Lines) - Behind Text */
         #bg-canvas {
             position: fixed;
             top: 0; left: 0;
@@ -85,13 +85,12 @@
             z-index: -1; 
         }
 
-        /* 2. Cursor (Radar Reticle) - On Top of Text */
         #cursor-canvas {
             position: fixed;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            z-index: 9999; /* Very high to be on top */
-            pointer-events: none; /* Critical: lets clicks pass through */
+            z-index: 9999; 
+            pointer-events: none; 
         }
 
         /* --- TYPOGRAPHY --- */
@@ -121,7 +120,7 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 60%);
+            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.08) 0%, transparent 60%);
         }
 
         h1.name-title {
@@ -185,7 +184,7 @@
         }
 
         .highlight-card {
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(15, 20, 25, 0.9);
             border: 1px solid rgba(255, 255, 255, 0.15);
             padding: 1.5rem;
             text-align: center;
@@ -258,7 +257,7 @@
         }
         
         .impact-card {
-            background: linear-gradient(145deg, rgba(20,25,30,0.9), rgba(10,10,10,0.95));
+            background: linear-gradient(145deg, rgba(20,26,33,0.9), rgba(10,12,16,0.95));
             padding: 2rem;
             border-left: 4px solid var(--accent-amber);
             position: relative;
@@ -266,7 +265,7 @@
             z-index: 1;
         }
 
-        .impact-card:hover { transform: translateY(-3px); background: linear-gradient(145deg, rgba(25,30,35,0.9), rgba(15,15,15,0.95)); }
+        .impact-card:hover { transform: translateY(-3px); background: linear-gradient(145deg, rgba(30,36,42,0.9), rgba(20,20,20,0.95)); }
         
         .impact-card.tech-lead { border-color: var(--accent-amber); }
         .impact-card.org-lead { border-color: var(--accent-cyan); }
@@ -298,11 +297,8 @@
             .section-padding { padding: 3rem 1.5rem; }
             .highlights-grid { margin-top: 0; }
             
-            /* Restore default cursor on mobile/touch */
             body { cursor: auto; }
             a, button, .btn { cursor: pointer; }
-            
-            /* Hide the cursor canvas on mobile, keep bg canvas */
             #cursor-canvas { display: none; }
         }
     </style>
@@ -324,7 +320,6 @@
         
         <div class="marquee-container">
             <div class="marquee-content">
-                PRINCIPAL RESEARCH ENGINEER &nbsp;///&nbsp; SCIENTIFIC COMPUTING ARCHITECT &nbsp;///&nbsp; RADAR SYSTEMS LEAD &nbsp;///&nbsp; AI & SIGNAL PROCESSING &nbsp;///&nbsp; POLAR FIELD DEPLOYMENT &nbsp;///&nbsp; EDUCATOR & MENTOR &nbsp;///&nbsp; FULL-STACK HARDWARE & SOFTWARE &nbsp;///&nbsp;
                 PRINCIPAL RESEARCH ENGINEER &nbsp;///&nbsp; SCIENTIFIC COMPUTING ARCHITECT &nbsp;///&nbsp; RADAR SYSTEMS LEAD &nbsp;///&nbsp; AI & SIGNAL PROCESSING &nbsp;///&nbsp; POLAR FIELD DEPLOYMENT &nbsp;///&nbsp; EDUCATOR & MENTOR &nbsp;///&nbsp; FULL-STACK HARDWARE & SOFTWARE &nbsp;///&nbsp;
             </div>
         </div>
@@ -385,20 +380,21 @@
                     <span class="tag">Parallel Computing</span>
                     <span class="tag">Big Data Pipelines</span>
                     <span class="tag">Bash/Shell</span>
+                    <span class="tag">Cybersecurity (ISC2)</span>
                 </div>
             </div>
 
             <div class="arsenal-card">
                 <i class="fas fa-brain tech-icon"></i>
-                <h3>AI & Machine Learning</h3>
-                <p class="text-muted">Deep learning for computer vision & signal analysis.</p>
+                <h3>AI, ML, DL, & GenAI</h3>
+                <p class="text-muted">Deep learning, LLMs, and computer vision integration.</p>
                 <div class="tag-container">
                     <span class="tag">PyTorch / TensorFlow</span>
-                    <span class="tag">CNN / LSTM</span>
-                    <span class="tag">Semantic Segmentation</span>
+                    <span class="tag">Generative AI (LLMs)</span>
+                    <span class="tag">Agent Dev Kit</span>
                     <span class="tag">Computer Vision</span>
                     <span class="tag">Neural Networks</span>
-                    <span class="tag">Data Augmentation</span>
+                    <span class="tag">Semantic Segmentation</span>
                 </div>
             </div>
 
@@ -480,7 +476,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <span class="date-label">Jan 2019 - May 2025</span>
-                <h3>Graduate Research Assistant (PhD)</h3>
+                <h3>Calibration Software Lead (PhD GRA)</h3>
                 <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | University of Kansas</h4>
                 <p style="margin-top: 10px; color: #bbb;">
                     Led "Radiometric Calibration" initiative. Created 3D Digital Twin radar simulator for NSF EarthCube Open Polar Radar. Analyzed crossover data for massive polar datasets.
@@ -490,7 +486,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <span class="date-label">Jan 2025 - May 2025</span>
-                <h3>Graduate Teaching Assistant (GTA)</h3>
+                <h3>Laboratory Instructor (GTA)</h3>
                 <h4 style="color:var(--text-muted); font-weight:normal;">University of Kansas</h4>
                 <p style="margin-top: 10px; color: #bbb;">
                     Instructed laboratory sessions and mentored students in electrical engineering fundamentals, emphasizing safety protocols and practical instrumentation skills.
@@ -510,7 +506,7 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <span class="date-label">2017 - 2018</span>
-                <h3>Research Engineer & Hardware Lead</h3>
+                <h3>Airborne Radar Hardware Lead & Research Engineer</h3>
                 <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | NASA Operation IceBridge</h4>
                 <p style="margin-top: 10px; color: #bbb;">
                     Managed radar payloads on P-3B and DC-8 aircraft. Deployed to Arctic/Antarctic regions. Achieved 100% mission success rate for dual-deployment logistics.
@@ -520,20 +516,10 @@
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <span class="date-label">2014 - 2017</span>
-                <h3>Graduate Research Assistant (MS)</h3>
-                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | RF System Design</h4>
+                <h3>RF System Designer (MS GRA))</h3>
+                <h4 style="color:var(--text-muted); font-weight:normal;">CReSIS | Hardware Engineering</h4>
                 <p style="margin-top: 10px; color: #bbb;">
                     Designed modular frequency multiplier chains for NASA Global Hawk Snow Radar. Optimized SWaP for UAV deployment and validated filters at NIST.
-                </p>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <span class="date-label">2013 - 2014</span>
-                <h3>Student Researcher</h3>
-                <h4 style="color:var(--text-muted); font-weight:normal;">Acharya Nagarjuna University</h4>
-                <p style="margin-top: 10px; color: #bbb;">
-                    Project: Performance Analysis of Patch Antenna Configurations. Conducted simulation and analysis of microstrip patch antennas for various communication bands.
                 </p>
             </div>
 
@@ -649,9 +635,8 @@
 
         let width, height;
         let particles = [];
-        let mouse = { x: -500, y: -500 }; // Initialize off-screen
+        let mouse = { x: -500, y: -500 }; 
 
-        // Resize
         function resize() {
             width = window.innerWidth;
             height = window.innerHeight;
@@ -665,7 +650,6 @@
         }
         window.addEventListener('resize', resize);
         
-        // Track Mouse
         window.addEventListener('mousemove', e => { 
             mouse.x = e.clientX; 
             mouse.y = e.clientY; 
@@ -685,25 +669,22 @@
                 this.type = Math.random() > 0.8 ? 'bit' : 'dot'; 
                 this.val = Math.random() > 0.5 ? '1' : '0';
                 this.size = Math.random() * 2;
-                this.alpha = Math.random() * 0.3 + 0.1; // Base alpha
+                this.alpha = Math.random() * 0.3 + 0.1; 
             }
 
             update() {
                 this.x += this.vx;
                 this.y += this.vy;
 
-                // Wrap screen
                 if(this.x < 0) this.x = width;
                 if(this.x > width) this.x = 0;
                 if(this.y < 0) this.y = height;
                 if(this.y > height) this.y = 0;
 
-                // React to mouse (Electromagnetic push)
                 const dx = this.x - mouse.x;
                 const dy = this.y - mouse.y;
                 const dist = Math.sqrt(dx*dx + dy*dy);
                 
-                // If near mouse, increase alpha and slight push
                 if(dist < 150) {
                     this.alpha = 1; 
                 } else {
@@ -729,7 +710,6 @@
 
         function initParticles() {
             particles = [];
-            // Calc density
             const count = Math.floor((width * height) / 12000);
             for(let i=0; i<count; i++) particles.push(new Particle());
         }
@@ -753,7 +733,6 @@
             cursorCtx.strokeStyle = '#00f3ff';
             cursorCtx.lineWidth = 2;
             
-            // Ring 1
             cursorCtx.beginPath();
             cursorCtx.arc(x, y, 20, angle, angle + 1.5); 
             cursorCtx.stroke();
@@ -771,18 +750,29 @@
             cursorCtx.moveTo(x, y + 30); cursorCtx.lineTo(x, y + 10);
             cursorCtx.stroke();
 
-            // 4. Scanning Radar Line
+            // 4. Scanning Radar Line - INCREASED VISIBILITY
             cursorCtx.beginPath();
-            cursorCtx.strokeStyle = 'rgba(10, 255, 10, 0.3)';
+            cursorCtx.strokeStyle = 'rgba(10, 255, 10, 0.6)'; // Increased opacity
+            cursorCtx.lineWidth = 2; // Increased thickness
             cursorCtx.moveTo(x, y);
             const scanAngle = time / 150; 
-            cursorCtx.lineTo(x + Math.cos(scanAngle) * 100, y + Math.sin(scanAngle) * 100);
+            cursorCtx.lineTo(x + Math.cos(scanAngle) * 120, y + Math.sin(scanAngle) * 120);
             cursorCtx.stroke();
+            
+            // 5. Radar Sweep Area (Gradient)
+            const gradient = cursorCtx.createRadialGradient(x, y, 0, x, y, 120);
+            gradient.addColorStop(0, 'rgba(10, 255, 10, 0.0)');
+            gradient.addColorStop(1, 'rgba(10, 255, 10, 0.05)');
+            
+            cursorCtx.fillStyle = gradient;
+            cursorCtx.beginPath();
+            cursorCtx.moveTo(x, y);
+            cursorCtx.arc(x, y, 120, scanAngle - 0.2, scanAngle);
+            cursorCtx.fill();
         }
 
         // --- ANIMATION LOOP ---
         function animate() {
-            // Clear Layer 1
             bgCtx.clearRect(0, 0, width, height);
             
             const time = Date.now();
@@ -793,7 +783,7 @@
                 p.draw();
             });
 
-            // 2. Draw Connections (Layer 1) - Constellation effect
+            // 2. Draw Connections (Layer 1)
             bgCtx.globalAlpha = 0.15;
             bgCtx.strokeStyle = '#00f3ff';
             bgCtx.lineWidth = 1;
@@ -804,7 +794,6 @@
                 const dy = p1.y - mouse.y;
                 const dist = Math.sqrt(dx*dx + dy*dy);
                 
-                // Only connect to mouse if close
                 if (dist < 200) {
                     bgCtx.moveTo(p1.x, p1.y);
                     bgCtx.lineTo(mouse.x, mouse.y);
@@ -818,7 +807,6 @@
             requestAnimationFrame(animate);
         }
 
-        // Initialize
         resize();
         animate();
     </script>
