@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hara Madhav Talasila, PhD | Radar Systems & Signal Processing</title>
+    <title>Hara Madhav Talasila, PhD | Radar Systems, Radioglaciology & Signal Processing</title>
 
-    <meta name="description" content="Hara Madhav Talasila, PhD — Research Engineer at CReSIS. Radar systems, radiometric calibration, HPC signal processing, and polar field deployments for NASA and NSF.">
-    <meta name="keywords" content="Hara Madhav Talasila, Radar Engineer, Signal Processing, CReSIS, NASA IceBridge, Radiometric Calibration, Remote Sensing, Kansas">
+    <meta name="description" content="Hara Madhav Talasila, PhD. Research Engineer at CReSIS. Radar systems, radiometric calibration, radioglaciology, HPC signal processing, and polar field deployments.">
+    <meta name="keywords" content="Hara Madhav Talasila, Radar Engineer, Signal Processing, Radioglaciology, CReSIS, NASA IceBridge, Radiometric Calibration, Remote Sensing">
     <meta name="author" content="Hara Madhav Talasila">
-    <meta property="og:title" content="Hara Madhav Talasila, PhD | Radar Systems & Signal Processing">
-    <meta property="og:description" content="Research Engineer. Full-stack radar architect from RF hardware to petabyte-scale data pipelines.">
-    <meta property="og:url" content="https://haramadhav.com">
-    <link rel="canonical" href="https://haramadhav.com">
+    
+    <!--
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛰️</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧊</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+    -->
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,18 +187,12 @@
             overflow: hidden;
         }
 
-        /* ---- Background / Photo layer ---- */
         .hero-bg {
             position: absolute;
             inset: 0;
             z-index: 0;
         }
 
-        /* Replace the gradient below with your photo:
-           background-image: url('graduation.jpeg');
-           background-size: cover;
-           background-position: center top;
-        */
         .hero-bg-fill {
             position: absolute;
             inset: 0;
@@ -198,7 +200,6 @@
                 linear-gradient(160deg, #0F2040 0%, #1E3A65 50%, #2A5A3C 100%);
         }
 
-        /* Translucent vignette overlay - use this class on any image section */
         .vignette-overlay {
             position: absolute;
             inset: 0;
@@ -206,14 +207,12 @@
                 radial-gradient(ellipse 70% 80% at 65% 50%, transparent 20%, rgba(10,20,45,0.55) 70%, rgba(10,20,45,0.90) 100%);
         }
 
-        /* If you add a photo, add a second overlay for left readability: */
         .hero-text-mask {
             position: absolute;
             inset: 0;
             background: linear-gradient(90deg, rgba(10,20,45,0.85) 0%, rgba(10,20,45,0.6) 45%, transparent 75%);
         }
 
-        /* Subtle noise texture */
         .hero-bg::after {
             content: '';
             position: absolute;
@@ -268,7 +267,7 @@
 
         .hero-title {
             font-family: var(--font-body);
-            font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+            font-size: clamp(0.85rem, 1.7vw, 1.1rem);
             font-weight: 400;
             color: var(--accent-light);
             letter-spacing: 0.05em;
@@ -326,7 +325,6 @@
         }
         .btn-outline:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.07); color: #FFF; }
 
-        /* Scroll indicator */
         .scroll-hint {
             position: absolute;
             bottom: 2.5rem;
@@ -358,13 +356,13 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 0;
         }
 
         .stat-item {
             text-align: center;
-            padding: 1rem 1.5rem;
+            padding: 1rem 1rem;
             border-right: 1px solid rgba(255,255,255,0.1);
         }
         .stat-item:last-child { border-right: none; }
@@ -382,7 +380,17 @@
             font-size: 0.75rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.6);
+            line-height: 1.4;
+        }
+
+        .stat-subtext {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 0.02em;
+            text-transform: none;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.15rem;
         }
 
         /* ==========================================
@@ -402,18 +410,21 @@
             grid-template-columns: 1fr auto;
             gap: 0.5rem;
             transition: box-shadow var(--transition), border-color var(--transition);
-            cursor: pointer;
             position: relative;
         }
-
-        .exp-card:hover {
-            box-shadow: var(--card-shadow-hover);
-            border-color: rgba(196,92,40,0.3);
+        
+        .exp-card.cresis-card {
+            border-left: 4px solid var(--navy-mid);
         }
+        .exp-card.cresis-card:hover { border-left-color: var(--accent); }
 
-        .exp-card-left {}
+        .exp-card.clickable { cursor: pointer; }
+        .exp-card.clickable:hover { box-shadow: var(--card-shadow-hover); border-color: rgba(196,92,40,0.3); }
+
         .exp-role { font-size: 1.15rem; font-weight: 600; color: var(--navy); font-family: var(--font-body); }
         .exp-org { font-size: 0.9rem; color: var(--accent); margin-top: 0.2rem; font-weight: 500; }
+        .exp-sub { font-size: 0.85rem; color: var(--text); margin-top: 0.5rem; line-height: 1.5; }
+        
         .exp-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
         .exp-tag {
             font-size: 0.72rem;
@@ -424,28 +435,11 @@
             font-weight: 500;
             letter-spacing: 0.02em;
         }
-        .exp-tag.green {
-            background: rgba(42,127,98,0.08);
-            color: var(--accent-green);
-        }
-        .exp-tag.navy {
-            background: rgba(15,32,64,0.07);
-            color: var(--navy-mid);
-        }
+        .exp-tag.green { background: rgba(42,127,98,0.08); color: var(--accent-green); }
+        .exp-tag.navy { background: rgba(15,32,64,0.07); color: var(--navy-mid); }
 
-        .exp-card-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 0.5rem;
-        }
-
-        .exp-date {
-            font-size: 0.8rem;
-            color: var(--muted);
-            font-weight: 400;
-            white-space: nowrap;
-        }
+        .exp-card-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem; }
+        .exp-date { font-size: 0.8rem; color: var(--muted); font-weight: 400; white-space: nowrap; }
 
         .exp-expand-btn {
             font-size: 0.78rem;
@@ -521,20 +515,12 @@
         }
         .pub-item:hover { box-shadow: var(--card-shadow); }
 
-        .pub-year {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            color: var(--accent);
-            font-weight: 600;
-            line-height: 1;
-            padding-top: 0.1rem;
-            min-width: 3rem;
-        }
-
-        .pub-body {}
+        .pub-year { font-family: var(--font-display); font-size: 1.4rem; color: var(--accent); font-weight: 600; line-height: 1; padding-top: 0.1rem; min-width: 3rem; }
         .pub-title { font-size: 0.92rem; font-weight: 600; color: var(--navy); line-height: 1.5; }
         .pub-venue { font-size: 0.82rem; color: var(--muted); margin-top: 0.25rem; }
         .pub-authors { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+        .pub-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 0.6rem; align-items: center; }
+        .pub-links a { font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem; }
 
         .pub-badge {
             font-size: 0.68rem;
@@ -551,61 +537,35 @@
         .pub-badge.prep { background: rgba(184,144,42,0.12); color: var(--gold); }
 
         /* ==========================================
-           PROJECTS (4cThreat, etc.)
+           COMPACT PROJECTS
         ========================================== */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
         }
 
         .project-card {
             background: #FFF;
             border: 1px solid var(--border);
             border-radius: 6px;
-            overflow: hidden;
-            transition: box-shadow var(--transition);
-        }
-        .project-card:hover { box-shadow: var(--card-shadow-hover); }
-
-        /* Image container with vignette effect.
-           Add your image: <div class="proj-image" style="background-image:url('your-image.jpg')"> */
-        .proj-image {
-            height: 200px;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-        /* Vignette overlay on project images */
-        .proj-image::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at center, transparent 20%, rgba(10,20,45,0.5) 80%),
-                linear-gradient(to bottom, transparent 50%, rgba(10,20,45,0.7) 100%);
-            opacity: 0.8;
-        }
-
-        .proj-image-icon {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
+            padding: 1.25rem;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: rgba(255,255,255,0.25);
+            flex-direction: column;
+            justify-content: space-between;
+            transition: box-shadow var(--transition), border-color var(--transition);
+            cursor: pointer;
         }
+        .project-card:hover { box-shadow: var(--card-shadow-hover); border-color: rgba(196,92,40,0.3); }
 
-        .proj-body { padding: 1.5rem; }
-        .proj-body h4 { color: var(--navy); font-size: 1rem; margin-bottom: 0.25rem; }
-        .proj-period { font-size: 0.78rem; color: var(--accent); font-weight: 500; margin-bottom: 0.75rem; }
-        .proj-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+        .proj-header { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem; }
+        .proj-icon { color: var(--accent); font-size: 1.1rem; }
+        .project-card h4 { color: var(--navy); font-size: 0.95rem; }
+        .proj-period { font-size: 0.72rem; color: var(--muted); font-weight: 500; margin-bottom: 0.75rem; letter-spacing: 0.02em; }
+        .project-card p { font-size: 0.85rem; color: var(--text); line-height: 1.5; margin-bottom: 1rem;}
 
         /* ==========================================
-           SERVICE / LEADERSHIP
+           SERVICE & LEADERSHIP
         ========================================== */
         .service-grid {
             display: grid;
@@ -622,39 +582,21 @@
         }
         .service-card:hover { box-shadow: var(--card-shadow); }
 
-        .service-card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
+        .service-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
         .service-icon {
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.9rem; flex-shrink: 0;
         }
-
         .service-icon.amber { background: rgba(184,144,42,0.12); color: var(--gold); }
         .service-icon.red   { background: rgba(180,40,40,0.1); color: #C43030; }
         .service-icon.green { background: rgba(42,127,98,0.1); color: var(--accent-green); }
         .service-icon.navy  { background: rgba(15,32,64,0.1); color: var(--navy-mid); }
-        .service-icon.teal  { background: rgba(42,127,130,0.1); color: #2A7F82; }
 
         .service-card h4 { font-size: 0.9rem; color: var(--navy); }
         .service-card ul { list-style: none; padding: 0; }
-        .service-card ul li {
-            font-size: 0.82rem;
-            color: var(--muted);
-            padding: 0.3rem 0;
-            border-bottom: 1px solid var(--border);
-            line-height: 1.5;
-        }
+        .service-card ul li { font-size: 0.82rem; color: var(--muted); padding: 0.3rem 0; border-bottom: 1px solid var(--border); line-height: 1.5; }
         .service-card ul li:last-child { border-bottom: none; }
 
         /* ==========================================
@@ -662,8 +604,7 @@
         ========================================== */
         .drawer-overlay {
             display: none;
-            position: fixed;
-            inset: 0;
+            position: fixed; inset: 0;
             background: rgba(15,32,64,0.5);
             z-index: 2000;
             backdrop-filter: blur(4px);
@@ -681,29 +622,23 @@
             transition: transform 0.36s cubic-bezier(0.4,0,0.2,1);
             box-shadow: -10px 0 60px rgba(15,32,64,0.2);
         }
-
         .drawer.open { transform: translateX(0); }
 
         .drawer-header {
-            position: sticky;
-            top: 0;
+            position: sticky; top: 0;
             background: #FEFCF9;
             border-bottom: 1px solid var(--border);
             padding: 1.25rem 1.75rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+            display: flex; justify-content: space-between; align-items: flex-start;
             z-index: 1;
         }
 
         .drawer-close {
             width: 32px; height: 32px;
-            background: none; border: 1px solid var(--border);
-            border-radius: 50%;
+            background: none; border: 1px solid var(--border); border-radius: 50%;
             cursor: pointer;
             display: flex; align-items: center; justify-content: center;
-            color: var(--muted);
-            font-size: 0.85rem;
+            color: var(--muted); font-size: 0.85rem;
             transition: background var(--transition), color var(--transition);
             flex-shrink: 0;
         }
@@ -716,49 +651,25 @@
         .drawer-date { font-size: 0.8rem; color: var(--muted); margin-top: 0.4rem; }
 
         .drawer-section { margin-top: 1.75rem; }
-        .drawer-section-title {
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 0.75rem;
-        }
+        .drawer-section-title { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; }
 
         .drawer-bullets { list-style: none; padding: 0; }
         .drawer-bullets li {
-            padding: 0.5rem 0;
-            padding-left: 1rem;
+            padding: 0.5rem 0; padding-left: 1rem;
             border-bottom: 1px solid var(--border);
-            font-size: 0.88rem;
-            color: var(--text);
-            line-height: 1.6;
-            position: relative;
+            font-size: 0.88rem; color: var(--text); line-height: 1.6; position: relative;
         }
         .drawer-bullets li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.9rem;
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            background: var(--accent);
+            content: ''; position: absolute; left: 0; top: 0.9rem;
+            width: 5px; height: 5px; border-radius: 50%; background: var(--accent);
         }
         .drawer-bullets li:last-child { border-bottom: none; }
 
         .drawer-tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
-        .drawer-tag {
-            font-size: 0.72rem;
-            padding: 0.25rem 0.75rem;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 3px;
-            color: var(--text);
-        }
+        .drawer-tag { font-size: 0.72rem; padding: 0.25rem 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 3px; color: var(--text); }
 
         /* ==========================================
-           FOOTER
+           FOOTER / PORTRAIT
         ========================================== */
         footer {
             background: var(--navy);
@@ -768,101 +679,82 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2.5rem;
             margin-bottom: 3rem;
         }
 
-        .footer-name {
-            font-family: var(--font-display);
-            font-size: 2rem;
-            color: #FFF;
-            font-weight: 400;
+        .portrait-wrapper {
+            position: relative;
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px solid rgba(255,255,255,0.1);
         }
-
-        .footer-tagline {
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.5);
-            line-height: 1.6;
-            max-width: 320px;
+        .portrait-wrapper::after {
+            content: '';
+            position: absolute; inset: 0;
+            box-shadow: inset 0 0 20px rgba(15,32,64,0.95);
+            transition: opacity 0.3s ease;
+            border-radius: 50%;
+            pointer-events: none;
         }
-
-        .footer-links-title {
-            font-size: 0.72rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            margin-bottom: 1.1rem;
-            font-weight: 600;
+        .portrait-wrapper img {
+            width: 100%; height: 100%; object-fit: cover;
+            opacity: 0.6; filter: grayscale(30%) contrast(1.1);
+            transition: opacity 0.3s ease, filter 0.3s ease;
         }
+        
+        .portrait-wrapper:hover::after { opacity: 0; }
+        .portrait-wrapper:hover img { opacity: 1; filter: grayscale(0%) contrast(1); }
 
-        .footer-social {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
+        .footer-links-title { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1.1rem; font-weight: 600; }
 
+        .footer-social { display: flex; flex-direction: column; gap: 0.5rem; }
         .footer-social-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.1);
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            color: rgba(255,255,255,0.75); font-size: 0.85rem; font-weight: 500;
+            transition: color var(--transition);
+        }
+        .footer-social-link:hover { color: #FFF; }
+        .footer-social-link i { font-size: 1rem; width: 20px; text-align: center; color: var(--accent-light); }
+
+        .btn-social-media {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.2);
             border-radius: 4px;
-            color: rgba(255,255,255,0.75);
-            font-size: 0.82rem;
-            font-weight: 500;
-            transition: background var(--transition), border-color var(--transition), color var(--transition);
+            color: #FFF; font-size: 0.85rem; font-weight: 600;
+            cursor: pointer;
+            transition: background var(--transition), border-color var(--transition);
+            width: 100%;
         }
-        .footer-social-link:hover {
-            background: rgba(255,255,255,0.12);
-            border-color: rgba(255,255,255,0.25);
-            color: #FFF;
+        .btn-social-media:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.4);
         }
-        .footer-social-link i { font-size: 1rem; }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 1.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 0.75rem;
+            border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;
         }
-
-        .footer-bottom p {
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.35);
-        }
-
-        .footer-bottom a {
-            font-size: 0.78rem;
-            color: rgba(255,255,255,0.4);
-        }
+        .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
+        .footer-bottom a { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
         .footer-bottom a:hover { color: rgba(255,255,255,0.75); }
 
         /* ==========================================
            FADE-IN ANIMATION
         ========================================== */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .fade-in.visible {
-            opacity: 1;
-            transform: none;
-        }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: none; }
 
         /* ==========================================
            RESPONSIVE
         ========================================== */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
             .pub-item { grid-template-columns: 1fr; }
             .pub-year { font-size: 0.8rem; }
             .hero-summary { font-size: 0.92rem; }
@@ -877,9 +769,6 @@
 </head>
 <body>
 
-<!-- ============================================================
-     NAVIGATION
-============================================================ -->
 <nav id="navbar">
     <div class="nav-inner">
         <a href="#hero" class="nav-name" aria-label="Back to top">Hara Madhav Talasila</a>
@@ -887,27 +776,17 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#publications">Publications</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#service">Service</a></li>
+            <li><a href="#projects">Ventures</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact" class="btn-primary" style="padding:0.4rem 1rem;">Contact</a></li>
         </ul>
     </div>
 </nav>
 
 
-<!-- ============================================================
-     HERO
-============================================================ -->
 <header id="hero">
     <div class="hero-bg">
         <div class="hero-bg-fill"></div>
-        <!--
-            TO ADD YOUR PHOTO:
-            1. Put your photo file (e.g. graduation.jpeg) in the same folder as this index.html
-            2. Replace the hero-bg-fill div above with:
-               <img src="graduation.jpeg" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;opacity:0.45;">
-            3. The vignette overlays below will handle the translucency automatically.
-        -->
         <div class="vignette-overlay"></div>
         <div class="hero-text-mask"></div>
     </div>
@@ -921,7 +800,7 @@
         <h1 class="hero-name">Hara Madhav<br><em>Talasila</em></h1>
 
         <p class="hero-title">
-            Research Engineer &nbsp;&middot;&nbsp; Radar Systems &nbsp;&middot;&nbsp; Signal Processing
+            Research Engineer &nbsp;&middot;&nbsp; Radar Systems &nbsp;&middot;&nbsp; Radioglaciology &nbsp;&middot;&nbsp; Signal Processing
         </p>
 
         <p class="hero-summary">
@@ -933,7 +812,7 @@
                 <i class="fas fa-layer-group" style="font-size:0.85rem;"></i>
                 View Experience
             </a>
-            <a href="https://drive.google.com/drive/folders/1cHT2s35CqhKiIZs9VuX7etHSSPIE21Gq" target="_blank" class="btn-outline">
+            <a href="#" target="_blank" class="btn-outline">
                 <i class="fas fa-file-alt" style="font-size:0.85rem;"></i>
                 Download CV
             </a>
@@ -947,37 +826,35 @@
 </header>
 
 
-<!-- ============================================================
-     STATS STRIP
-============================================================ -->
 <section id="stats">
     <div class="container">
         <div class="stats-grid">
             <div class="stat-item">
                 <div class="stat-num">12+</div>
-                <div class="stat-label">Years at CReSIS</div>
+                <div class="stat-label">Years of R&D</div>
             </div>
             <div class="stat-item">
                 <div class="stat-num">4</div>
-                <div class="stat-label">Polar Campaigns</div>
+                <div class="stat-label">Polar Deployments<span class="stat-subtext">(Lead Hardware on 3)</span></div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">3</div>
+                <div class="stat-label">Radar Datasets<span class="stat-subtext">(IRSNO1B)</span></div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">5</div>
+                <div class="stat-label">Airborne Platforms<span class="stat-subtext">(Supported &amp; Integrated)</span></div>
             </div>
             <div class="stat-item">
                 <div class="stat-num">15+</div>
                 <div class="stat-label">Publications</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num">3</div>
-                <div class="stat-label">NASA Airborne Datasets</div>
             </div>
         </div>
     </div>
 </section>
 
 
-<!-- ============================================================
-     EXPERIENCE
-============================================================ -->
-<section id="experience" class="section section-alt">
+<section id="experience" class="section">
     <div class="container">
         <div class="section-heading fade-in">
             <span class="label">Career</span>
@@ -988,10 +865,10 @@
 
         <div class="exp-grid">
 
-            <div class="exp-card fade-in" onclick="openDrawer('researcher')">
+            <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('researcher')">
                 <div class="exp-card-left">
                     <div class="exp-role">Researcher</div>
-                    <div class="exp-org">Center for Remote Sensing and Integrated Systems (CReSIS), University of Kansas</div>
+                    <div class="exp-org">Center for Remote Sensing and Integrated Systems (CReSIS)</div>
                     <div class="exp-tags">
                         <span class="exp-tag">Radiometric Calibration</span>
                         <span class="exp-tag green">HPC Pipelines</span>
@@ -999,15 +876,15 @@
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Jun 2025 &ndash; Present</div>
+                    <div class="exp-date">Jun 2025 to Present</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
 
-            <div class="exp-card fade-in" onclick="openDrawer('phd-gra')">
+            <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('phd-gra')">
                 <div class="exp-card-left">
                     <div class="exp-role">Calibration Software Lead</div>
-                    <div class="exp-org">CReSIS &mdash; NSF EarthCube / NASA Operation IceBridge</div>
+                    <div class="exp-org">CReSIS / NSF EarthCube / NASA Operation IceBridge</div>
                     <div class="exp-tags">
                         <span class="exp-tag">Open Polar Radar</span>
                         <span class="exp-tag green">Digital Twin / FullSim</span>
@@ -1015,12 +892,12 @@
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Jan 2019 &ndash; May 2025</div>
+                    <div class="exp-date">Jan 2019 to May 2025</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
 
-            <div class="exp-card fade-in" onclick="openDrawer('gta')">
+            <div class="exp-card fade-in clickable" onclick="openDrawer('gta')">
                 <div class="exp-card-left">
                     <div class="exp-role">Graduate Teaching Assistant (Instructor)</div>
                     <div class="exp-org">Dept. of EECS, University of Kansas</div>
@@ -1030,15 +907,15 @@
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Jan 2025 &ndash; May 2025</div>
+                    <div class="exp-date">Jan 2025 to May 2025</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
 
-            <div class="exp-card fade-in" onclick="openDrawer('ainstein')">
+            <div class="exp-card fade-in clickable" onclick="openDrawer('ainstein')">
                 <div class="exp-card-left">
                     <div class="exp-role">Software Lead (Intern)</div>
-                    <div class="exp-org">Ainstein LLC, Lawrence, KS</div>
+                    <div class="exp-org">Ainstein LLC</div>
                     <div class="exp-tags">
                         <span class="exp-tag">Automotive MIMO Radar</span>
                         <span class="exp-tag green">CFAR / Beamforming</span>
@@ -1046,40 +923,55 @@
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Jun 2021 &ndash; Aug 2021</div>
+                    <div class="exp-date">Jun 2021 to Aug 2021</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
 
-            <div class="exp-card fade-in" onclick="openDrawer('hardware-lead')">
+            <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('hardware-lead')">
                 <div class="exp-card-left">
                     <div class="exp-role">Radar Hardware Lead &amp; Research Engineer</div>
-                    <div class="exp-org">CReSIS &mdash; NASA Operation IceBridge (Arctic &amp; Antarctic)</div>
+                    <div class="exp-org">CReSIS / NASA Operation IceBridge (Arctic &amp; Antarctic)</div>
                     <div class="exp-tags">
                         <span class="exp-tag">Field Deployments</span>
-                        <span class="exp-tag green">P-3B / DC-8 / Basler BT-67</span>
+                        <span class="exp-tag green">Airborne Platforms</span>
                         <span class="exp-tag navy">EMI/EMC</span>
-                        <span class="exp-tag">Team of the Year Nominee</span>
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Feb 2017 &ndash; Dec 2018</div>
+                    <div class="exp-date">Feb 2017 to Dec 2018</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
 
-            <div class="exp-card fade-in" onclick="openDrawer('ms-gra')">
+            <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('ms-gra')">
                 <div class="exp-card-left">
-                    <div class="exp-role">Radar System Engineer (MS GRA)</div>
-                    <div class="exp-org">CReSIS &mdash; NASA Global Hawk UAV Program</div>
+                    <div class="exp-role">Radar System Engineer</div>
+                    <div class="exp-org">CReSIS / NASA Global Hawk UAV Program</div>
                     <div class="exp-tags">
                         <span class="exp-tag">mm-Wave Filters</span>
                         <span class="exp-tag green">Frequency Multiplier Chain</span>
-                        <span class="exp-tag navy">Altium / HFSS / ADS</span>
+                        <span class="exp-tag navy">Altium / HFSS</span>
                     </div>
                 </div>
                 <div class="exp-card-right">
-                    <div class="exp-date">Aug 2014 &ndash; Jan 2017</div>
+                    <div class="exp-date">Aug 2014 to Jan 2017</div>
+                    <button class="exp-expand-btn">View Details</button>
+                </div>
+            </div>
+
+            <div class="exp-card fade-in clickable" onclick="openDrawer('proj-arl')">
+                <div class="exp-card-left">
+                    <div class="exp-role">Student Researcher</div>
+                    <div class="exp-org">Antenna Research Lab (ARL), RVRJC College of Engineering</div>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Antenna Design</span>
+                        <span class="exp-tag green">V-band Arrays</span>
+                        <span class="exp-tag navy">Beam Steering</span>
+                    </div>
+                </div>
+                <div class="exp-card-right">
+                    <div class="exp-date">Jul 2013 to Apr 2014</div>
                     <button class="exp-expand-btn">View Details</button>
                 </div>
             </div>
@@ -1089,10 +981,7 @@
 </section>
 
 
-<!-- ============================================================
-     SKILLS
-============================================================ -->
-<section id="skills" class="section">
+<section id="skills" class="section section-alt">
     <div class="container">
         <div class="section-heading fade-in">
             <span class="label">Expertise</span>
@@ -1113,7 +1002,6 @@
                     <span class="skill-tag">SAR / InSAR</span>
                     <span class="skill-tag">CFAR</span>
                     <span class="skill-tag">DOA / AOA (MVDR, MUSIC)</span>
-                    <span class="skill-tag">Adaptive Filtering</span>
                 </div>
             </div>
 
@@ -1168,6 +1056,7 @@
                     <span class="skill-tag">LSTM / Skip MLP</span>
                     <span class="skill-tag">Computer Vision (YOLO)</span>
                     <span class="skill-tag">NVIDIA Jetson / JetPack</span>
+                    <span class="skill-tag">Edge AI</span>
                     <span class="skill-tag">Sensor Fusion</span>
                     <span class="skill-tag">Google GenAI SDK / ADK</span>
                 </div>
@@ -1180,7 +1069,6 @@
                     <span class="skill-tag">System Architecture</span>
                     <span class="skill-tag">V&amp;V / Digital Twin</span>
                     <span class="skill-tag">Hardware/Software Co-design</span>
-                    <span class="skill-tag">Edge AI</span>
                     <span class="skill-tag">CONOPS Development</span>
                     <span class="skill-tag">Technical Program Management</span>
                 </div>
@@ -1191,10 +1079,7 @@
 </section>
 
 
-<!-- ============================================================
-     PUBLICATIONS
-============================================================ -->
-<section id="publications" class="section section-alt">
+<section id="publications" class="section">
     <div class="container">
         <div class="section-heading fade-in">
             <span class="label">Research</span>
@@ -1210,7 +1095,7 @@
                 <div class="pub-body">
                     <div class="pub-title">A Unified Radiometric Calibration Procedure for Radar Depth Sounder Data Products</div>
                     <div class="pub-authors">Talasila, H. M., Paden, J.</div>
-                    <div class="pub-venue">International Symposium on Radioglaciology (IGS), Germany &mdash; in preparation</div>
+                    <div class="pub-venue">International Symposium on Radioglaciology (IGS), Germany</div>
                 </div>
                 <span class="pub-badge prep">In Prep</span>
             </div>
@@ -1220,7 +1105,11 @@
                 <div class="pub-body">
                     <div class="pub-title">Natural Target Analysis for the Radiometric Calibration of Radar Depth Sounder Data Products</div>
                     <div class="pub-authors">Talasila, H. M., Paden, J.</div>
-                    <div class="pub-venue">IEEE International Radar Conference (RADAR 2025), Atlanta, GA &mdash; doi: 10.1109/RADAR52380.2025.11031479</div>
+                    <div class="pub-venue">IEEE International Radar Conference (RADAR 2025), Atlanta, GA</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/RADAR52380.2025.11031479" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
                 </div>
                 <span class="pub-badge oral">Oral</span>
             </div>
@@ -1230,7 +1119,11 @@
                 <div class="pub-body">
                     <div class="pub-title">AI-ready Snow Radar Echogram Dataset (SRED) for Climate Change Monitoring</div>
                     <div class="pub-authors">Oluwanisola, I., Talasila, H. M., et al.</div>
-                    <div class="pub-venue">arXiv preprint arXiv:2505.00786 &mdash; doi: 10.48550/arXiv.2505.00786</div>
+                    <div class="pub-venue">arXiv preprint arXiv:2505.00786</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.48550/arXiv.2505.00786" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
                 </div>
                 <span class="pub-badge preprint">Preprint</span>
             </div>
@@ -1240,7 +1133,11 @@
                 <div class="pub-body">
                     <div class="pub-title">Crossover Analysis for the Radiometric Calibration of Radar Depth Sounder Data Products</div>
                     <div class="pub-authors">Talasila, H. M., Paden, J.</div>
-                    <div class="pub-venue">2024 IEEE Radar Conference (RadarConf 2024), Denver, CO &mdash; doi: 10.1109/RadarConf2458775.2024.10549183</div>
+                    <div class="pub-venue">2024 IEEE Radar Conference (RadarConf 2024), Denver, CO</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/RadarConf2458775.2024.10549183" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
                 </div>
                 <span class="pub-badge oral">Oral</span>
             </div>
@@ -1248,19 +1145,13 @@
             <div class="pub-item fade-in">
                 <div class="pub-year">2023</div>
                 <div class="pub-body">
-                    <div class="pub-title">An Age Scale for New Climate Records from Sherman Island, West Antarctica</div>
-                    <div class="pub-authors">Rowell, I. et al. (incl. Talasila, H. M. — SAR processing)</div>
-                    <div class="pub-venue">Climate of the Past, vol. 19, no. 8, pp. 1699&ndash;1714 &mdash; doi: 10.5194/cp-19-1699-2023</div>
-                </div>
-                <span class="pub-badge journal">Journal</span>
-            </div>
-
-            <div class="pub-item fade-in">
-                <div class="pub-year">2023</div>
-                <div class="pub-body">
                     <div class="pub-title">High-Altitude Measurements of Snow Thickness using Ultra-Wideband Microwave Radar</div>
                     <div class="pub-authors">Talasila, H. M. et al.</div>
-                    <div class="pub-venue">IEEE IGARSS 2023, Pasadena, CA &mdash; doi: 10.1109/IGARSS52108.2023.10282897</div>
+                    <div class="pub-venue">IEEE IGARSS 2023, Pasadena, CA</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/IGARSS52108.2023.10282897" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
                 </div>
                 <span class="pub-badge oral">Oral</span>
             </div>
@@ -1271,81 +1162,74 @@
                     <div class="pub-title">First-Pass Design of UWB Microwave and mm-Wave Filters for Multi-Stage Frequency Multiplication</div>
                     <div class="pub-authors">Talasila, H. M., Morales, F. R., Orloff, N., Gu, D., et al.</div>
                     <div class="pub-venue">Microwave Journal, vol. 62, no. 11, Nov. 2019</div>
+                    <div class="pub-links">
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
                 </div>
                 <span class="pub-badge journal">Journal</span>
             </div>
 
         </div>
-
-        <div style="margin-top:1.5rem; text-align:right;">
-            <a href="https://scholar.google.com/citations?user=haramadhav" target="_blank" style="font-size:0.85rem;font-weight:600;color:var(--accent);">
-                All publications on Google Scholar <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i>
-            </a>
-        </div>
     </div>
 </section>
 
 
-<!-- ============================================================
-     PROJECTS
-============================================================ -->
-<section id="projects" class="section">
+<section id="projects" class="section section-alt">
     <div class="container">
         <div class="section-heading fade-in">
-            <span class="label">Current Ventures</span>
-            <h2>Projects</h2>
+            <span class="label">Current &amp; Past</span>
+            <h2>Ventures</h2>
             <div class="divider"></div>
         </div>
 
         <div class="projects-grid">
 
-            <div class="project-card fade-in">
-                <!--
-                    To add a project image:
-                    <div class="proj-image" style="background-image: url('4cthreat.jpg');">
-                    The CSS vignette/translucency is already applied automatically.
-                -->
-                <div class="proj-image">
-                    <div class="proj-image-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="project-card fade-in" onclick="openDrawer('proj-4cthreat')">
+                <div>
+                    <div class="proj-header">
+                        <i class="fas fa-shield-alt proj-icon"></i>
+                        <h4>4cThreat</h4>
+                    </div>
+                    <div class="proj-period">Nov 2025 to Present</div>
+                    <p>Distributed airspace intelligence via sensor fusion on Edge AI platforms. Built for real-time drone tracking.</p>
                 </div>
-                <div class="proj-body">
-                    <h4>4cThreat (Foresee Threat)</h4>
-                    <div class="proj-period">Nov 2025 &ndash; Present</div>
-                    <p>Sensor fusion for airspace intelligence on Edge AI platforms. Architected the YRKM (Yellow Red Kinetic Monitor) distributed detection framework, cloud-native backend for multi-sensor telemetry, and NVIDIA Jetson Orin deployment pipelines for real-time drone detection.</p>
-                </div>
+                <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
             </div>
 
-            <div class="project-card fade-in">
-                <div class="proj-image">
-                    <div class="proj-image-icon"><i class="fas fa-globe"></i></div>
+            <div class="project-card fade-in" onclick="openDrawer('proj-gainterrain')">
+                <div>
+                    <div class="proj-header">
+                        <i class="fas fa-globe proj-icon"></i>
+                        <h4>Gain Terrain</h4>
+                    </div>
+                    <div class="proj-period">Jun 2025 to Present</div>
+                    <p>Signal intelligence project focused on characterizing terrestrial and orbital electromagnetic transmissions.</p>
                 </div>
-                <div class="proj-body">
-                    <h4>Gain Terrain</h4>
-                    <div class="proj-period">Jun 2025 &ndash; Present</div>
-                    <p>Signal intelligence project focused on characterizing terrestrial and orbital electromagnetic transmissions. Applies spectral analysis and geolocation techniques to passive RF collection.</p>
-                </div>
+                <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
             </div>
 
-            <div class="project-card fade-in">
-                <div class="proj-image">
-                    <div class="proj-image-icon"><i class="fas fa-map-marker-alt"></i></div>
-                </div>
-                <div class="proj-body">
-                    <h4>OVERWATCH</h4>
+            <div class="project-card fade-in" onclick="openDrawer('proj-overwatch')">
+                <div>
+                    <div class="proj-header">
+                        <i class="fas fa-map-marker-alt proj-icon"></i>
+                        <h4>OVERWATCH Protocol</h4>
+                    </div>
                     <div class="proj-period">Personal Build</div>
-                    <p>Real-time family location tracking dashboard built on Node.js and Leaflet.js. Features live WebSocket updates, battery telemetry via protobuf decoding, CSV warm-up for historical traces, drag-to-reorder asset cards, and a live ping loop.</p>
+                    <p>Real-time location tracking dashboard built on Node.js featuring battery telemetry, weather layers, asset tracking, emergency preparation, and content aggregation.</p>
                 </div>
+                <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
             </div>
 
-            <div class="project-card fade-in">
-                <div class="proj-image">
-                    <div class="proj-image-icon"><i class="fas fa-ice-cream"></i></div>
+            <div class="project-card fade-in" onclick="openDrawer('proj-madeinrepalle')">
+                <div>
+                    <div class="proj-header">
+                        <i class="fas fa-ice-cream proj-icon"></i>
+                        <h4>Made in Repalle</h4>
+                    </div>
+                    <div class="proj-period">2019 to Present</div>
+                    <p>Digital infrastructure, marketing systems, and supply chain management for a seasonal hybrid fruit farm and business co-founded with my father.</p>
                 </div>
-                <div class="proj-body">
-                    <h4>Made in Repalle</h4>
-                    <div class="proj-period">2019 &ndash; Present</div>
-                    <p>Digital infrastructure, marketing systems, and supply chain management for a seasonal hybrid fruit business. End-to-end from sourcing logistics to online presence.</p>
-                </div>
+                <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
             </div>
 
         </div>
@@ -1353,9 +1237,64 @@
 </section>
 
 
-<!-- ============================================================
-     SERVICE & LEADERSHIP
-============================================================ -->
+<section id="education" class="section">
+    <div class="container">
+        <div class="section-heading fade-in">
+            <span class="label">Academic Background</span>
+            <h2>Education</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="exp-grid">
+            <div class="exp-card fade-in">
+                <div class="exp-card-left">
+                    <div class="exp-role">Ph.D. in Electrical Engineering (Signal &amp; Data Processing)</div>
+                    <div class="exp-org">University of Kansas</div>
+                    <div class="exp-sub">
+                        <strong>Advisor:</strong> Dr. John D. Paden<br>
+                        <strong>Dissertation:</strong> Radiometric Calibration of Radar Depth Sounder Data Products
+                        <div class="pub-links" style="margin-top: 0.5rem;">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Source</a>
+                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-card-right">
+                    <div class="exp-date">May 2025</div>
+                </div>
+            </div>
+
+            <div class="exp-card fade-in">
+                <div class="exp-card-left">
+                    <div class="exp-role">M.S. in Electrical Engineering (Radar Systems &amp; Remote Sensing)</div>
+                    <div class="exp-org">University of Kansas</div>
+                    <div class="exp-sub">
+                        <strong>Advisor:</strong> Dr. John D. Paden<br>
+                        <strong>Thesis:</strong> Modular Frequency Multiplier and Filters for the NASA Global Hawk Snow Radar
+                        <div class="pub-links" style="margin-top: 0.5rem;">
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Source</a>
+                            <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-card-right">
+                    <div class="exp-date">Dec 2016</div>
+                </div>
+            </div>
+
+            <div class="exp-card fade-in">
+                <div class="exp-card-left">
+                    <div class="exp-role">B.Tech in Electronics &amp; Communication Engineering</div>
+                    <div class="exp-org">Acharya Nagarjuna University</div>
+                </div>
+                <div class="exp-card-right">
+                    <div class="exp-date">Apr 2014</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="service" class="section section-alt">
     <div class="container">
         <div class="section-heading fade-in">
@@ -1376,7 +1315,6 @@
                     <li>Elsevier Remote Sensing Applications (RSASE)</li>
                     <li>IEEE IGARSS / EuRAD / EuMC / EuMIC</li>
                     <li>Associate Editor, American Journal of Remote Sensing</li>
-                    <li>Editorial Board, Journal of Electrical and Electronics Research (UK)</li>
                 </ul>
             </div>
 
@@ -1386,11 +1324,10 @@
                     <h4>Governance &amp; Student Leadership</h4>
                 </div>
                 <ul>
-                    <li>University Senator &mdash; International Affairs, Academic Computing</li>
-                    <li>Student Senator &mdash; Graduate constituency, KU</li>
-                    <li>Founder &amp; President &mdash; KU Think Tank Mini</li>
-                    <li>Founder &amp; President &mdash; CReSIS Student Organization</li>
-                    <li>President &mdash; KU Global Partners</li>
+                    <li>University Senator</li>
+                    <li>Student Senator, Graduate constituency, KU</li>
+                    <li>Founder &amp; President, KU Think Tank Mini</li>
+                    <li>President, KU Global Partners</li>
                 </ul>
             </div>
 
@@ -1400,9 +1337,8 @@
                     <h4>Community &amp; Emergency Response</h4>
                 </div>
                 <ul>
-                    <li>Responder (Deployable) &mdash; CERT, Overland Park, KS</li>
-                    <li>Blood Donor Ambassador &mdash; American Red Cross</li>
-                    <li>Blood Donor since 2013 (US and India)</li>
+                    <li>Responder (Deployable), CERT</li>
+                    <li>Blood Donor Ambassador, American Red Cross</li>
                     <li>BeMyEyes Responder (Telugu / English)</li>
                     <li>St. Jude Children's Research Hospital Fundraiser</li>
                 </ul>
@@ -1414,11 +1350,10 @@
                     <h4>Mentorship &amp; Outreach</h4>
                 </div>
                 <ul>
-                    <li>IARPC Early Career Community of Practice (Arctic Mentorship)</li>
+                    <li>IARPC Early Career Community of Practice</li>
                     <li>KU Diversity &amp; Mentoring Training Program</li>
                     <li>Judge, Undergraduate ERIP Conference (CReSIS)</li>
                     <li>APECS POLAREO Database Project Group</li>
-                    <li>KU Undergraduate Research Mentor Award Committee</li>
                 </ul>
             </div>
 
@@ -1427,26 +1362,37 @@
 </section>
 
 
-<!-- ============================================================
-     FOOTER / CONTACT
-============================================================ -->
 <footer id="contact">
     <div class="container">
         <div class="footer-grid">
+            
             <div>
-                <div class="footer-name">Hara Madhav Talasila</div>
-                <p class="footer-tagline">
-                    PhD, Electrical Engineering &mdash; Radar Systems and Signal Processing.<br>
-                    Overland Park, Kansas, USA.<br>
-                    Open to faculty, research scientist, and industry EE/CS positions.
-                </p>
+                <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1rem;">
+                    <div class="portrait-wrapper">
+                        <img src="portrait.jpeg" alt="Hara Madhav Talasila">
+                    </div>
+                    <div>
+                        <div class="footer-links-title" style="margin-bottom:0.75rem;">Contact</div>
+                        <div class="footer-social">
+                            <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                            <a class="footer-social-link" href="https://linkedin.com/in/haramadhav" target="_blank">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                            <a class="footer-social-link" href="https://calendar.google.com" target="_blank">
+                                <i class="fas fa-calendar-alt"></i> Schedule a Meeting
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div>
                 <div class="footer-links-title">Connect</div>
                 <div class="footer-social">
-                    <a class="footer-social-link" href="https://linkedin.com/in/haramadhav" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
+                    <a class="footer-social-link" href="https://scholar.google.com/citations?user=haramadhav" target="_blank">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
                     </a>
                     <a class="footer-social-link" href="https://github.com/haramadhav" target="_blank">
                         <i class="fab fa-github"></i> GitHub
@@ -1454,20 +1400,22 @@
                     <a class="footer-social-link" href="https://gitlab.com/haramadhav" target="_blank">
                         <i class="fab fa-gitlab"></i> GitLab
                     </a>
-                    <a class="footer-social-link" href="https://scholar.google.com/citations?user=haramadhav" target="_blank">
-                        <i class="fas fa-graduation-cap"></i> Google Scholar
-                    </a>
-                    <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
                     <a class="footer-social-link" href="https://g.dev/hara" target="_blank">
                         <i class="fab fa-google"></i> Google Dev
                     </a>
-                    <a class="footer-social-link" href="https://calendar.google.com" target="_blank">
-                        <i class="fas fa-calendar-alt"></i> Schedule a Meeting
-                    </a>
                 </div>
             </div>
+
+            <div>
+                <div class="footer-links-title">Media &amp; Field Operations</div>
+                <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:1rem; line-height:1.5;">
+                    Explore video footage from NASA Operation IceBridge field deployments and recent project articles.
+                </p>
+                <button class="btn-social-media" onclick="openDrawer('social-media')">
+                    <i class="fas fa-play-circle"></i> View Media &amp; Logs
+                </button>
+            </div>
+
         </div>
 
         <div class="footer-bottom">
@@ -1478,9 +1426,6 @@
 </footer>
 
 
-<!-- ============================================================
-     DETAIL DRAWER
-============================================================ -->
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
 
 <div class="drawer" id="mainDrawer">
@@ -1496,9 +1441,6 @@
 </div>
 
 
-<!-- ============================================================
-     JAVASCRIPT
-============================================================ -->
 <script>
     /* ---- Navbar scroll behavior ---- */
     const navbar = document.getElementById('navbar');
@@ -1519,12 +1461,13 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-    /* ---- Experience detail data ---- */
+    /* ---- Experience & Project Detail Data ---- */
     const expData = {
+        /* ----- EXPERIENCES ----- */
         'researcher': {
             role: 'Researcher',
             org: 'Center for Remote Sensing and Integrated Systems (CReSIS)',
-            date: 'June 2025 &ndash; Present &nbsp;&middot;&nbsp; Lawrence, Kansas',
+            date: 'June 2025 to Present',
             sections: [
                 {
                     title: 'Current Work',
@@ -1535,12 +1478,12 @@
                     ]
                 }
             ],
-            tags: ['MATLAB', 'Python', 'HPC', 'Radiometric Calibration', 'Open Polar Radar', 'Greenland']
+            tags: ['MATLAB', 'Python', 'HPC', 'Radiometric Calibration', 'Open Polar Radar', 'Parallel Processing', 'Layer-based Calibration', 'Greenland']
         },
         'phd-gra': {
             role: 'Calibration Software Lead',
-            org: 'CReSIS, University of Kansas &mdash; NSF RISE-2126530 EarthCube / NASA Operation IceBridge',
-            date: 'January 2019 &ndash; May 2025 &nbsp;&middot;&nbsp; Lawrence, Kansas',
+            org: 'CReSIS / NSF EarthCube / NASA Operation IceBridge',
+            date: 'January 2019 to May 2025',
             sections: [
                 {
                     title: 'Calibration & Data Science',
@@ -1572,7 +1515,7 @@
                 {
                     title: 'SAR & International Collaboration',
                     bullets: [
-                        'Reported ~5 cm snow thickness retrieval from ~5,800 m range using high-altitude Stripmap SAR processing over sea ice &mdash; first reported in literature at that range.',
+                        'Reported ~5 cm snow thickness retrieval from ~5,800 m range using high-altitude Stripmap SAR processing over sea ice, first reported in literature at that range.',
                         'Delivered focused SAR data for a low-altitude MCoRDS mission over Sherman Island, West Antarctica, supporting British Antarctic Survey (BAS) climate record research.',
                         'Implemented TDBP, RDA, CSA, and Omega-K SAR algorithms in MATLAB, plus InSAR simulators for DEM generation.'
                     ]
@@ -1585,12 +1528,12 @@
                     ]
                 }
             ],
-            tags: ['MATLAB', 'Python', 'HPC', 'Open Polar Radar', 'NSF EarthCube', 'NASA IceBridge', 'Linear Algebra', 'SAR / InSAR', 'Deep Learning', 'Radiometric Calibration']
+            tags: ['MATLAB', 'Python', 'HPC', 'Open Polar Radar', 'NSF EarthCube', 'NASA IceBridge', 'Linear Algebra', 'Least-Squares Optimization', 'SAR / InSAR', 'Deep Learning', 'Radiometric Calibration', 'MAR Climate Model', 'FullSim']
         },
         'gta': {
             role: 'Graduate Teaching Assistant (Instructor)',
             org: 'Department of Electrical Engineering and Computer Science, University of Kansas',
-            date: 'January 2025 &ndash; May 2025',
+            date: 'January 2025 to May 2025',
             sections: [
                 {
                     title: 'Teaching Responsibilities',
@@ -1605,8 +1548,8 @@
         },
         'ainstein': {
             role: 'Software Lead (Intern)',
-            org: 'Ainstein LLC, Lawrence, KS',
-            date: 'June 2021 &ndash; August 2021',
+            org: 'Ainstein LLC',
+            date: 'June 2021 to August 2021',
             sections: [
                 {
                     title: 'Key Contributions',
@@ -1621,23 +1564,23 @@
         },
         'hardware-lead': {
             role: 'Radar Hardware Lead & Research Engineer',
-            org: 'CReSIS, University of Kansas &mdash; NASA Operation IceBridge',
-            date: 'February 2017 &ndash; December 2018 &nbsp;&middot;&nbsp; Arctic & Antarctic Deployments',
+            org: 'CReSIS / NASA Operation IceBridge',
+            date: 'February 2017 to December 2018',
             sections: [
                 {
                     title: 'Field Deployments',
                     bullets: [
                         'Radar Hardware Lead for three NASA Operation IceBridge airborne deployments across three seasons: 2017 Fall, 2018 Spring, 2018 Fall.',
                         'Deployed in four field campaigns managing and operating airborne radars over Greenland, Canada, Norway, Antarctica, and surrounding seas.',
-                        'Authorized operator of the full CReSIS radar suite: 2&ndash;8 GHz Snow radar, 12&ndash;18 GHz Ku-band, 2&ndash;18 GHz UWB Snow radar, 180&ndash;210 MHz MCoRDS, and 600&ndash;900 MHz Accumulation radar.',
+                        'Authorized operator of the full CReSIS radar suite: 2 to 8 GHz Snow radar, 12 to 18 GHz Ku-band, 2 to 18 GHz UWB Snow radar, 180 to 210 MHz MCoRDS, and 600 to 900 MHz Accumulation radar.',
                         'Field locations spanned Goddard Wallops, Armstrong Flight Research Center, Svalbard (Norway), Pituffik/Thule and Kangerlussuaq (Greenland), Punta Arenas (Chile), and Ushuaia (Argentina).',
-                        '"Team of the Year" nominee at the University of Kansas for handling pre-mission preparation and dual simultaneous Antarctic deployments.'
+                        'Team of the Year nominee at the University of Kansas for handling pre-mission preparation and dual simultaneous Antarctic deployments.'
                     ]
                 },
                 {
                     title: 'Hardware Engineering',
                     bullets: [
-                        'Integrated high-power radar system payloads onto NASA P-3B, Basler BT-67, and DC-8 aircraft.',
+                        'Integrated high-power radar system payloads onto a diverse range of airborne platforms.',
                         'Designed and assembled a quick-switch dual-redundant receiver for the 2018 Spring UWB Snow radar to minimize downtime during mission-critical polar flight windows.',
                         'Engineered high-density multi-tier DC power modules for compact Snow radar on unmanned helicopter, with robust thermal management.',
                         'Characterized beam patterns, VSWR, and reflection parameters of array antenna fairings in an EM Anechoic Chamber.',
@@ -1646,19 +1589,19 @@
                     ]
                 }
             ],
-            tags: ['Airborne Radar', 'Payload Integration', 'EMI/EMC', 'P-3B / DC-8', 'Arctic', 'Antarctic', 'UWB Snow Radar', 'MCoRDS']
+            tags: ['Airborne Radar', 'Payload Integration', 'EMI/EMC', 'Thermal Management', 'P-3B', 'DC-8', 'Basler BT-67', 'Arctic', 'Antarctic', 'UWB Snow Radar', 'MCoRDS', 'Accumulation Radar', 'Anechoic Chamber']
         },
         'ms-gra': {
-            role: 'Radar System Engineer (MS GRA)',
-            org: 'CReSIS &mdash; NASA NNX13AQ30A: Snow Radar for NASA Global Hawk & Ikhana UAVs',
-            date: 'August 2014 &ndash; January 2017',
+            role: 'Radar System Engineer',
+            org: 'CReSIS / NASA Global Hawk UAV Program',
+            date: 'August 2014 to January 2017',
             sections: [
                 {
                     title: 'RF Hardware Design',
                     bullets: [
-                        'Engineered a miniaturized x16 frequency multiplier chain (2&ndash;18 GHz) for the NASA Global Hawk UAV, using drop-in modules to reduce signal reflections and meet strict high-altitude environmental specifications.',
-                        'Designed 9 custom band-pass filters from VHF to V-band: edge-coupled microstrip on 5-mil alumina substrate (20&ndash;28 GHz, 40&ndash;56 GHz, 38 GHz), interdigital cavity filters (5&ndash;7 GHz, 10&ndash;14 GHz), and lumped LC filters (0.1&ndash;1.1 GHz).',
-                        'mm-Wave alumina filters achieved best-in-literature 2 dB worst-case insertion loss and 12&ndash;17 dB return loss over 33% fractional bandwidth, independently validated at NIST-Boulder, Michigan State, and UMass.',
+                        'Engineered a miniaturized x16 frequency multiplier chain (2 to 18 GHz) for the NASA Global Hawk UAV, using drop-in modules to reduce signal reflections and meet strict high-altitude environmental specifications.',
+                        'Designed 9 custom band-pass filters from VHF to V-band: edge-coupled microstrip on 5-mil alumina substrate (20 to 28 GHz, 40 to 56 GHz, 38 GHz), interdigital cavity filters (5 to 7 GHz, 10 to 14 GHz), and lumped LC filters (0.1 to 1.1 GHz).',
+                        'mm-Wave alumina filters achieved best-in-literature 2 dB worst-case insertion loss and 12 to 17 dB return loss over 33% fractional bandwidth, independently validated at NIST-Boulder, Michigan State, and UMass.',
                         'Featured in Microwave Journal (vol. 62, Nov. 2019).'
                     ]
                 },
@@ -1672,7 +1615,109 @@
                     ]
                 }
             ],
-            tags: ['mm-Wave', 'Frequency Multiplier', 'Filter Design', 'Altium Designer', 'Ansys HFSS', 'ADS', 'NASA Global Hawk', 'Microwave Journal']
+            tags: ['mm-Wave', 'Frequency Multiplier', 'Filter Design', 'Interdigital Cavity Filters', 'Alumina Microstrip', 'Altium Designer', 'Ansys HFSS', 'ADS', 'NASA Global Hawk', 'Automated Testing', 'EM Co-simulation']
+        },
+        'proj-arl': {
+            role: 'Student Researcher',
+            org: 'Antenna Research Lab (ARL), RVRJC College of Engineering',
+            date: 'Jul 2013 to Apr 2014',
+            sections: [
+                {
+                    title: 'Role & Research',
+                    bullets: [
+                        'Designed and optimized multiple Patch Antenna arrays in IEEE V-band for inter-satellite communication.',
+                        'Built an electromagnetic model for a Reconfigurable and Beam Steerable Square Loop Antenna tailored for vehicle-to-vehicle (V2V) or vehicle-to-point (V2P) communication.'
+                    ]
+                }
+            ],
+            tags: ['Antenna Design', 'V-band Patch Antenna', 'Beam Steering', 'V2V / V2P', 'Electromagnetic Modeling']
+        },
+
+        /* ----- PROJECTS ----- */
+        'proj-4cthreat': {
+            role: '4cThreat (Foresee Threat)',
+            org: 'Collaborative Venture',
+            date: 'Nov 2025 to Present',
+            sections: [
+                {
+                    title: 'Project Overview',
+                    bullets: [
+                        'Collaboration for sensor-fusion technologies in airspace intelligence using statistical signal processing and AI, deployed on Edge AI platforms.',
+                        'Architected YRKM (Yellow Red Kinetic Monitor) for data from sensor nodes to track threats.',
+                        'Built a cloud-hosted demo to simulate multiple threats and command center view in real-time.',
+                        'Interfacing Electro-Optical video stream to detect objects and relay tracking vectors to backend server.',
+                        'Building traction both online (website, frontend and backend runners) and offline (customer surveys and procedures for Letters of Interest).'
+                    ]
+                }
+            ],
+            tags: ['Sensor Fusion', 'Edge AI', 'NVIDIA Jetson Orin', 'Distributed Systems', 'Python Backend', 'Real-Time Tracking', 'YRKM Framework']
+        },
+        'proj-gainterrain': {
+            role: 'Gain Terrain',
+            org: 'Signal Intelligence Venture',
+            date: 'Jun 2025 to Present',
+            sections: [
+                {
+                    title: 'Project Overview',
+                    bullets: [
+                        'Signal intelligence project for terrestrial and orbital Electromagnetic transmissions.',
+                        'Applies spectral analysis and geolocation techniques to passive RF collection and environment characterization.'
+                    ]
+                }
+            ],
+            tags: ['Signal Intelligence', 'Spectral Analysis', 'Geolocation', 'RF Collection']
+        },
+        'proj-overwatch': {
+            role: 'OVERWATCH Protocol',
+            org: 'Personal Build',
+            date: 'Ongoing',
+            sections: [
+                {
+                    title: 'Project Overview',
+                    bullets: [
+                        'Real-time location tracking dashboard built on Node.js and Leaflet.js.',
+                        'Features live WebSocket updates, battery telemetry via protobuf decoding, and CSV warm-up for historical traces.',
+                        'Integrated advanced data layers including real-time weather, asset tracking, and emergency preparation mapping.',
+                        'Includes drag-to-reorder asset cards, content aggregation layers, and a live ping loop for constant monitoring.'
+                    ]
+                }
+            ],
+            tags: ['Node.js', 'Leaflet.js', 'WebSockets', 'Protobuf', 'Distributed Telemetry', 'Weather Mapping', 'Asset Tracking']
+        },
+        'proj-madeinrepalle': {
+            role: 'Made in Repalle',
+            org: 'Family Farm Venture',
+            date: '2019 to Present',
+            sections: [
+                {
+                    title: 'Project Overview',
+                    bullets: [
+                        'Digital infrastructure, marketing systems, and supply chain management for a seasonal hybrid fruit business co-founded with my father.',
+                        'Built end-to-end solutions spanning from sourcing logistics and on-farm operations to an engaging online presence.'
+                    ]
+                }
+            ],
+            tags: ['Digital Infrastructure', 'Supply Chain Management', 'E-commerce', 'Agri-Business']
+        },
+
+        /* ----- SOCIAL DRAWER ----- */
+        'social-media': {
+            role: 'Media & Field Operations',
+            org: 'Field Highlights & Articles',
+            date: 'Explore footage from NASA OIB and more.',
+            sections: [
+                {
+                    title: 'Featured Posts & Video Logs',
+                    bullets: [
+                        '<em>[Placeholder: Drop your LinkedIn embed iframe here]</em>',
+                        '<br>',
+                        '<em>[Placeholder: Insert YouTube or Drive video link for NASA OIB footage]</em>',
+                        '<br>',
+                        '<em>[Placeholder: Add links or text for your mini blog articles]</em>'
+                    ]
+                }
+            ],
+            tags: ['NASA OIB Footage', 'Antarctica', 'Greenland', 'Vlog', 'Blog Posts']
         }
     };
 
@@ -1690,7 +1735,7 @@
         d.sections.forEach(sec => {
             bodyHTML += `<div class="drawer-section">
                 <div class="drawer-section-title">${sec.title}</div>
-                <ul class="drawer-bullets">
+                <ul class="drawer-bullets" style="list-style:none;">
                     ${sec.bullets.map(b => `<li>${b}</li>`).join('')}
                 </ul>
             </div>`;
@@ -1698,7 +1743,7 @@
 
         if (d.tags && d.tags.length) {
             bodyHTML += `<div class="drawer-section">
-                <div class="drawer-section-title">Technologies &amp; Keywords</div>
+                <div class="drawer-section-title">Tags</div>
                 <div class="drawer-tag-row">
                     ${d.tags.map(t => `<span class="drawer-tag">${t}</span>`).join('')}
                 </div>
