@@ -686,11 +686,12 @@
 
         .portrait-wrapper {
             position: relative;
-            width: 100px; height: 100px;
+            width: 110px; height: 110px;
             border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
-            border: 2px solid rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.12);
+            box-shadow: 0 0 0 3px rgba(196,92,40,0.35), 0 4px 20px rgba(0,0,0,0.4);
         }
         .portrait-wrapper::after {
             content: '';
@@ -808,15 +809,18 @@
         </p>
 
         <div class="hero-cta">
-            <a href="#experience" class="btn-primary">
+            <a href="#contact" class="btn-primary">
                 <i class="fas fa-layer-group" style="font-size:0.85rem;"></i>
-                View Experience
+                Portfolio
             </a>
             <a href="#" target="_blank" class="btn-outline">
                 <i class="fas fa-file-alt" style="font-size:0.85rem;"></i>
-                Download CV
+                 Quick CV (public)
             </a>
         </div>
+        <p style="margin-top:0.85rem; font-size:0.72rem; color:rgba(255,255,255,0.38); letter-spacing:0.03em;">
+            Please email or connect with me for a complete Portfolio - CV, Resume, & Works.
+        </p>
     </div>
 
     <div class="scroll-hint" aria-hidden="true">
@@ -1145,6 +1149,34 @@
             <div class="pub-item fade-in">
                 <div class="pub-year">2023</div>
                 <div class="pub-body">
+                    <div class="pub-title">Snow Radar Echogram Layer Tracker: Deep Neural Networks for Radar Data from NASA Operation IceBridge</div>
+                    <div class="pub-authors">Oluwanisola, I., Talasila, H. M., et al.</div>
+                    <div class="pub-venue">2023 IEEE Radar Conference (RadarConf 2023), San Antonio, TX</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1109/RadarConf2351548.2023.10149734" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+                <span class="pub-badge oral">Oral</span>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-year">2023</div>
+                <div class="pub-body">
+                    <div class="pub-title">An Age Scale for New Climate Records from Sherman Island, West Antarctica</div>
+                    <div class="pub-authors">Rowell, I. et al. &mdash; SAR processing by Talasila, H. M.</div>
+                    <div class="pub-venue">Climate of the Past, vol. 19, no. 8, pp. 1699&ndash;1714</div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.5194/cp-19-1699-2023" target="_blank"><i class="fas fa-external-link-alt"></i> Source / DOI</a>
+                        <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                    </div>
+                </div>
+                <span class="pub-badge journal">Journal</span>
+            </div>
+
+            <div class="pub-item fade-in">
+                <div class="pub-year">2023</div>
+                <div class="pub-body">
                     <div class="pub-title">High-Altitude Measurements of Snow Thickness using Ultra-Wideband Microwave Radar</div>
                     <div class="pub-authors">Talasila, H. M. et al.</div>
                     <div class="pub-venue">IEEE IGARSS 2023, Pasadena, CA</div>
@@ -1163,6 +1195,7 @@
                     <div class="pub-authors">Talasila, H. M., Morales, F. R., Orloff, N., Gu, D., et al.</div>
                     <div class="pub-venue">Microwave Journal, vol. 62, no. 11, Nov. 2019</div>
                     <div class="pub-links">
+                        <a href="https://www.microwavejournal.com/articles/32899" target="_blank"><i class="fas fa-external-link-alt"></i> Source</a>
                         <a href="#" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
                     </div>
                 </div>
@@ -1367,12 +1400,16 @@
         <div class="footer-grid">
             
             <div>
-                <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1rem;">
+                <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem;">
                     <div class="portrait-wrapper">
                         <img src="portrait.jpeg" alt="Hara Madhav Talasila">
                     </div>
                     <div>
-                        <div class="footer-links-title" style="margin-bottom:0.75rem;">Contact</div>
+                        <div style="font-family:var(--font-display); font-size:1.45rem; font-weight:400; color:#FFF; line-height:1.2; margin-bottom:0.25rem;">Hara Madhav<br><em style="font-style:italic; color:rgba(255,255,255,0.65);">Talasila</em></div>
+                        <div style="font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-light); margin-bottom:0.75rem;">PhD &middot; Research Engineer</div>
+                    </div>
+                </div>
+                <div class="footer-links-title" style="margin-bottom:0.75rem;">Contact</div>
                         <div class="footer-social">
                             <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
                                 <i class="fas fa-envelope"></i> Email
@@ -1384,8 +1421,6 @@
                                 <i class="fas fa-calendar-alt"></i> Schedule a Meeting
                             </a>
                         </div>
-                    </div>
-                </div>
             </div>
 
             <div>
@@ -1407,9 +1442,9 @@
             </div>
 
             <div>
-                <div class="footer-links-title">Media &amp; Field Operations</div>
+                <div class="footer-links-title">Media, Logs &amp; Field Operations</div>
                 <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:1rem; line-height:1.5;">
-                    Explore video footage from NASA Operation IceBridge field deployments and recent project articles.
+                    Explore my words and pixels. I will be adding notes, project articles, media, and video footage from NASA Operation IceBridge field deployments.
                 </p>
                 <button class="btn-social-media" onclick="openDrawer('social-media')">
                     <i class="fas fa-play-circle"></i> View Media &amp; Logs
@@ -1441,7 +1476,7 @@
 </div>
 
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     /* ---- Navbar scroll behavior ---- */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
