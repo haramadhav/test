@@ -334,12 +334,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.9rem;
             opacity: 0.5;
         }
         .scroll-hint span { font-size: 0.7rem; letter-spacing: 0.1em; color: #FFF; text-transform: uppercase; }
         .scroll-line {
-            width: 1px;
+            width: 11px;
             height: 36px;
             background: linear-gradient(to bottom, #FFF, transparent);
             animation: scrollDrop 1.8s ease-in-out infinite;
@@ -686,7 +686,7 @@
 
         .portrait-wrapper {
             position: relative;
-            width: 110px; height: 110px;
+            width: 164px; height: 164px;
             border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
@@ -703,14 +703,14 @@
         }
         .portrait-wrapper img {
             width: 100%; height: 100%; object-fit: cover;
-            opacity: 0.6; filter: grayscale(30%) contrast(1.1);
+            opacity: 0.93; filter: grayscale(16%) contrast(1.0);
             transition: opacity 0.3s ease, filter 0.3s ease;
         }
         
         .portrait-wrapper:hover::after { opacity: 0; }
         .portrait-wrapper:hover img { opacity: 1; filter: grayscale(0%) contrast(1); }
 
-        .footer-links-title { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1.1rem; font-weight: 600; }
+        .footer-links-title { font-size: 1.1rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 1.1rem; font-weight: 600; }
 
         .footer-social { display: flex; flex-direction: column; gap: 0.5rem; }
         .footer-social-link {
@@ -818,9 +818,14 @@
                  Quick CV (public)
             </a>
         </div>
-        <p style="margin-top:0.85rem; font-size:0.72rem; color:rgba(255,255,255,0.38); letter-spacing:0.03em;">
-            Please email or connect with me for a complete Portfolio - CV, Resume, & Works.
-        </p>
+        <div style="margin-top: 1.25rem; border-left: 11px solid var(--accent-green); padding-left: 0.85rem;">
+            <p style="font-size:1.2rem; color:#FFFFFF; font-weight:500; letter-spacing:0.03em; margin-bottom: 0.2rem;">
+                Available for immediate start in EE &amp; CS roles (Faculty, Research, Industry).
+            </p>
+            <p style="font-size:1.0rem; color:rgba(255,255,255,0.5); letter-spacing:0.03em; margin-bottom: 9.2rem;">
+                Please email or connect with me for a complete Portfolio - CV, Resume, & Works.
+            </p>
+        </div>
     </div>
 
     <div class="scroll-hint" aria-hidden="true">
@@ -1302,7 +1307,7 @@
                     <div class="exp-role">M.S. in Electrical Engineering (Radar Systems &amp; Remote Sensing)</div>
                     <div class="exp-org">University of Kansas</div>
                     <div class="exp-sub">
-                        <strong>Advisor:</strong> Dr. John D. Paden<br>
+                        <strong>Advisor:</strong> Dr. Fernando Rodriguez-Morales<br>
                         <strong>Thesis:</strong> Modular Frequency Multiplier and Filters for the NASA Global Hawk Snow Radar
                         <div class="pub-links" style="margin-top: 0.5rem;">
                             <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Source</a>
@@ -1409,7 +1414,18 @@
                         <div style="font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-light); margin-bottom:0.75rem;">PhD &middot; Research Engineer</div>
                     </div>
                 </div>
+
+                <div style="display: inline-block; background: rgba(42,127,98,0.15); border: 1px solid rgba(42,127,98,0.4); border-radius: 11px; padding: 0.4rem 0.75rem; margin-bottom: 1.5rem;">
+                    <span style="font-size: 1.0rem; font-weight: 600; letter-spacing: 0.03em; color: #FFF;">
+                        <i class="fas fa-circle" style="color: var(--accent-green); font-size: 0.5rem; vertical-align: middle; margin-right: 6px; margin-bottom: 2px;"></i>
+                        Available for immediate start in EE &amp; CS (Faculty, Research, Industry)
+                    </span>
+                </div>
+
                 <div class="footer-links-title" style="margin-bottom:0.75rem;">Contact</div>
+                        <p style="font-size:0.8rem; color:rgba(255,255,255,0.7); margin-bottom:1rem; line-height:1.5;">
+                            Please ping me for a link to my portfolio - Full CV and past works.
+                        </p>
                         <div class="footer-social">
                             <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
                                 <i class="fas fa-envelope"></i> Email
