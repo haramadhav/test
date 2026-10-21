@@ -7,7 +7,7 @@
     <title>Hara Madhav Talasila, PhD | Radar Systems, Radioglaciology & Signal Processing</title>
 
     <meta name="description"
-        content="Hara Madhav Talasila, PhD. Research Engineer at CReSIS. Radar systems, radiometric calibration, radioglaciology, HPC signal processing, and polar field deployments.">
+        content="Hara Madhav Talasila, PhD. Electrical engineer and radar systems architect. RF hardware, polar radar deployments, radiometric calibration, scientific software, power-generation engineering, and edge AI.">
     <meta name="keywords"
         content="Hara Madhav Talasila, Radar Engineer, Signal Processing, Radioglaciology, CReSIS, NASA IceBridge, Radiometric Calibration, Remote Sensing">
     <meta name="author" content="Hara Madhav Talasila">
@@ -21,14 +21,15 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
     -->
 
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link id="siteFavicon" rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ctext%20y%3D%22.9em%22%20font-size%3D%2290%22%3E%E2%9A%A1%3C%2Ftext%3E%3C%2Fsvg%3E">
+    <meta id="themeColor" name="theme-color" content="#ECECEE">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Outfit:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -37,24 +38,50 @@
            DESIGN SYSTEM
         ========================================== */
         :root {
-            --bg: #F8F5EF;
-            --bg-section: #FFFFFF;
-            --bg-dark: #0F2040;
-            --navy: #0F2040;
-            --navy-mid: #1E3A65;
-            --accent: #C45C28;
-            --accent-light: #E8845A;
-            --accent-green: #2A7F62;
-            --gold: #B8902A;
-            --text: #1A1C2A;
-            --muted: #6B7280;
-            --border: #E2DDD4;
-            --card-shadow: 0 2px 20px rgba(15, 32, 64, 0.08);
-            --card-shadow-hover: 0 8px 40px rgba(15, 32, 64, 0.15);
+            --bg: #E3E4E6;
+            --bg-section: #F2F2F3;
+            --bg-alt: #D6D7DA;
+            --bg-dark: #D6D7DA;
+            --nav-bg: #ECECEE;
+            --navy: #1D1D1F;
+            --navy-mid: #515158;
+            --text: #1D1D1F;
+            --muted: #515158;
+            --ink-rgb: 29, 29, 31;
+            --accent: #171717;
+            --accent-light: #171717;
+            --accent-hover: #141414;
+            --accent-rgb: 23, 23, 23;
+            --button-bg: #171717;
+            --button-hover: #141414;
+            --button-text: #FFFFFF;
+            --accent-green: #00693e;
+            --secondary-rgb: 0, 105, 62;
+            --gold: #7a5300;
+            --gold-rgb: 122, 83, 0;
+            --rose: #b80f2a;
+            --rose-rgb: 184, 15, 42;
+            --border: #B8BAC0;
+            --hero-start: #E3E8ED;
+            --hero-mid: #E3E8ED;
+            --hero-end: #E3E8ED;
+            --hero-ink: #1D3447;
+            --hero-muted: #526270;
+            --hero-border: #CDD6DF;
+            --hero-accent: #171717;
+            --hero-accent-hover: #141414;
+            --hero-button-bg: #171717;
+            --hero-button-hover: #141414;
+            --hero-button-text: #FFFFFF;
+            --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.025);
+            --card-shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.09);
             --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Outfit', system-ui, sans-serif;
-            --nav-h: 68px;
-            --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+            --page-width: 1360px;
+            --page-gutter: clamp(1.25rem, 4.4vw, 4rem);
+            --nav-h: 78px;
+            --transition: 0.2s ease;
+            color-scheme: light;
         }
 
         *,
@@ -109,7 +136,7 @@
         }
 
         a:hover {
-            color: var(--accent-light);
+            color: var(--accent-hover);
         }
 
         /* ==========================================
@@ -126,7 +153,7 @@
         }
 
         .section-alt {
-            background: #FFFFFF;
+            background: var(--bg-alt);
         }
 
         .section-heading {
@@ -140,7 +167,7 @@
 
         .section-heading h2 {
             font-size: clamp(2rem, 4vw, 2.8rem);
-            color: var(--navy);
+            color: var(--text);
         }
 
         .section-heading p {
@@ -169,11 +196,15 @@
             z-index: 1000;
             display: flex;
             align-items: center;
+            background: var(--nav-bg);
+            border-bottom: 1px solid rgba(var(--accent-rgb), 0.2);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             transition: background var(--transition), box-shadow var(--transition);
         }
 
         #navbar.scrolled {
-            background: rgba(248, 245, 239, 0.96);
+            background: var(--nav-bg);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 1px 0 var(--border);
@@ -193,9 +224,9 @@
             font-family: var(--font-display);
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--text);
             letter-spacing: 0.01em;
-            opacity: 0;
+            opacity: 1;
             transition: opacity var(--transition);
         }
 
@@ -221,8 +252,19 @@
         }
 
         .nav-links a:hover {
-            background: rgba(196, 92, 40, 0.08);
+            background: rgba(var(--accent-rgb), 0.08);
             color: var(--accent);
+        }
+
+        #navbar .nav-links a.btn-primary {
+            color: var(--text);
+            background: var(--button-bg);
+        }
+
+        #navbar .nav-links a.btn-primary:hover,
+        #navbar .nav-links a.btn-primary.active {
+            color: var(--text);
+            background: var(--button-hover);
         }
 
         /* ==========================================
@@ -245,21 +287,19 @@
         .hero-bg-fill {
             position: absolute;
             inset: 0;
-            background:
-                linear-gradient(160deg, #0F2040 0%, #1E3A65 50%, #2A5A3C 100%);
+            background: linear-gradient(145deg, var(--hero-start) 0%, var(--hero-mid) 55%, var(--hero-end) 100%);
         }
 
         .vignette-overlay {
             position: absolute;
             inset: 0;
-            background:
-                radial-gradient(ellipse 70% 80% at 65% 50%, transparent 20%, rgba(10, 20, 45, 0.55) 70%, rgba(10, 20, 45, 0.90) 100%);
+            background: radial-gradient(ellipse 75% 85% at 65% 50%, transparent 30%, rgba(46, 42, 48, 0.08) 75%, rgba(46, 42, 48, 0.14) 100%);
         }
 
         .hero-text-mask {
             position: absolute;
             inset: 0;
-            background: linear-gradient(90deg, rgba(10, 20, 45, 0.85) 0%, rgba(10, 20, 45, 0.6) 45%, transparent 75%);
+            background: linear-gradient(90deg, rgba(55, 49, 58, 0.16) 0%, rgba(55, 49, 58, 0.06) 50%, transparent 80%);
         }
 
         .hero-bg::after {
@@ -288,7 +328,7 @@
             font-weight: 500;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--muted);
             margin-bottom: 1.5rem;
         }
 
@@ -303,33 +343,56 @@
             font-family: var(--font-display);
             font-size: clamp(3rem, 7vw, 5.5rem);
             font-weight: 400;
-            color: #FFFFFF;
+            color: var(--text);
             line-height: 1.05;
             letter-spacing: -0.01em;
             margin-bottom: 0.25rem;
         }
 
-        h1.hero-name em {
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.75);
+        h1.hero-name .hero-surname {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text);
         }
 
         .hero-title {
             font-family: var(--font-body);
             font-size: clamp(0.85rem, 1.7vw, 1.1rem);
             font-weight: 400;
-            color: var(--accent-light);
+            color: var(--accent);
             letter-spacing: 0.05em;
             text-transform: uppercase;
             margin-bottom: 1.75rem;
         }
 
         .hero-summary {
-            max-width: 560px;
-            font-size: clamp(0.95rem, 1.6vw, 1.05rem);
-            color: rgba(255, 255, 255, 0.78);
-            line-height: 1.75;
-            margin-bottom: 2.5rem;
+            max-width: 620px;
+            font-size: clamp(1.2rem, 2.25vw, 1.65rem);
+            font-weight: 500;
+            color: var(--text);
+            line-height: 1.45;
+            margin-bottom: 1rem;
+        }
+
+        .hero-summary span {
+            display: block;
+        }
+
+        .hero-summary span:last-child {
+            color: var(--accent);
+        }
+
+        .hero-readmore {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-readmore:hover {
+            color: var(--accent-hover);
         }
 
         .hero-cta {
@@ -343,8 +406,8 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.75rem 1.75rem;
-            background: var(--accent);
-            color: #FFFFFF;
+            background: var(--button-bg);
+            color: var(--text);
             font-family: var(--font-body);
             font-size: 0.88rem;
             font-weight: 600;
@@ -356,8 +419,8 @@
         }
 
         .btn-primary:hover {
-            background: #A84E20;
-            color: #FFF;
+            background: var(--button-hover);
+            color: var(--text);
             transform: translateY(-1px);
         }
 
@@ -367,21 +430,21 @@
             gap: 0.5rem;
             padding: 0.75rem 1.75rem;
             background: transparent;
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text);
             font-family: var(--font-body);
             font-size: 0.88rem;
             font-weight: 500;
             letter-spacing: 0.04em;
-            border: 1px solid rgba(255, 255, 255, 0.35);
+            border: 1px solid var(--border);
             border-radius: 4px;
             cursor: pointer;
             transition: border-color var(--transition), background var(--transition);
         }
 
         .btn-outline:hover {
-            border-color: rgba(255, 255, 255, 0.7);
-            background: rgba(255, 255, 255, 0.07);
-            color: #FFF;
+            border-color: var(--accent);
+            background: rgba(var(--accent-rgb), 0.08);
+            color: var(--text);
         }
 
         .scroll-hint {
@@ -401,14 +464,14 @@
         .scroll-hint span {
             font-size: 0.7rem;
             letter-spacing: 0.1em;
-            color: #FFF;
+            color: var(--muted);
             text-transform: uppercase;
         }
 
         .scroll-line {
             width: 11px;
             height: 36px;
-            background: linear-gradient(to bottom, #FFF, transparent);
+            background: linear-gradient(to bottom, var(--accent), transparent);
             animation: scrollDrop 1.8s ease-in-out infinite;
         }
 
@@ -430,7 +493,7 @@
            STATS STRIP
         ========================================== */
         #stats {
-            background: var(--navy);
+            background: var(--bg-dark);
             padding: 2.5rem 0;
         }
 
@@ -443,7 +506,7 @@
         .stat-item {
             text-align: center;
             padding: 1rem 1rem;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(var(--ink-rgb), 0.1);
         }
 
         .stat-item:last-child {
@@ -454,7 +517,7 @@
             font-family: var(--font-display);
             font-size: 2.6rem;
             font-weight: 600;
-            color: #FFFFFF;
+            color: var(--text);
             line-height: 1;
         }
 
@@ -463,7 +526,7 @@
             font-size: 0.75rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.6);
+            color: var(--muted);
             line-height: 1.4;
         }
 
@@ -472,7 +535,7 @@
             font-size: 0.65rem;
             letter-spacing: 0.02em;
             text-transform: none;
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--muted);
             margin-top: 0.15rem;
         }
 
@@ -485,7 +548,7 @@
         }
 
         .exp-card {
-            background: #FFFFFF;
+            background: var(--bg-section);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.75rem 2rem;
@@ -497,11 +560,29 @@
         }
 
         .exp-card.cresis-card {
-            border-left: 4px solid var(--navy-mid);
+            padding-left: 4.75rem;
+            overflow: hidden;
         }
 
-        .exp-card.cresis-card:hover {
-            border-left-color: var(--accent);
+        .cresis-rail {
+            position: absolute;
+            inset: 0 auto 0 0;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--button-bg);
+            color: var(--text);
+            font-size: 0.66rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            transition: background var(--transition);
+        }
+
+        .exp-card.cresis-card:hover .cresis-rail {
+            background: var(--button-bg);
         }
 
         .exp-card.clickable {
@@ -510,13 +591,13 @@
 
         .exp-card.clickable:hover {
             box-shadow: var(--card-shadow-hover);
-            border-color: rgba(196, 92, 40, 0.3);
+            border-color: rgba(var(--accent-rgb), 0.3);
         }
 
         .exp-role {
             font-size: 1.15rem;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--text);
             font-family: var(--font-body);
         }
 
@@ -544,7 +625,7 @@
         .exp-tag {
             font-size: 0.72rem;
             padding: 0.2rem 0.65rem;
-            background: rgba(196, 92, 40, 0.08);
+            background: rgba(var(--accent-rgb), 0.08);
             color: var(--accent);
             border-radius: 3px;
             font-weight: 500;
@@ -552,12 +633,12 @@
         }
 
         .exp-tag.green {
-            background: rgba(42, 127, 98, 0.08);
+            background: rgba(var(--secondary-rgb), 0.08);
             color: var(--accent-green);
         }
 
         .exp-tag.navy {
-            background: rgba(15, 32, 64, 0.07);
+            background: rgba(24, 22, 26, 0.07);
             color: var(--navy-mid);
         }
 
@@ -589,8 +670,8 @@
         }
 
         .exp-expand-btn:hover {
-            background: var(--accent);
-            color: #FFF;
+            background: var(--button-bg);
+            color: var(--text);
         }
 
         /* ==========================================
@@ -603,7 +684,7 @@
         }
 
         .skill-card {
-            background: #FFF;
+            background: var(--bg-section);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.75rem;
@@ -620,7 +701,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(196, 92, 40, 0.1);
+            background: rgba(var(--accent-rgb), 0.1);
             color: var(--accent);
             border-radius: 8px;
             font-size: 1rem;
@@ -628,7 +709,7 @@
         }
 
         .skill-card h4 {
-            color: var(--navy);
+            color: var(--text);
             font-size: 0.95rem;
             margin-bottom: 0.75rem;
         }
@@ -657,7 +738,7 @@
         }
 
         .pub-item {
-            background: #FFF;
+            background: var(--bg-section);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.25rem 1.5rem;
@@ -685,7 +766,7 @@
         .pub-title {
             font-size: 0.92rem;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--text);
             line-height: 1.5;
         }
 
@@ -728,22 +809,22 @@
         }
 
         .pub-badge.oral {
-            background: rgba(196, 92, 40, 0.12);
+            background: rgba(var(--accent-rgb), 0.12);
             color: var(--accent);
         }
 
         .pub-badge.journal {
-            background: rgba(42, 127, 98, 0.12);
+            background: rgba(var(--secondary-rgb), 0.12);
             color: var(--accent-green);
         }
 
         .pub-badge.preprint {
-            background: rgba(15, 32, 64, 0.08);
+            background: rgba(24, 22, 26, 0.08);
             color: var(--navy-mid);
         }
 
         .pub-badge.prep {
-            background: rgba(184, 144, 42, 0.12);
+            background: rgba(var(--gold-rgb), 0.12);
             color: var(--gold);
         }
 
@@ -757,7 +838,7 @@
         }
 
         .project-card {
-            background: #FFF;
+            background: var(--bg-section);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.25rem;
@@ -770,7 +851,7 @@
 
         .project-card:hover {
             box-shadow: var(--card-shadow-hover);
-            border-color: rgba(196, 92, 40, 0.3);
+            border-color: rgba(var(--accent-rgb), 0.3);
         }
 
         .proj-header {
@@ -786,7 +867,7 @@
         }
 
         .project-card h4 {
-            color: var(--navy);
+            color: var(--text);
             font-size: 0.95rem;
         }
 
@@ -815,7 +896,7 @@
         }
 
         .service-card {
-            background: #FFF;
+            background: var(--bg-section);
             border: 1px solid var(--border);
             border-radius: 6px;
             padding: 1.5rem;
@@ -845,28 +926,28 @@
         }
 
         .service-icon.amber {
-            background: rgba(184, 144, 42, 0.12);
+            background: rgba(var(--gold-rgb), 0.12);
             color: var(--gold);
         }
 
         .service-icon.red {
-            background: rgba(180, 40, 40, 0.1);
-            color: #C43030;
+            background: rgba(var(--rose-rgb), 0.12);
+            color: var(--rose);
         }
 
         .service-icon.green {
-            background: rgba(42, 127, 98, 0.1);
+            background: rgba(var(--secondary-rgb), 0.1);
             color: var(--accent-green);
         }
 
         .service-icon.navy {
-            background: rgba(15, 32, 64, 0.1);
+            background: rgba(24, 22, 26, 0.1);
             color: var(--navy-mid);
         }
 
         .service-card h4 {
             font-size: 0.9rem;
-            color: var(--navy);
+            color: var(--text);
         }
 
         .service-card ul {
@@ -893,7 +974,7 @@
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(15, 32, 64, 0.5);
+            background: rgba(24, 22, 26, 0.5);
             z-index: 2000;
             backdrop-filter: blur(4px);
         }
@@ -908,12 +989,12 @@
             right: 0;
             bottom: 0;
             width: min(600px, 100vw);
-            background: #FEFCF9;
+            background: var(--bg-section);
             z-index: 2001;
             overflow-y: auto;
             transform: translateX(100%);
             transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: -10px 0 60px rgba(15, 32, 64, 0.2);
+            box-shadow: -10px 0 60px rgba(24, 22, 26, 0.2);
         }
 
         .drawer.open {
@@ -923,7 +1004,7 @@
         .drawer-header {
             position: sticky;
             top: 0;
-            background: #FEFCF9;
+            background: var(--bg-section);
             border-bottom: 1px solid var(--border);
             padding: 1.25rem 1.75rem;
             display: flex;
@@ -949,9 +1030,9 @@
         }
 
         .drawer-close:hover {
-            background: var(--accent);
-            color: #FFF;
-            border-color: var(--accent);
+            background: var(--button-bg);
+            color: var(--text);
+            border-color: var(--button-bg);
         }
 
         .drawer-body {
@@ -961,7 +1042,7 @@
         .drawer-role {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--navy);
+            color: var(--text);
             font-family: var(--font-body);
         }
 
@@ -1041,8 +1122,8 @@
            FOOTER / PORTRAIT
         ========================================== */
         footer {
-            background: var(--navy);
-            color: rgba(255, 255, 255, 0.8);
+            background: var(--bg-dark);
+            color: var(--muted);
             padding: 4rem 0 2.5rem;
         }
 
@@ -1060,15 +1141,15 @@
             border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
-            border: 2px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 0 0 3px rgba(196, 92, 40, 0.35), 0 4px 20px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(var(--ink-rgb), 0.12);
+            box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.35), 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .portrait-wrapper::after {
             content: '';
             position: absolute;
             inset: 0;
-            box-shadow: inset 0 0 20px rgba(15, 32, 64, 0.95);
+            box-shadow: inset 0 0 20px rgba(24, 22, 26, 0.95);
             transition: opacity 0.3s ease;
             border-radius: 50%;
             pointer-events: none;
@@ -1111,14 +1192,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: rgba(255, 255, 255, 0.75);
+            color: var(--muted);
             font-size: 0.85rem;
             font-weight: 500;
             transition: color var(--transition);
         }
 
         .footer-social-link:hover {
-            color: #FFF;
+            color: var(--text);
         }
 
         .footer-social-link i {
@@ -1134,10 +1215,10 @@
             justify-content: center;
             gap: 0.5rem;
             padding: 0.8rem 1.5rem;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(var(--ink-rgb), 0.08);
+            border: 1px solid rgba(var(--ink-rgb), 0.2);
             border-radius: 4px;
-            color: #FFF;
+            color: var(--text);
             font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
@@ -1146,12 +1227,12 @@
         }
 
         .btn-social-media:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(var(--ink-rgb), 0.15);
+            border-color: var(--muted);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(var(--ink-rgb), 0.1);
             padding-top: 1.5rem;
             display: flex;
             justify-content: space-between;
@@ -1162,16 +1243,16 @@
 
         .footer-bottom p {
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.35);
+            color: var(--muted);
         }
 
         .footer-bottom a {
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--muted);
         }
 
         .footer-bottom a:hover {
-            color: rgba(255, 255, 255, 0.75);
+            color: var(--text);
         }
 
         /* ==========================================
@@ -1187,6 +1268,29 @@
             opacity: 1;
             transform: none;
         }
+
+        /* ==========================================
+           PROFILE & MEASUREMENT CHAIN
+        ========================================== */
+        .summary-copy {
+            max-width: 920px;
+        }
+
+        .summary-copy p {
+            color: var(--text);
+            font-size: 1.04rem;
+            line-height: 1.85;
+            margin-bottom: 1.1rem;
+        }
+
+
+
+
+
+
+
+
+
 
         /* ==========================================
            RESPONSIVE
@@ -1205,8 +1309,9 @@
             }
 
             .hero-summary {
-                font-size: 0.92rem;
+                font-size: 1.25rem;
             }
+
 
             .section {
                 padding: 3.5rem 0;
@@ -1220,6 +1325,15 @@
 
             .exp-card {
                 grid-template-columns: 1fr;
+            }
+
+            .exp-card.cresis-card {
+                padding-left: 3.5rem;
+            }
+
+            .cresis-rail {
+                width: 1.75rem;
+                font-size: 0.6rem;
             }
         }
 
@@ -1243,7 +1357,7 @@
             display: block;
             width: 22px;
             height: 2px;
-            background: var(--navy);
+            background: var(--text);
             border-radius: 2px;
             transition: transform 0.25s ease, opacity 0.25s ease;
         }
@@ -1260,7 +1374,7 @@
             position: fixed;
             inset: 0;
             top: var(--nav-h);
-            background: rgba(248, 245, 239, 0.98);
+            background: var(--nav-bg);
             backdrop-filter: blur(16px);
             z-index: 999;
             display: flex;
@@ -1303,7 +1417,7 @@
         }
 
         .mobile-menu ul li a:hover {
-            background: rgba(196, 92, 40, 0.08);
+            background: rgba(var(--accent-rgb), 0.08);
             color: var(--accent);
         }
 
@@ -1312,7 +1426,7 @@
         ========================================== */
         .nav-links a.active {
             color: var(--accent);
-            background: rgba(196, 92, 40, 0.08);
+            background: rgba(var(--accent-rgb), 0.08);
         }
 
         /* ==========================================
@@ -1325,15 +1439,15 @@
             width: 42px;
             height: 42px;
             border-radius: 50%;
-            background: var(--navy);
-            color: #FFF;
+            background: var(--bg-dark);
+            color: var(--text);
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
-            box-shadow: 0 4px 16px rgba(15, 32, 64, 0.25);
+            box-shadow: 0 4px 16px rgba(24, 22, 26, 0.25);
             opacity: 0;
             transform: translateY(12px);
             transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s;
@@ -1346,7 +1460,7 @@
         }
 
         #backToTop:hover {
-            background: var(--accent);
+            background: var(--button-bg);
         }
 
         /* ==========================================
@@ -1355,8 +1469,8 @@
         .hero-availability {
             margin-top: 1.25rem;
             padding: 1rem 1.25rem;
-            background: rgba(42, 127, 98, 0.15);
-            border: 1px solid rgba(42, 127, 98, 0.35);
+            background: rgba(var(--secondary-rgb), 0.15);
+            border: 1px solid rgba(var(--secondary-rgb), 0.35);
             border-left: 4px solid var(--accent-green);
             border-radius: 6px;
             margin-bottom: 0.5rem;
@@ -1386,7 +1500,7 @@
 
         .hero-availability p {
             font-size: 0.92rem;
-            color: rgba(255, 255, 255, 0.88);
+            color: var(--text);
             margin-bottom: 0.9rem;
             font-weight: 500;
         }
@@ -1402,9 +1516,157 @@
             display: block;
             margin-top: 0.75rem;
             font-size: 0.78rem;
-            color: rgba(255, 255, 255, 0.45);
+            color: var(--muted);
             font-style: italic;
         }
+
+        html { scroll-padding-top: calc(var(--nav-h) + 1.25rem); }
+        body { font-size: 1.05rem; font-weight: 400; overflow-x: clip; -webkit-font-smoothing: antialiased; }
+        h2, h3 { font-weight: 500; letter-spacing: -0.015em; }
+        .container { max-width: calc(var(--page-width) + 2 * var(--page-gutter)); padding-inline: var(--page-gutter); }
+        #navbar, #navbar.scrolled {
+            position: sticky; top: 0; height: var(--nav-h); z-index: 1000;
+            background: var(--nav-bg); border-bottom: 1px solid var(--border);
+            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.035);
+            backdrop-filter: none; -webkit-backdrop-filter: none;
+        }
+        .nav-inner {
+            max-width: calc(var(--page-width) + 2 * var(--page-gutter));
+            padding-inline: var(--page-gutter); gap: 1.5rem; justify-content: space-between;
+        }
+        .nav-name { display: block; font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; letter-spacing: 0; white-space: nowrap; }
+        .nav-links { margin-left: auto; gap: 0.15rem; }
+        .nav-links a { font-size: 0.9rem; font-weight: 400; letter-spacing: 0.01em; padding: 0.5rem 0.65rem; border-radius: 0; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); background: transparent; box-shadow: inset 0 -1px 0 var(--accent); }
+        #hero { display: block; min-height: 0; }
+        .hero-bg-fill { background: var(--hero-start); }
+        .hero-bg::after { display: none; }
+        .hero-content {
+            --text: var(--hero-ink); --muted: var(--hero-muted);
+            --accent: var(--hero-accent); --accent-light: var(--hero-accent);
+            --accent-hover: var(--hero-accent-hover); --accent-green: var(--hero-muted);
+            --button-bg: var(--hero-button-bg); --button-hover: var(--hero-button-hover);
+            --button-text: var(--hero-button-text); --border: var(--hero-border);
+            width: 100%; max-width: calc(var(--page-width) + 2 * var(--page-gutter));
+            padding: clamp(3.5rem, 6vw, 5.5rem) var(--page-gutter) 2.75rem;
+            display: grid; grid-template-columns: minmax(18rem, 1fr) minmax(0, 2fr);
+            column-gap: clamp(1.5rem, 3vw, 3rem); row-gap: 3.5rem; align-items: start;
+        }
+        .hero-identity, .hero-overview { min-width: 0; }
+        .hero-eyebrow { margin-bottom: 1.25rem; color: var(--hero-muted); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.07em; }
+        .hero-eyebrow span { width: 22px; background: var(--hero-accent); }
+        h1.hero-name { font-family: var(--font-display); font-size: clamp(2.9rem, 4.5vw, 4.4rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.03; margin: 0 0 1.25rem; }
+        h1.hero-name .hero-surname { font-family: inherit; font-weight: 400; font-style: normal; color: var(--hero-ink); }
+        .hero-title { color: var(--hero-muted); font-size: 1rem; font-weight: 300; letter-spacing: 0; text-transform: none; margin: 0; line-height: 1.65; }
+        .hero-cta { gap: 1.4rem; align-items: center; margin-top: 1.75rem; }
+        .btn-primary, .btn-outline { font-weight: 400; letter-spacing: 0; border-radius: 3px; }
+        .btn-primary, .btn-primary:hover, .exp-expand-btn:hover, .drawer-close:hover, .cresis-rail { color: var(--button-text); }
+        .cresis-rail { background: var(--button-bg); }
+        .exp-card.cresis-card:hover .cresis-rail { background: var(--button-hover); }
+        .hero-cta .btn-primary { padding: 0.7rem 1.2rem; font-size: 0.94rem; }
+        .hero-text-link { font-size: 0.94rem; font-weight: 400; color: var(--hero-ink); }
+        .hero-text-link span { margin-left: 0.5rem; color: var(--hero-accent); }
+        .hero-overview { border-left: 1px solid var(--hero-border); padding: 0.2rem 0 0.4rem clamp(1rem, 2vw, 2rem); margin-top: 0.15rem; }
+        .hero-summary { max-width: none; font-family: var(--font-body); font-size: clamp(1.65rem, 2.7vw, 2.65rem); font-weight: 300; line-height: 1.5; letter-spacing: -0.015em; margin-bottom: 1.35rem; }
+        .hero-summary span:last-child { color: var(--hero-accent); }
+        .hero-description { max-width: 46rem; color: var(--hero-muted); font-size: 1.1rem; line-height: 1.8; font-weight: 300; margin-bottom: 1.15rem; }
+        .hero-readmore { font-size: 0.94rem; font-weight: 400; margin: 0; }
+        .hero-resources { grid-column: 1 / -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; border-top: 1px solid var(--hero-border); padding-top: 1.5rem; }
+        .hero-availability { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; min-width: 0; }
+        .hero-availability-label { justify-content: center; font-size: 0.76rem; font-weight: 400; letter-spacing: 0.06em; color: var(--hero-muted); margin-bottom: 0.35rem; }
+        .hero-availability-label i { color: var(--hero-accent); font-size: 0.4rem; }
+        .hero-availability p { margin: 0; color: var(--hero-muted); font-size: 0.94rem; font-weight: 300; }
+        .hero-doc-links { flex-shrink: 0; justify-content: center; gap: 0.55rem; }
+        .hero-doc-links .btn-outline { padding: 0.55rem 0.9rem; font-size: 0.88rem; border-color: var(--hero-border); color: var(--hero-ink); }
+        .hero-doc-links .btn-outline:hover { background: rgba(var(--accent-rgb), 0.05); border-color: var(--hero-accent); }
+        #stats { background: var(--bg-section); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.3rem 0; }
+        .stat-num { font-family: var(--font-display); font-size: 2.25rem; font-weight: 400; }
+        .stat-label { font-weight: 400; font-size: 0.72rem; letter-spacing: 0.05em; }
+        .stat-subtext { font-size: 0.7rem; }
+        .summary-copy { max-width: 68rem; }
+        .summary-copy p { font-size: 1.12rem; line-height: 1.85; }
+        .skills-grid, .projects-grid, .service-grid { display: grid; gap: 1.5rem; grid-auto-rows: 1fr; margin-inline: auto; align-items: stretch; }
+        .skills-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 1200px; }
+        .projects-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); max-width: 1200px; }
+        .projects-grid > .project-card { grid-column: span 2; }
+        .projects-grid > .project-card:nth-child(4) { grid-column: 2 / span 2; }
+        .projects-grid > .project-card:nth-child(5) { grid-column: 4 / span 2; }
+        .service-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 1360px; gap: 1rem; grid-auto-rows: auto; }
+        .skill-card, .project-card, .service-card { min-width: 0; height: 100%; padding: 1.75rem; }
+        .skill-card, .project-card { text-align: center; }
+        .skill-icon { margin-inline: auto; }
+        .skill-card h4, .project-card h4, .service-card h4 { font-size: 1.08rem; line-height: 1.4; font-weight: 500; }
+        .skill-tags { justify-content: center; gap: 0.5rem; }
+        .skill-tag { font-size: 0.83rem; line-height: 1.4; padding: 0.35rem 0.7rem; }
+        .proj-header { justify-content: center; }
+        .proj-period { font-size: 0.84rem; margin-top: 0.35rem; }
+        .project-card p { font-size: 0.98rem; line-height: 1.7; }
+        .exp-expand-btn { font-size: 0.86rem; padding: 0.4rem 0.9rem; }
+        .service-card { padding: 1.05rem; }
+        .service-card h4 { font-size: 0.95rem; line-height: 1.4; }
+        .service-card-header { justify-content: flex-start; flex-direction: row; text-align: left; gap: 0.65rem; min-height: 2.5rem; margin-bottom: 0.55rem; }
+        .service-card .service-icon { width: 30px; height: 30px; font-size: 0.8rem; color: var(--text); background: var(--bg-alt); }
+        .service-card ul li { font-size: 0.86rem; line-height: 1.5; padding: 0.22rem 0; }
+        .pub-title { font-size: 1.08rem; line-height: 1.5; }
+        .pub-authors, .pub-venue { font-size: 0.91rem; }
+        .pub-badge { font-size: 0.7rem; }
+        .drawer-bullets li { font-size: 1rem; line-height: 1.8; }
+        #backToTop, #backToTop:hover { color: var(--button-text); background: var(--button-bg); }
+        footer { background: #232629; --text: #F2F2F3; --muted: #C0C3C7; --accent: #D7DADF; --accent-light: #D7DADF; --accent-hover: #FFFFFF; --accent-green: #C0C3C7; --secondary-rgb: 192,195,199; --ink-rgb: 242,242,243; }
+        .footer-links-title { font-family: var(--font-body); font-size: 0.9rem; font-weight: 400; letter-spacing: 0.06em; }
+        :where(a, button):focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+        @media (max-width: 1150px) { .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 900px; } }
+        @media (max-width: 1100px) {
+            .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .projects-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+            .projects-grid > .project-card:nth-child(4) { grid-column: auto / span 2; }
+            .projects-grid > .project-card:nth-child(5) { grid-column: 2 / span 2; }
+        }
+        @media (max-width: 1050px) { .nav-links { display: none; } .nav-hamburger { display: flex; flex-shrink: 0; } }
+        @media (max-width: 899px) {
+            .hero-content { grid-template-columns: minmax(0, 1fr); row-gap: 2.5rem; padding-top: 3rem; }
+            .hero-overview { border-left: 0; border-top: 1px solid var(--hero-border); padding: 1.75rem 0 0; margin: 0; }
+            .hero-summary { font-size: clamp(1.5rem, 4vw, 1.9rem); }
+            .hero-description { max-width: 46rem; }
+            .hero-resources { flex-direction: column; align-items: center; gap: 1.25rem; }
+            .hero-doc-links { flex-shrink: 1; }
+            h1.hero-name { font-size: clamp(2.9rem, 7vw, 3.75rem); }
+        }
+        @media (max-width: 680px) {
+            .skills-grid, .projects-grid, .service-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; gap: 1.25rem; }
+            .projects-grid > .project-card, .projects-grid > .project-card:nth-child(4), .projects-grid > .project-card:nth-child(5) { grid-column: 1; }
+            .hero-doc-links { flex-wrap: wrap; }
+        }
+        @media (max-width: 600px) { :root { --nav-h: 66px; } .nav-name { font-size: 1.2rem; } .hero-eyebrow { font-size: 0.75rem; } .hero-title { font-size: 0.95rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+        .hero-availability-label .availability-dot, footer .availability-dot {
+            display: inline-block;
+            animation: availability-breathe 2.8s ease-in-out infinite;
+            transform-origin: center;
+        }
+        @keyframes availability-breathe {
+            0%, 100% { opacity: 0.45; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.15); }
+        }
+        .hero-doc-links .btn-outline:disabled,
+        .hero-doc-links .btn-outline:disabled:hover {
+            opacity: 1; cursor: default; background: transparent;
+            color: var(--hero-ink); border-color: var(--hero-border);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-availability-label .availability-dot, footer .availability-dot { animation: none !important; opacity: 1; transform: none; }
+        }
+
+        .footer-grid { grid-template-columns: minmax(320px, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 2rem; }
+        .footer-grid > div { min-width: 0; }
+        .footer-profile-header { flex-wrap: wrap; }
+        .footer-social-link { overflow-wrap: anywhere; }
+        #backToTop { visibility: hidden; pointer-events: none; }
+        #backToTop.visible { visibility: visible; pointer-events: auto; }
+        @media (max-width: 1100px) { .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 760px) { .footer-grid { grid-template-columns: minmax(0, 1fr); } }
+
     </style>
 </head>
 
@@ -1420,9 +1682,9 @@
                 <li><a href="#projects">Ventures</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#service">Service</a></li>
-                <li><a href="#contact" class="btn-primary" style="padding:0.4rem 1rem;">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
+            <button class="nav-hamburger" id="navHamburger" aria-controls="mobileMenu" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -1443,66 +1705,49 @@
 
 
     <header id="hero">
-        <div class="hero-bg">
-            <div class="hero-bg-fill"></div>
-            <div class="vignette-overlay"></div>
-            <div class="hero-text-mask"></div>
-        </div>
-
+        <div class="hero-bg" aria-hidden="true"><div class="hero-bg-fill"></div></div>
         <div class="hero-content">
-            <div class="hero-eyebrow">
-                <span></span>
-                PhD Electrical Engineering, University of Kansas
-            </div>
-
-            <h1 class="hero-name">Hara Madhav<br><em>Talasila</em></h1>
-
-            <p class="hero-title">
-                Research Engineer &nbsp;&middot;&nbsp; Radar Systems &nbsp;&middot;&nbsp; Radioglaciology
-                &nbsp;&middot;&nbsp; Signal Processing
-            </p>
-
-            <p class="hero-summary">
-                Twelve years at the intersection of RF hardware and scalable software, designing radar instruments for
-                NASA airborne campaigns from the Arctic to Antarctica, building petabyte-scale signal processing
-                pipelines, and solving a 30-year open problem in radiometric calibration of ice-sounding radar data.
-            </p>
-
-            <div class="hero-cta">
-                <a href="#contact" class="btn-primary">
-                    <i class="fas fa-layer-group" style="font-size:0.85rem;"></i>
-                    Contact for full Portfolio
-                </a>
-
-            </div>
-            <div class="hero-availability">
-                <div class="hero-availability-label">
-                    <i class="fas fa-circle"></i> Available for immediate start
+            <div class="hero-identity">
+                <div class="hero-eyebrow"><span></span>Engineer &middot; Researcher &middot; Founder</div>
+                <h1 class="hero-name">Hara Madhav<br><span class="hero-surname">Talasila</span></h1>
+                <p class="hero-title">PhD in Electrical Engineering<br>University of Kansas</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Get in touch <span aria-hidden="true">&rarr;</span></a>
+                    <a href="#experience" class="hero-text-link">Explore my work <span aria-hidden="true">&rarr;</span></a>
                 </div>
-                <p>Open to Faculty, Research, and Industry roles in EE &amp; CS.</p>
+            </div>
+            <div class="hero-overview">
+                <p class="hero-summary">
+                    <span>Set the direction.</span>
+                    <span>Build what matters.</span>
+                    <span>Lead it through.</span>
+                </p>
+                <p class="hero-description">I connect research, engineering, and execution&mdash;from polar fieldwork and scientific software to power plants and new ventures.</p>
+                <a class="hero-readmore" href="#about">Read the full story <span aria-hidden="true">&darr;</span></a>
+            </div>
+            <div class="hero-resources">
+                <div class="hero-availability">
+                    <div class="hero-availability-label"><i class="fas fa-circle availability-dot" aria-hidden="true"></i> Available for immediate start</div>
+                    <p>Open to faculty, research, and industry roles in EE &amp; CS.</p>
+                </div>
+                <!-- CV/resume buttons: add links and uncomment this block to enable.
                 <div class="hero-doc-links">
-                    <a href="https://drive.google.com/file/d/1LvDVPFkDKNn5Hwlsen4hb9oW2UHKY0HV/view?usp=drive_link"
-                        target="_blank" class="btn-outline">
+                    <a href=""
+                        target="_blank" class="btn-outline" rel="noopener noreferrer">
                         <i class="fas fa-file-alt"></i> CV
                     </a>
-                    <a href="https://drive.google.com/file/d/1uDEEmMEkB8nFm6epJMktDjN25lW2ndqz/view?usp=drive_link"
-                        target="_blank" class="btn-outline">
+                    <a href=""
+                        target="_blank" class="btn-outline" rel="noopener noreferrer">
                         <i class="fas fa-file-alt"></i> Resume / EE
                     </a>
-                    <a href="https://drive.google.com/file/d/1iuoNIXSSJvZUgja7QlHT6gwQ06LSBkM_/view?usp=drive_link"
-                        target="_blank" class="btn-outline">
+                    <a href=""
+                        target="_blank" class="btn-outline" rel="noopener noreferrer">
                         <i class="fas fa-file-alt"></i> Resume / CS
                     </a>
                 </div>
-                <small>I'd appreciate any leads or referrals you're happy to share.</small>
-            </div>
-            <div class="scroll-hint" aria-hidden="true">
-                <span>Scroll</span>
-                <div class="scroll-line"></div>
+                -->
             </div>
         </div>
-
-        
     </header>
 
 
@@ -1529,8 +1774,30 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-num">15+</div>
-                    <div class="stat-label">Publications<span class="stat-subtext">(2 in prep)</span></div>
+                    <div class="stat-label">Publications &amp; Works<span class="stat-subtext">(Full list in CV)</span></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="section-heading fade-in">
+                <span class="label">Engineering perspective</span>
+                <h2 id="about-heading">The full measurement chain.</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="summary-copy fade-in">
+                <p>I work across the full sensor lifecycle: RF and millimeter-wave hardware, airborne radar integration,
+                    signal processing, calibration, and scientific software. My work includes leading radar hardware for
+                    three NASA Operation IceBridge deployments in the Arctic and Antarctic, engineering microwave
+                    hardware for the Global Hawk snow radar, and building petabyte-scale processing and simulation tools
+                    for Open Polar Radar.</p>
+                <p>My doctoral research resolved a 30-year radiometric calibration challenge for Operation IceBridge
+                    data. Today I bring that systems perspective to power-plant estimating and engineering automation at
+                    Kiewit, develop sensor fusion and edge AI through 4cThreat, and teach radar from first principles
+                    through Radar School.</p>
             </div>
         </div>
     </section>
@@ -1547,7 +1814,24 @@
 
             <div class="exp-grid">
 
+                <div class="exp-card fade-in clickable" onclick="openDrawer('kiewit')">
+                    <div class="exp-card-left">
+                        <div class="exp-role">Electrical Engineer</div>
+                        <div class="exp-org">Kiewit, Lenexa, Kansas</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">Combined-Cycle Power</span>
+                            <span class="exp-tag green">Estimating / Bidding</span>
+                            <span class="exp-tag navy">Engineering Automation</span>
+                        </div>
+                    </div>
+                    <div class="exp-card-right">
+                        <div class="exp-date">Jul 2026 to Present</div>
+                        <button class="exp-expand-btn">View Details</button>
+                    </div>
+                </div>
+
                 <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('researcher')">
+                    <span class="cresis-rail" aria-hidden="true">CReSIS</span>
                     <div class="exp-card-left">
                         <div class="exp-role">Researcher</div>
                         <div class="exp-org">Center for Remote Sensing and Integrated Systems (CReSIS)</div>
@@ -1558,12 +1842,13 @@
                         </div>
                     </div>
                     <div class="exp-card-right">
-                        <div class="exp-date">Jun 2025 to Present</div>
+                        <div class="exp-date">Jun 2025 to May 2026</div>
                         <button class="exp-expand-btn">View Details</button>
                     </div>
                 </div>
 
                 <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('phd-gra')">
+                    <span class="cresis-rail" aria-hidden="true">CReSIS</span>
                     <div class="exp-card-left">
                         <div class="exp-role">Calibration Software Lead</div>
                         <div class="exp-org">CReSIS / NSF EarthCube / Open Polar Radar / NASA Operation IceBridge</div>
@@ -1613,6 +1898,7 @@
                 </div>
 
                 <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('hardware-lead')">
+                    <span class="cresis-rail" aria-hidden="true">CReSIS</span>
                     <div class="exp-card-left">
                         <div class="exp-role">Radar Hardware Lead &amp; Research Engineer</div>
                         <div class="exp-org">CReSIS / NASA Operation IceBridge (Arctic &amp; Antarctic)</div>
@@ -1629,6 +1915,7 @@
                 </div>
 
                 <div class="exp-card fade-in clickable cresis-card" onclick="openDrawer('ms-gra')">
+                    <span class="cresis-rail" aria-hidden="true">CReSIS</span>
                     <div class="exp-card-left">
                         <div class="exp-role">Radar System Engineer</div>
                         <div class="exp-org">CReSIS / NASA Global Hawk UAV Program</div>
@@ -1687,6 +1974,7 @@
                         <span class="skill-tag">Beamforming</span>
                         <span class="skill-tag">MIMO Processing</span>
                         <span class="skill-tag">CFAR</span>
+                        <span class="skill-tag">Monte Carlo Simulation</span>
                         <span class="skill-tag">DOA / AOA (MVDR, MUSIC)</span>
                     </div>
                 </div>
@@ -1746,7 +2034,8 @@
                         <span class="skill-tag">NVIDIA Jetson / JetPack</span>
                         <span class="skill-tag">Edge AI</span>
                         <span class="skill-tag">Sensor Fusion</span>
-                        <span class="skill-tag">DSP for AI</span>
+                        <span class="skill-tag">Extended Kalman Filtering</span>
+                        <span class="skill-tag">OpenCV</span>
                         <span class="skill-tag">Google GenAI SDK / ADK</span>
                     </div>
                 </div>
@@ -1788,14 +2077,15 @@
                         <div class="pub-title">A Unified Radiometric Calibration Procedure for Radar Depth Sounder Data
                             Products</div>
                         <div class="pub-authors">Talasila, H. M., Paden, J.</div>
-                        <div class="pub-venue">International Symposium on Radioglaciology (IGS), Germany</div>
+                        <div class="pub-venue">International Symposium on Radioglaciology (IGS), Germany &middot; September 2026</div>
                         <div class="pub-links">
                             <a href="https://drive.google.com/file/d/1XSweShYl9tmuxJcZ68UGNwVdMf0kEkxp/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
-                    <span class="pub-badge prep">Submitted</span>
+                    <span class="pub-badge oral">Oral</span>
                 </div>
+
 
                 <div class="pub-item fade-in">
                     <div class="pub-year">2025</div>
@@ -1805,10 +2095,10 @@
                         <div class="pub-authors">Talasila, H. M., Paden, J.</div>
                         <div class="pub-venue">IEEE International Radar Conference (RADAR 2025), Atlanta, GA</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1109/RADAR52380.2025.11031479" target="_blank"><i
+                            <a href="https://doi.org/10.1109/RADAR52380.2025.11031479" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/1uK6I8E3vVNRj47XVGqicazZ50LiLbhQ8/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge oral">Oral</span>
@@ -1822,10 +2112,10 @@
                         <div class="pub-authors">Oluwanisola, I., Talasila, H. M., et al.</div>
                         <div class="pub-venue">arXiv preprint arXiv:2505.00786</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.48550/arXiv.2505.00786" target="_blank"><i
+                            <a href="https://doi.org/10.48550/arXiv.2505.00786" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/1cLmoEClFldobVL4ygtSPdcyzHv1C6a_l/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge preprint">Preprint</span>
@@ -1839,10 +2129,10 @@
                         <div class="pub-authors">Talasila, H. M., Paden, J.</div>
                         <div class="pub-venue">2024 IEEE Radar Conference (RadarConf 2024), Denver, CO</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1109/RadarConf2458775.2024.10549183" target="_blank"><i
+                            <a href="https://doi.org/10.1109/RadarConf2458775.2024.10549183" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/1gzSCfNqhRL92ASpwVSFpNiG7OuMQfqM7/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge oral">Oral</span>
@@ -1856,10 +2146,10 @@
                         <div class="pub-authors">Oluwanisola, I., Talasila, H. M., et al.</div>
                         <div class="pub-venue">2023 IEEE Radar Conference (RadarConf 2023), San Antonio, TX</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1109/RadarConf2351548.2023.10149734" target="_blank"><i
+                            <a href="https://doi.org/10.1109/RadarConf2351548.2023.10149734" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/1hwvmzHoyreunUiebT3UNWtRGyZgw-jBR/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge oral">Oral</span>
@@ -1873,10 +2163,10 @@
                         <div class="pub-authors">Rowell, I. et al. (SAR processing by Talasila, H. M.)</div>
                         <div class="pub-venue">Climate of the Past, vol. 19, no. 8, pp. 1699&ndash;1714</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.5194/cp-19-1699-2023" target="_blank"><i
+                            <a href="https://doi.org/10.5194/cp-19-1699-2023" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/16mhzC04wyMbL6P7kVhBli6EZQCr9h6mV/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge journal">Journal</span>
@@ -1890,10 +2180,10 @@
                         <div class="pub-authors">Talasila, H. M. et al.</div>
                         <div class="pub-venue">IEEE IGARSS 2023, Pasadena, CA</div>
                         <div class="pub-links">
-                            <a href="https://doi.org/10.1109/IGARSS52108.2023.10282897" target="_blank"><i
+                            <a href="https://doi.org/10.1109/IGARSS52108.2023.10282897" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
                             <a href="https://drive.google.com/file/d/1nL7iDzvD-Dyrhehy0cdq6jGR0xFJ5vAy/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge oral">Oral</span>
@@ -1908,9 +2198,9 @@
                         <div class="pub-venue">Microwave Journal, vol. 62, no. 11, Nov. 2019</div>
                         <div class="pub-links">
                             <a href="https://www.nist.gov/publications/first-pass-design-uwb-microwave-and-millimeter-wave-filters-multi-stage-frequency"
-                                target="_blank"><i class="fas fa-external-link-alt"></i> Source / NIST</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> Source / NIST</a>
                             <a href="https://drive.google.com/file/d/1D3OghfYjEyIBJDsBdTWYUViXBvSdp7Ep/view?usp=drive_link"
-                                target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                         </div>
                     </div>
                     <span class="pub-badge journal">Journal</span>
@@ -1938,8 +2228,21 @@
                             <h4>4cThreat</h4>
                         </div>
                         <div class="proj-period">Nov 2025 to Present</div>
-                        <p>Distributed airspace intelligence via sensor fusion on Edge AI platforms. Built for real-time
-                            drone tracking.</p>
+                        <p>Developing drone detection and airspace monitoring through radar engineering,
+                            statistical sensor fusion, and edge computer vision.</p>
+                    </div>
+                    <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
+                </div>
+
+                <div class="project-card fade-in" onclick="openDrawer('proj-radarschool')">
+                    <div>
+                        <div class="proj-header">
+                            <i class="fas fa-graduation-cap proj-icon"></i>
+                            <h4>Radar School</h4>
+                        </div>
+                        <div class="proj-period">2026 to Present</div>
+                        <p>Radar from first principles to real instruments. An open education series for students,
+                            engineers, and curious minds, published online and archived on Zenodo.</p>
                     </div>
                     <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
                 </div>
@@ -1977,8 +2280,8 @@
                             <h4>Made in Repalle</h4>
                         </div>
                         <div class="proj-period">2019 to Present</div>
-                        <p>Digital infrastructure, marketing systems, and supply chain management for a seasonal hybrid
-                            fruit farm and business founded by my father.</p>
+                        <p>Digital storefront, ordering workflows, and customer communications for a family fruit business,
+                            with seasonal supply and logistics coordinated around harvest timing and demand.</p>
                     </div>
                     <div style="margin-top:1rem;"><button class="exp-expand-btn">View Details</button></div>
                 </div>
@@ -2005,11 +2308,11 @@
                             <em>Advisor:</em> Dr. John D. Paden<br>
                             <em>Dissertation:</em> Radiometric Calibration of Radar Depth Sounder Data Products
                             <div class="pub-links" style="margin-top: 0.5rem;">
-                                <a href="https://doi.org/10.5281/zenodo.18328219" target="_blank"><i
+                                <a href="https://doi.org/10.5281/zenodo.18328219" target="_blank" rel="noopener noreferrer"><i
                                         class="fas fa-external-link-alt"></i> DOI</a>
-                                <a href="https://www.proquest.com/docview/3246480821" target="_blank"><i
+                                <a href="https://www.proquest.com/docview/3246480821" target="_blank" rel="noopener noreferrer"><i
                                         class="fas fa-external-link-alt"></i> ProQuest</a>   
-                                <a href="https://zenodo.org/records/18328219/files/Talasila_PhD_Final.pdf?download=1" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="https://zenodo.org/records/18328219/files/Talasila_PhD_Final.pdf?download=1" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
@@ -2027,12 +2330,12 @@
                             <em>Thesis:</em> Modular Frequency Multiplier and Filters for the NASA Global Hawk Snow
                             Radar
                             <div class="pub-links" style="margin-top: 0.5rem;">
-                                <a href="https://hdl.handle.net/1808/24131" target="_blank"><i
+                                <a href="https://hdl.handle.net/1808/24131" target="_blank" rel="noopener noreferrer"><i
                                         class="fas fa-external-link-alt"></i> Source</a>
-                                <a href="https://kuscholarworks.ku.edu/entities/publication/aea5b776-731f-4b54-ae91-7e45501e649c" target="_blank"><i
+                                <a href="https://kuscholarworks.ku.edu/entities/publication/aea5b776-731f-4b54-ae91-7e45501e649c" target="_blank" rel="noopener noreferrer"><i
                                         class="fas fa-external-link-alt"></i> KU Libraries</a>
                                 <a href="https://drive.google.com/file/d/1M3N6TXmBFv1CwHSMoDAvr0EehHZg5Rf9/view?usp=drive_link"
-                                    target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
+                                    target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> PDF</a>
                             </div>
                         </div>
                     </div>
@@ -2076,8 +2379,9 @@
                     <ul>
                         <li>IEEE Transactions on Radar Systems (T-RS)</li>
                         <li>Elsevier Remote Sensing Applications (RSASE)</li>
-                        <li>IEEE IGARSS / ICoMMS / EuRAD / EuMC / EuMIC</li>
-                        <li>Editorial Board, AJRS / JEER</li>
+                        <li>IEEE IGARSS / ICEECE / ICoMMS / EuRAD / EuMC / EuMIC</li>
+                        <li>Associate Editor &amp; Reviewer, AJRS</li>
+                        <li>Editorial Board, JEER</li>
                         <li>IEEE Learning Network Courses</li>
                     </ul>
                 </div>
@@ -2091,7 +2395,7 @@
                         <li>Founder &amp; President, KU Think Tank Mini</li>
                         <li>University Senator, KU</li>
                         <li>Student Senator, Graduate constituency, KU</li>
-                        <li>President, CReSIS Student Organization</li>
+                        <li>Founder &amp; President, CReSIS Student Organization</li>
                         <li>President, KU Global Partners</li>
                     </ul>
                 </div>
@@ -2134,48 +2438,48 @@
             <div class="footer-grid">
 
                 <div>
-                    <div style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem;">
+                    <div class="footer-profile-header" style="display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem;">
                         <div class="portrait-wrapper">
-                            <img src="portrait.jpeg" alt="Hara Madhav Talasila">
+                            <img src="portrait.jpeg" alt="Hara Madhav Talasila" width="164" height="164" loading="lazy" decoding="async">
                         </div>
                         <div>
                             <div
-                                style="font-family:var(--font-display); font-size:1.45rem; font-weight:400; color:#FFF; line-height:1.2; margin-bottom:0.25rem;">
-                                Hara Madhav<br><em
-                                    style="font-style:italic; color:rgba(255,255,255,0.65);">Talasila</em></div>
+                                style="font-family:var(--font-display); font-size:1.45rem; font-weight:600; color:var(--text); line-height:1.2; margin-bottom:0.25rem;">
+                                Hara Madhav<br><span
+                                    style="font-weight:600; color:var(--muted);">Talasila</span></div>
                             <div
                                 style="font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-light); margin-bottom:0.75rem;">
-                                PhD &middot; Research Engineer</div>
+                                PhD &middot; Electrical Engineer</div>
                         </div>
                     </div>
 
                     <div
-                        style="display: inline-block; background: rgba(42,127,98,0.15); border: 1px solid rgba(42,127,98,0.4); border-radius: 11px; padding: 0.4rem 0.75rem; margin-bottom: 1.5rem;">
-                        <span style="font-size: 1.0rem; font-weight: 600; letter-spacing: 0.03em; color: #FFF;">
-                            <i class="fas fa-circle"
+                        style="display: inline-block; background: rgba(var(--secondary-rgb),0.12); border: 1px solid rgba(var(--secondary-rgb),0.4); border-radius: 11px; padding: 0.4rem 0.75rem; margin-bottom: 1.5rem;">
+                        <span style="font-size: 1.0rem; font-weight: 600; letter-spacing: 0.03em; color: var(--text);">
+                            <i class="fas fa-circle availability-dot" aria-hidden="true"
                                 style="color: var(--accent-green); font-size: 0.5rem; vertical-align: middle; margin-right: 6px; margin-bottom: 2px;"></i>
                             Available for immediate start in EE &amp; CS (Faculty, Research, Industry)
                         </span>
                     </div>
 
                     <div class="footer-links-title" style="margin-bottom:0.75rem;">Contact</div>
-                    <p style="font-size:0.8rem; color:rgba(255,255,255,0.7); margin-bottom:1rem; line-height:1.5;">
+                    <p style="font-size:0.8rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">
                         Contact for full Portfolio - CV, Resume, & Works.
                     </p>
                     <div class="footer-social">
                         <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
                             <i class="fas fa-envelope"></i> Email
                         </a>
-                        <a class="footer-social-link" href="https://linkedin.com/in/haramadhav" target="_blank">
+                        <a class="footer-social-link" href="https://linkedin.com/in/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
                         <a class="footer-social-link" href="https://calendar.app.google/7sW8ihZEMJiYDag59"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-calendar-alt"></i> Calendar
                         </a>
                         <a class="footer-social-link"
                             href="https://calendar.google.com/calendar/appointments/AcZssZ3JLFk0MVFOnJ8wDmAf9FhKZkJPvRmECHD6cCY="
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-calendar-alt"></i> Schedule a Meeting
                         </a>
                     </div>
@@ -2184,42 +2488,54 @@
                 <div>
                     <div class="footer-links-title">Find my work/interests</div>
                     <div class="footer-social">
-                        <p style="font-size:0.8rem; color:rgba(255,255,255,0.7); margin-bottom:1rem; line-height:1.5;">
+                        <p style="font-size:0.8rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">
                             Code, radar tools, and side projects.
                         </p>
-                        <a class="footer-social-link" href="https://github.com/haramadhav" target="_blank">
+                        <a class="footer-social-link" href="https://github.com/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a class="footer-social-link" href="https://gitlab.com/haramadhav" target="_blank">
+                        <a class="footer-social-link" href="https://gitlab.com/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-gitlab"></i> GitLab
                         </a>
-                        <a class="footer-social-link" href="https://g.dev/hara" target="_blank">
+                        <a class="footer-social-link" href="https://g.dev/hara" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-cloud"></i> Google Dev
                         </a>
                         <a class="footer-social-link"
                             href="https://www.skills.google/public_profiles/9e4d5e5d-e323-41ea-a89e-ae5f8c8c3197"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-google"></i> Google Skills
                         </a>
                         <a class="footer-social-link" href="https://scholar.google.com/citations?user=Bvb6yGwAAAAJ"
-                            target="_blank">
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-graduation-cap"></i> Google Scholar
                         </a>
-                        <a class="footer-social-link" href="https://orcid.org/0000-0002-6209-3121" target="_blank">
+                        <a class="footer-social-link" href="https://orcid.org/0000-0002-6209-3121" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-id-badge"></i> ORCiD
                         </a>
-                        <!-- <a class="footer-social-link" href="https://ieee-collabratec.ieee.org/app/p/radar?slv=true" target="_blank">
+                        <!-- <a class="footer-social-link" href="https://ieee-collabratec.ieee.org/app/p/radar?slv=true" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-users"></i> IEEE Collabratec
                     </a> -->
 
                     </div>
                 </div>
 
+                <div class="footer-ventures">
+                    <div class="footer-links-title">Ventures</div>
+                    <div class="footer-social">
+                        <a class="footer-social-link" href="https://4cthreat.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i> 4cThreat
+                        </a>
+                        <a class="footer-social-link" href="https://madeinrepalle.haramadhav.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-leaf" aria-hidden="true"></i> Made in Repalle
+                        </a>
+                    </div>
+                </div>
+
                 <div>
                     <div class="footer-links-title">Media &amp; Logs </div>
-                    <p style="font-size:0.8rem; color:rgba(255,255,255,0.6); margin-bottom:1rem; line-height:1.5;">
-                        Explore my words and pixels. I will be adding notes, project articles, media, and video footage
-                        from NASA Operation IceBridge field deployments.
+                    <p style="font-size:0.8rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">
+                        Explore Radar School articles, project notes, and footage from NASA Operation IceBridge
+                        field deployments.
                     </p>
                     <button class="btn-social-media" onclick="openDrawer('social-media')">
                         <i class="fas fa-play-circle"></i> View Media &amp; Logs
@@ -2252,15 +2568,11 @@
     </div>
 
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        /* ---- Navbar scroll behavior ---- */
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 60) navbar.classList.add('scrolled');
-            else navbar.classList.remove('scrolled');
-        }, { passive: true });
+    <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
+    <script>
         /* ---- Fade-in on scroll ---- */
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((e, i) => {
@@ -2276,17 +2588,33 @@
         /* ---- Experience & Project Detail Data ---- */
         const expData = {
             /* ----- EXPERIENCES ----- */
+            'kiewit': {
+                role: "Electrical Engineer",
+                org: "Kiewit, Lenexa, Kansas",
+                date: "July 2026 to Present",
+                sections: [
+                    {
+                        title: "Power Generation, Estimating & Automation",
+                        bullets: [
+                            "Contribute to combined-cycle power-generation project estimating and bidding, engineering analyses, and workflow automation.",
+                            "Combine AI-assisted methods with deterministic algorithms to turn complex technical information into structured, auditable, testable, and review-ready engineering work products."
+                        ]
+                    }
+                ],
+                tags: ["Combined-Cycle Power", "Estimating & Bidding", "Engineering Analysis", "Workflow Automation", "AI-assisted Engineering"]
+            },
             'researcher': {
                 role: 'Researcher',
                 org: 'Center for Remote Sensing and Integrated Systems (CReSIS)',
-                date: 'June 2025 to Present',
+                date: 'June 2025 to May 2026',
                 sections: [
                     {
-                        title: 'Current Work',
+                        title: 'Radiometric Calibration Research',
                         bullets: [
+                            "Formulated a unified radiometric calibration procedure for radar depth-sounder data products; presented the work orally at the International Symposium on Radioglaciology in Germany, September 2026.",
                             'Initiated and led production of the first radiometrically calibrated radar depth sounder dataset for the Greenland ice sheet, based on 2017 and 2018 P3 campaign data.',
-                            'Programming parallel-process routines for inter-season calibration across multi-year flight data archives.',
-                            'Developing a layer-based calibration method to leverage internal ice layer reflections as distributed reference targets.'
+                            'Programmed parallel-processing routines for inter-season calibration across multi-year flight data archives.',
+                            'Developed a layer-based calibration method using internal ice layer reflections as distributed reference targets.'
                         ]
                     }
                 ],
@@ -2303,7 +2631,7 @@
                             'Solved the previously unaddressed problem of absolute radiometric calibration for multi-channel radar depth sounders, unlocking scientific value of decades of uncalibrated legacy polar data.',
                             'Pioneered the Open Polar Radar (OPR) calibration software, using flight crossovers and specular natural targets with HPC parallel processing routines.',
                             'Formulated a novel linear algebra framework to homogenize scattering power across disjoint campaigns using least-squares optimization, reducing residual errors across the full historical archive.',
-                            'Validated calibrated radar backscatter against MAR climate model outputs and SUMup surface mass balance data, confirming physical accuracy of the new methods.',
+                            'Evaluated calibrated radar backscatter against sea-ice lead ground truths, MAR climate-model outputs, and SUMup surface mass-balance observations to assess physical accuracy.',
                             'Laid groundwork for studies on surface roughness, snow density, and clutter analysis using calibrated data products.'
                         ]
                     },
@@ -2447,22 +2775,40 @@
 
             /* ----- PROJECTS ----- */
             'proj-4cthreat': {
-                role: '4cThreat (Foresee Threat)',
-                org: 'Collaborative Venture',
-                date: 'Nov 2025 to Present',
+                role: "4cThreat (Foresee Threat)",
+                org: "Founder",
+                date: "November 2025 to Present",
                 sections: [
                     {
-                        title: 'Project Overview',
+                        title: "Airspace Monitoring & Sensor Fusion",
                         bullets: [
-                            'Collaboration for sensor-fusion technologies in airspace intelligence using statistical signal processing and AI, deployed on Edge AI platforms.',
-                            'Architected YRKM (Yellow Red Kinetic Monitor) for data from sensor nodes to track threats.',
-                            'Built a cloud-hosted demo to simulate multiple threats and command center view in real-time.',
-                            'Interfacing Electro-Optical video stream to detect objects and relay tracking vectors to backend server.',
-                            'Building traction both online (website, frontend and backend runners) and offline (customer surveys and procedures for Letters of Interest).'
+                            "Developing multimodal sensor fusion and edge AI for drone detection and airspace monitoring, with applications in public safety and critical-infrastructure protection.",
+                            "Architected YRKM (Yellow Red Kinetic Monitor) for distributed sensor telemetry; built a cloud-hosted command-center demonstrator displaying simulated target tracks in real time.",
+                            "Developed a Python/YOLO camera-based object-detection pipeline for NVIDIA Jetson Orin Nano.",
+                            "Implemented a reproducible simulation benchmark comparing radar-only and radar-bearing tracking under different sensor geometries, measurement outages, and uncertainty assumptions.",
+                            "Manuscript in preparation with the 4cThreat Research Group: <em>A Joint Fisher-Information Framework for Heterogeneous Sensor Fusion in Counter-UAS Systems: Bounds, Operational Scenarios, and a Reproducible Benchmark</em>.",
+                            "Established repository architecture and CI/CD workflows across cloud runners and edge devices, applying secure-development practices for dependencies, secrets, and endpoint access.",
+                            "Reached the top 20 in Cornell Tech's Runway selection process and delivered the venture pitch; conducted customer-discovery interviews and surveys, and established procedures for letters of interest."
                         ]
                     }
                 ],
-                tags: ['Sensor Fusion', 'Edge AI', 'NVIDIA Jetson Orin', 'Distributed Systems', 'Python Backend', 'Real-Time Tracking', 'YRKM Framework']
+                tags: ["Sensor Fusion", "Edge AI", "NVIDIA Jetson Orin Nano", "YOLO / OpenCV", "Python / WebSockets", "Tracking Simulation", "YRKM"]
+            },
+            'proj-radarschool': {
+                role: "Radar School",
+                org: "Founder & Author",
+                date: "2026 to Present",
+                sections: [
+                    {
+                        title: "Radar Education & Open Publishing",
+                        bullets: [
+                            "Explain the physical sciences and engineering behind radar for students, early-career engineers, and the broader public.",
+                            "Author radar-education articles on <a href=\"https://radarschool.haramadhav.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Radar School</a> and LinkedIn; archive the series on <a href=\"https://doi.org/10.5281/zenodo.20532944\" target=\"_blank\" rel=\"noopener noreferrer\">Zenodo</a> for persistent, citable access.",
+                            "Built and maintain the publishing infrastructure, including a custom GitHub Pages site and a version-controlled content repository with a consistent file and release structure."
+                        ]
+                    }
+                ],
+                tags: ["Radar Education", "First Principles", "Scientific Communication", "GitHub Pages", "Zenodo", "Open Science"]
             },
             'proj-gainterrain': {
                 role: 'Gain Terrain',
@@ -2504,8 +2850,8 @@
                     {
                         title: 'Project Overview',
                         bullets: [
-                            'Digital infrastructure, marketing systems, and supply chain management for a seasonal hybrid fruit business co-founded with my father.',
-                            'Built end-to-end solutions spanning from sourcing logistics and on-farm operations to an engaging online presence.'
+                            "Built and operate the digital storefront, ordering workflow, and customer communications for a seasonal hybrid-fruit family business.",
+                            "Coordinate seasonal supply and logistics for perishable hybrid fruits, align harvest timing with demand to limit spoilage, and develop a brand with a repeat regional customer base."
                         ]
                     }
                 ],
@@ -2514,16 +2860,16 @@
 
             /* ----- SOCIAL DRAWER ----- */
             'social-media': {
-                role: 'Media & Logs /// Work in Progress ///',
+                role: 'Media & Logs',
                 org: 'Field Highlights & Articles',
                 date: 'Explore footage from NASA OIB and more.',
                 sections: [
                     {
                         title: 'Featured Posts & Video Logs',
                         bullets: [
-                            'Doctoral Hood by Dr. John D. Paden  <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7344252752090251265" target="_blank" style="display:inline-flex; align-items:center; padding:0.75rem 1.25rem; background:rgba(15,32,64,0.05); border:1px solid rgba(15,32,64,0.15); border-radius:4px; color:var(--navy); font-weight:600; text-decoration:none; transition: background 0.2s;"><i class="fab fa-linkedin" style="color:#0A66C2; margin-right:8px; font-size:1.1rem;"></i> View Field Highlight on LinkedIn</a>',
+                            'Doctoral hooding by my advisor, Dr. John D. Paden, at the University of Kansas (2025).  <a href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7344252752090251265" target="_blank" style="display:inline-flex; align-items:center; padding:0.75rem 1.25rem; background:rgba(15,32,64,0.05); border:1px solid rgba(15,32,64,0.15); border-radius:4px; color:var(--navy); font-weight:600; text-decoration:none; transition: background 0.2s;" rel="noopener noreferrer"><i class="fab fa-linkedin" style="color:#0A66C2; margin-right:8px; font-size:1.1rem;"></i> Watch Doctoral Hooding on LinkedIn</a>',
                             
-                            'Glimpse of NASA OIB missions <div style="position:relative; border-radius:6px; overflow:hidden; border:1px solid rgba(15,32,64,0.2); margin:0.5rem 0; background:#000;"><a href="https://www.youtube.com/watch?v=SxhLcEIWNyY" target="_blank" style="display:block; position:relative; text-decoration:none;"><img src="https://i.ytimg.com/vi/SxhLcEIWNyY/maxresdefault.jpg" alt="NASA IceBridge" style="width:100%; display:block; opacity:0.85; transition:opacity 0.3s;" onmouseover="this.style.opacity=\'1\'" onmouseout="this.style.opacity=\'0.85\'"><div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:68px; height:48px; background:#FF0000; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.4);"><i class="fas fa-play" style="color:#FFF; font-size:1.4rem; margin-left:4px;"></i></div><div style="position:absolute; bottom:0; left:0; right:0; padding:1.5rem 1rem 0.75rem; background:linear-gradient(transparent, rgba(0,0,0,0.9));"><span style="color:#FFF; font-weight:500; font-size:0.9rem; letter-spacing:0.02em;">NASA\'s Operation IceBridge Completes Eleven Years of Polar Surveys</span></div></a></div>',
+                            'Glimpse of NASA OIB missions <div style="position:relative; border-radius:6px; overflow:hidden; border:1px solid rgba(15,32,64,0.2); margin:0.5rem 0; background:#000;"><a href="https://www.youtube.com/watch?v=SxhLcEIWNyY" target="_blank" style="display:block; position:relative; text-decoration:none;" rel="noopener noreferrer"><img src="https://i.ytimg.com/vi/SxhLcEIWNyY/maxresdefault.jpg" alt="NASA IceBridge" style="width:100%; display:block; opacity:0.85; transition:opacity 0.3s;" onmouseover="this.style.opacity=\'1\'" onmouseout="this.style.opacity=\'0.85\'"><div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:68px; height:48px; background:#FF0000; border-radius:12px; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 12px rgba(0,0,0,0.4);"><i class="fas fa-play" style="color:#FFF; font-size:1.4rem; margin-left:4px;"></i></div><div style="position:absolute; bottom:0; left:0; right:0; padding:1.5rem 1rem 0.75rem; background:linear-gradient(transparent, rgba(0,0,0,0.9));"><span style="color:#FFF; font-weight:500; font-size:0.9rem; letter-spacing:0.02em;">NASA\'s Operation IceBridge Completes Eleven Years of Polar Surveys</span></div></a></div>',
                             
                         ]
                     }
@@ -2574,9 +2920,12 @@
             document.body.style.overflow = '';
              }
 
-        /* ---- Keyboard: ESC closes drawer ---- */
+        /* ---- Keyboard: ESC closes open overlays ---- */
         document.addEventListener('keydown', e => {
-            if (e.key === 'Escape') closeDrawer();
+            if (e.key === 'Escape') {
+                closeDrawer();
+                closeMobileMenu();
+            }
         });
 
         /* ---- Hamburger / mobile menu ---- */
@@ -2658,9 +3007,7 @@
 
     </script>
 
-    <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+
 
 </body>
 </html>
