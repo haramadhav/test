@@ -1182,13 +1182,13 @@
             font-weight: 600;
         }
 
-        .footer-social {
+        .footer-link-list {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
         }
 
-        .footer-social-link {
+        .footer-link {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -1198,18 +1198,18 @@
             transition: color var(--transition);
         }
 
-        .footer-social-link:hover {
+        .footer-link:hover {
             color: var(--text);
         }
 
-        .footer-social-link i {
+        .footer-link i {
             font-size: 1rem;
             width: 20px;
             text-align: center;
             color: var(--accent-light);
         }
 
-        .btn-social-media {
+        .btn-media-logs {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -1226,7 +1226,7 @@
             width: 100%;
         }
 
-        .btn-social-media:hover {
+        .btn-media-logs:hover {
             background: rgba(var(--ink-rgb), 0.15);
             border-color: var(--muted);
         }
@@ -1259,14 +1259,19 @@
            FADE-IN ANIMATION
         ========================================== */
         .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
             opacity: 1;
             transform: none;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .fade-in.visible {
+                animation: reveal-content 0.6s ease;
+            }
+
+            @keyframes reveal-content {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: none; }
+            }
         }
 
         /* ==========================================
@@ -1464,7 +1469,7 @@
         }
 
         /* ==========================================
-           HERO CTA AVAILABILITY BANNER — REFINED
+           HERO CTA AVAILABILITY BANNER
         ========================================== */
         .hero-availability {
             margin-top: 1.25rem;
@@ -1538,7 +1543,7 @@
         .nav-links { margin-left: auto; gap: 0.15rem; }
         .nav-links a { font-size: 0.9rem; font-weight: 400; letter-spacing: 0.01em; padding: 0.5rem 0.65rem; border-radius: 0; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent); background: transparent; box-shadow: inset 0 -1px 0 var(--accent); }
-        #hero { display: block; min-height: 0; }
+        #hero { display: flex; min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); }
         .hero-bg-fill { background: var(--hero-start); }
         .hero-bg::after { display: none; }
         .hero-content {
@@ -1548,9 +1553,9 @@
             --button-bg: var(--hero-button-bg); --button-hover: var(--hero-button-hover);
             --button-text: var(--hero-button-text); --border: var(--hero-border);
             width: 100%; max-width: calc(var(--page-width) + 2 * var(--page-gutter));
-            padding: clamp(3.5rem, 6vw, 5.5rem) var(--page-gutter) 2.75rem;
+            padding: clamp(4rem, 8vh, 6.5rem) var(--page-gutter) clamp(3.5rem, 7vh, 5.5rem);
             display: grid; grid-template-columns: minmax(18rem, 1fr) minmax(0, 2fr);
-            column-gap: clamp(1.5rem, 3vw, 3rem); row-gap: 3.5rem; align-items: start;
+            column-gap: clamp(1.5rem, 3vw, 3rem); row-gap: clamp(2rem, 4vh, 3rem); align-items: start;
         }
         .hero-identity, .hero-overview { min-width: 0; }
         .hero-eyebrow { margin-bottom: 1.25rem; color: var(--hero-muted); font-size: 0.82rem; font-weight: 400; letter-spacing: 0.07em; }
@@ -1558,7 +1563,7 @@
         h1.hero-name { font-family: var(--font-display); font-size: clamp(2.9rem, 4.5vw, 4.4rem); font-weight: 400; letter-spacing: -0.025em; line-height: 1.03; margin: 0 0 1.25rem; }
         h1.hero-name .hero-surname { font-family: inherit; font-weight: 400; font-style: normal; color: var(--hero-ink); }
         .hero-title { color: var(--hero-muted); font-size: 1rem; font-weight: 300; letter-spacing: 0; text-transform: none; margin: 0; line-height: 1.65; }
-        .hero-cta { gap: 1.4rem; align-items: center; margin-top: 1.75rem; }
+        .hero-cta { gap: 1.4rem; align-items: center; margin-top: 0; }
         .btn-primary, .btn-outline { font-weight: 400; letter-spacing: 0; border-radius: 3px; }
         .btn-primary, .btn-primary:hover, .exp-expand-btn:hover, .drawer-close:hover, .cresis-rail { color: var(--button-text); }
         .cresis-rail { background: var(--button-bg); }
@@ -1566,11 +1571,14 @@
         .hero-cta .btn-primary { padding: 0.7rem 1.2rem; font-size: 0.94rem; }
         .hero-text-link { font-size: 0.94rem; font-weight: 400; color: var(--hero-ink); }
         .hero-text-link span { margin-left: 0.5rem; color: var(--hero-accent); }
-        .hero-overview { border-left: 1px solid var(--hero-border); padding: 0.2rem 0 0.4rem clamp(1rem, 2vw, 2rem); margin-top: 0.15rem; }
-        .hero-summary { max-width: none; font-family: var(--font-body); font-size: clamp(1.65rem, 2.7vw, 2.65rem); font-weight: 300; line-height: 1.5; letter-spacing: -0.015em; margin-bottom: 1.35rem; }
-        .hero-summary span:last-child { color: var(--hero-accent); }
-        .hero-description { max-width: 46rem; color: var(--hero-muted); font-size: 1.1rem; line-height: 1.8; font-weight: 300; margin-bottom: 1.15rem; }
-        .hero-readmore { font-size: 0.94rem; font-weight: 400; margin: 0; }
+        .hero-overview { container-type: inline-size; border-left: 1px solid var(--hero-border); padding: 0 0 0.4rem clamp(1rem, 2vw, 2rem); margin-top: 0; }
+        .hero-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; max-width: none; font-family: var(--font-body); font-size: 0.82rem; font-weight: 400; line-height: 1.5; letter-spacing: 0.07em; text-transform: uppercase; color: var(--hero-muted); margin-bottom: 2.25rem; }
+        .hero-summary span:last-child { color: inherit; }
+        .hero-description { max-width: none; color: var(--hero-ink); font-family: var(--font-display); font-size: clamp(1.1rem, 2.5vw, 2.3rem); font-size: min(clamp(1.8rem, 2.8vw, 2.75rem), 4.4cqi); line-height: 1.4; font-weight: 400; letter-spacing: -0.025em; margin-bottom: 1.3rem; }
+        .hero-description span { display: block; }
+        .hero-description strong { font-size: 1.7em; font-weight: 600; }
+        .hero-actions { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(18rem, 1fr) minmax(0, 2fr); column-gap: clamp(1.5rem, 3vw, 3rem); align-items: center; }
+        .hero-readmore { font-size: 0.94rem; font-weight: 400; margin: 0; padding-inline-start: calc(1px + clamp(1rem, 2vw, 2rem)); }
         .hero-resources { grid-column: 1 / -1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; gap: 1.25rem; border-top: 1px solid var(--hero-border); padding-top: 1.5rem; }
         .hero-availability { margin: 0; padding: 0; border: 0; border-radius: 0; background: transparent; min-width: 0; }
         .hero-availability-label { justify-content: center; font-size: 0.76rem; font-weight: 400; letter-spacing: 0.06em; color: var(--hero-muted); margin-bottom: 0.35rem; }
@@ -1626,18 +1634,21 @@
         @media (max-width: 899px) {
             .hero-content { grid-template-columns: minmax(0, 1fr); row-gap: 2.5rem; padding-top: 3rem; }
             .hero-overview { border-left: 0; border-top: 1px solid var(--hero-border); padding: 1.75rem 0 0; margin: 0; }
-            .hero-summary { font-size: clamp(1.5rem, 4vw, 1.9rem); }
-            .hero-description { max-width: 46rem; }
+            .hero-summary { font-size: 0.82rem; }
+            .hero-description { max-width: none; }
+            .hero-actions { grid-template-columns: minmax(0, 1fr); row-gap: 1.25rem; }
+            .hero-readmore { padding-inline-start: 0; }
             .hero-resources { flex-direction: column; align-items: center; gap: 1.25rem; }
             .hero-doc-links { flex-shrink: 1; }
             h1.hero-name { font-size: clamp(2.9rem, 7vw, 3.75rem); }
         }
         @media (max-width: 680px) {
+            .hero-summary { grid-template-columns: minmax(0, 1fr); gap: 0.25rem; margin-bottom: 1.25rem; }
             .skills-grid, .projects-grid, .service-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; gap: 1.25rem; }
             .projects-grid > .project-card, .projects-grid > .project-card:nth-child(4), .projects-grid > .project-card:nth-child(5) { grid-column: 1; }
             .hero-doc-links { flex-wrap: wrap; }
         }
-        @media (max-width: 600px) { :root { --nav-h: 66px; } .nav-name { font-size: 1.2rem; } .hero-eyebrow { font-size: 0.75rem; } .hero-title { font-size: 0.95rem; } }
+        @media (max-width: 600px) { :root { --nav-h: 66px; } .nav-name { font-size: 1.2rem; } .hero-eyebrow { font-size: 0.75rem; } .hero-summary { font-size: 0.75rem; } .hero-title { font-size: 0.95rem; } .hero-description { font-size: clamp(1.05rem, 3.1vw, 1.3rem); } .hero-description span { display: inline; } }
         @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
 
         .hero-availability-label .availability-dot, footer .availability-dot {
@@ -1661,7 +1672,7 @@
         .footer-grid { grid-template-columns: minmax(320px, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 2rem; }
         .footer-grid > div { min-width: 0; }
         .footer-profile-header { flex-wrap: wrap; }
-        .footer-social-link { overflow-wrap: anywhere; }
+        .footer-link { overflow-wrap: anywhere; }
         #backToTop { visibility: hidden; pointer-events: none; }
         #backToTop.visible { visibility: visible; pointer-events: auto; }
         @media (max-width: 1100px) { .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -1674,7 +1685,7 @@
 
     <nav id="navbar">
         <div class="nav-inner">
-            <a href="#hero" class="nav-name" aria-label="Back to top">Hara Madhav Talasila</a>
+            <a href="#hero" class="nav-name" aria-label="Hara Madhav Talasila, page start">Hara Madhav Talasila</a>
             <ul class="nav-links">
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -1711,10 +1722,6 @@
                 <div class="hero-eyebrow"><span></span>Engineer &middot; Researcher &middot; Founder</div>
                 <h1 class="hero-name">Hara Madhav<br><span class="hero-surname">Talasila</span></h1>
                 <p class="hero-title">PhD in Electrical Engineering<br>University of Kansas</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get in touch <span aria-hidden="true">&rarr;</span></a>
-                    <a href="#experience" class="hero-text-link">Explore my work <span aria-hidden="true">&rarr;</span></a>
-                </div>
             </div>
             <div class="hero-overview">
                 <p class="hero-summary">
@@ -1722,7 +1729,17 @@
                     <span>Build what matters.</span>
                     <span>Lead it through.</span>
                 </p>
-                <p class="hero-description">I connect research, engineering, and execution&mdash;from polar fieldwork and scientific software to power plants and new ventures.</p>
+                <p class="hero-description">
+                    <span>I connect the <strong>science</strong> behind an idea,</span>
+                    <span>the <strong>engineering</strong> needed to realize it,</span>
+                    <span>and the <strong>strategy</strong> that gives it purpose.</span>
+                </p>
+            </div>
+            <div class="hero-actions">
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary">Get in touch <span aria-hidden="true">&rarr;</span></a>
+                    <a href="#experience" class="hero-text-link">Explore my work <span aria-hidden="true">&rarr;</span></a>
+                </div>
                 <a class="hero-readmore" href="#about">Read the full story <span aria-hidden="true">&darr;</span></a>
             </div>
             <div class="hero-resources">
@@ -2161,7 +2178,7 @@
                         <div class="pub-title">An Age Scale for New Climate Records from Sherman Island, West Antarctica
                         </div>
                         <div class="pub-authors">Rowell, I. et al. (SAR processing by Talasila, H. M.)</div>
-                        <div class="pub-venue">Climate of the Past, vol. 19, no. 8, pp. 1699&ndash;1714</div>
+                        <div class="pub-venue">Climate of the Past, vol. 19, no. 8, pp. 1699-1714</div>
                         <div class="pub-links">
                             <a href="https://doi.org/10.5194/cp-19-1699-2023" target="_blank" rel="noopener noreferrer"><i
                                     class="fas fa-external-link-alt"></i> Source / DOI</a>
@@ -2466,18 +2483,18 @@
                     <p style="font-size:0.8rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">
                         Contact for full Portfolio - CV, Resume, & Works.
                     </p>
-                    <div class="footer-social">
-                        <a class="footer-social-link" href="mailto:hara.madhav.talasila@gmail.com">
+                    <div class="footer-link-list">
+                        <a class="footer-link" href="mailto:hara.madhav.talasila@gmail.com">
                             <i class="fas fa-envelope"></i> Email
                         </a>
-                        <a class="footer-social-link" href="https://linkedin.com/in/haramadhav" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://linkedin.com/in/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin"></i> LinkedIn
                         </a>
-                        <a class="footer-social-link" href="https://calendar.app.google/7sW8ihZEMJiYDag59"
+                        <a class="footer-link" href="https://calendar.app.google/7sW8ihZEMJiYDag59"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-calendar-alt"></i> Calendar
                         </a>
-                        <a class="footer-social-link"
+                        <a class="footer-link"
                             href="https://calendar.google.com/calendar/appointments/AcZssZ3JLFk0MVFOnJ8wDmAf9FhKZkJPvRmECHD6cCY="
                             target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-calendar-alt"></i> Schedule a Meeting
@@ -2487,32 +2504,32 @@
 
                 <div>
                     <div class="footer-links-title">Find my work/interests</div>
-                    <div class="footer-social">
+                    <div class="footer-link-list">
                         <p style="font-size:0.8rem; color:var(--muted); margin-bottom:1rem; line-height:1.5;">
                             Code, radar tools, and side projects.
                         </p>
-                        <a class="footer-social-link" href="https://github.com/haramadhav" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://github.com/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a class="footer-social-link" href="https://gitlab.com/haramadhav" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://gitlab.com/haramadhav" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-gitlab"></i> GitLab
                         </a>
-                        <a class="footer-social-link" href="https://g.dev/hara" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://g.dev/hara" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-cloud"></i> Google Dev
                         </a>
-                        <a class="footer-social-link"
+                        <a class="footer-link"
                             href="https://www.skills.google/public_profiles/9e4d5e5d-e323-41ea-a89e-ae5f8c8c3197"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-google"></i> Google Skills
                         </a>
-                        <a class="footer-social-link" href="https://scholar.google.com/citations?user=Bvb6yGwAAAAJ"
+                        <a class="footer-link" href="https://scholar.google.com/citations?user=Bvb6yGwAAAAJ"
                             target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-graduation-cap"></i> Google Scholar
                         </a>
-                        <a class="footer-social-link" href="https://orcid.org/0000-0002-6209-3121" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://orcid.org/0000-0002-6209-3121" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-id-badge"></i> ORCiD
                         </a>
-                        <!-- <a class="footer-social-link" href="https://ieee-collabratec.ieee.org/app/p/radar?slv=true" target="_blank" rel="noopener noreferrer">
+                        <!-- <a class="footer-link" href="https://ieee-collabratec.ieee.org/app/p/radar?slv=true" target="_blank" rel="noopener noreferrer">
                         <i class="fas fa-users"></i> IEEE Collabratec
                     </a> -->
 
@@ -2521,11 +2538,14 @@
 
                 <div class="footer-ventures">
                     <div class="footer-links-title">Ventures</div>
-                    <div class="footer-social">
-                        <a class="footer-social-link" href="https://4cthreat.com/" target="_blank" rel="noopener noreferrer">
+                    <div class="footer-link-list">
+                        <a class="footer-link" href="https://4cthreat.com/" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-shield-alt" aria-hidden="true"></i> 4cThreat
                         </a>
-                        <a class="footer-social-link" href="https://madeinrepalle.haramadhav.com/" target="_blank" rel="noopener noreferrer">
+                        <a class="footer-link" href="https://radarschool.haramadhav.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i> Radar School
+                        </a>
+                        <a class="footer-link" href="https://madeinrepalle.haramadhav.com/" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-leaf" aria-hidden="true"></i> Made in Repalle
                         </a>
                     </div>
@@ -2537,7 +2557,7 @@
                         Explore Radar School articles, project notes, and footage from NASA Operation IceBridge
                         field deployments.
                     </p>
-                    <button class="btn-social-media" onclick="openDrawer('social-media')">
+                    <button class="btn-media-logs" onclick="openDrawer('media-logs')">
                         <i class="fas fa-play-circle"></i> View Media &amp; Logs
                     </button>
                 </div>
@@ -2568,22 +2588,24 @@
     </div>
 
 
-    <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <button id="backToTop" aria-label="Return to page start" onclick="window.scrollTo({top:0,behavior:'smooth'})">
         <i class="fas fa-chevron-up"></i>
     </button>
 
     <script>
         /* ---- Fade-in on scroll ---- */
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((e, i) => {
-                if (e.isIntersecting) {
-                    setTimeout(() => e.target.classList.add('visible'), i * 80);
-                    observer.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1 });
+        if (typeof IntersectionObserver === 'function') {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((e, i) => {
+                    if (e.isIntersecting) {
+                        setTimeout(() => e.target.classList.add('visible'), i * 80);
+                        observer.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.1 });
 
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
 
         /* ---- Experience & Project Detail Data ---- */
         const expData = {
@@ -2859,7 +2881,7 @@
             },
 
             /* ----- SOCIAL DRAWER ----- */
-            'social-media': {
+            'media-logs': {
                 role: 'Media & Logs',
                 org: 'Field Highlights & Articles',
                 date: 'Explore footage from NASA OIB and more.',
@@ -2959,17 +2981,19 @@
         const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
         const sections = Array.from(navAnchors).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
 
-        const sectionObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    navAnchors.forEach(a => {
-                        a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
-                    });
-                }
-            });
-        }, { rootMargin: '-40% 0px -55% 0px' });
+        if (typeof IntersectionObserver === 'function') {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navAnchors.forEach(a => {
+                            a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-40% 0px -55% 0px' });
 
-        sections.forEach(s => sectionObserver.observe(s));
+            sections.forEach(s => sectionObserver.observe(s));
+        }
 
         /* ---- Stats count-up animation ---- */
         function animateCounter(el, target, suffix) {
@@ -2988,22 +3012,24 @@
             requestAnimationFrame(update);
         }
 
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.stat-num').forEach(el => {
-                        const raw = el.textContent.trim();
-                        const suffix = raw.replace(/[0-9.]/g, '');
-                        const value = parseFloat(raw);
-                        if (!isNaN(value)) animateCounter(el, value, suffix);
-                    });
-                    statsObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.4 });
+        if (typeof IntersectionObserver === 'function') {
+            const statsObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.stat-num').forEach(el => {
+                            const raw = el.textContent.trim();
+                            const suffix = raw.replace(/[0-9.]/g, '');
+                            const value = parseFloat(raw);
+                            if (!isNaN(value)) animateCounter(el, value, suffix);
+                        });
+                        statsObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.4 });
 
-        const statsSection = document.getElementById('stats');
-        if (statsSection) statsObserver.observe(statsSection);
+            const statsSection = document.getElementById('stats');
+            if (statsSection) statsObserver.observe(statsSection);
+        }
 
     </script>
 
