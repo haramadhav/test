@@ -1678,6 +1678,45 @@
         @media (max-width: 1100px) { .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         @media (max-width: 760px) { .footer-grid { grid-template-columns: minmax(0, 1fr); } }
 
+
+        .hero-content { align-items: center; }
+        .hero-portrait { margin: 0; width: 100%; max-width: 24rem; }
+        .hero-portrait img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid var(--hero-border);
+        }
+        .hero-overview { border: 0; padding: 0; }
+        .hero-overview h1.hero-name { font-size: clamp(2.55rem, 4vw, 4.4rem); margin: 0 0 .7rem; }
+        .hero-overview .hero-eyebrow { margin: 0 0 .7rem; }
+        .hero-overview .hero-title { margin-bottom: 1.55rem; }
+        .hero-overview .hero-summary { margin-bottom: .8rem; }
+        .hero-overview .hero-description { margin-bottom: 0; }
+        .nav-story {
+            margin-inline-start: .65rem;
+            padding: .38rem .85rem;
+            white-space: nowrap;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            font-size: .9rem;
+            color: var(--accent);
+        }
+        .nav-story:hover { border-color: var(--accent); }
+        @media (max-width: 1050px) { .nav-story { margin-inline-start: auto; } }
+        @media (max-width: 899px) {
+            .hero-content { row-gap: 1.85rem; }
+            .hero-portrait { max-width: 16rem; }
+            .hero-overview .hero-description { font-size: clamp(1.35rem, 4.5vw, 2rem); }
+        }
+        @media (max-width: 480px) {
+            .hero-portrait { max-width: 12rem; }
+            .hero-overview h1.hero-name { font-size: clamp(2rem, 8vw, 2.55rem); }
+            .nav-story { font-size: .81rem; padding-inline: .55rem; }
+        }
     </style>
 </head>
 
@@ -1695,6 +1734,7 @@
                 <li><a href="#service">Service</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <a class="nav-story" href="story/index.html">Story</a>
             <button class="nav-hamburger" id="navHamburger" aria-controls="mobileMenu" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -1718,12 +1758,13 @@
     <header id="hero">
         <div class="hero-bg" aria-hidden="true"><div class="hero-bg-fill"></div></div>
         <div class="hero-content">
-            <div class="hero-identity">
-                <div class="hero-eyebrow"><span></span>Engineer &middot; Researcher &middot; Founder</div>
-                <h1 class="hero-name">Hara Madhav<br><span class="hero-surname">Talasila</span></h1>
-                <p class="hero-title">PhD in Electrical Engineering<br>University of Kansas</p>
-            </div>
+            <figure class="hero-portrait">
+                <img src="portrait.jpeg" width="3217" height="3217" alt="Portrait of Hara Madhav Talasila" fetchpriority="high">
+            </figure>
             <div class="hero-overview">
+                <h1 class="hero-name">Hara Madhav Talasila</h1>
+                <p class="hero-eyebrow">Engineer &middot; Researcher &middot; Founder</p>
+                <p class="hero-title">PhD in Electrical Engineering &middot; University of Kansas</p>
                 <p class="hero-summary">
                     <span>Set the direction.</span>
                     <span>Build what matters.</span>
@@ -1734,13 +1775,6 @@
                     <span>the <strong>engineering</strong> needed to realize it,</span>
                     <span>and the <strong>strategy</strong> that gives it purpose.</span>
                 </p>
-            </div>
-            <div class="hero-actions">
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get in touch <span aria-hidden="true">&rarr;</span></a>
-                    <a href="#experience" class="hero-text-link">Explore my work <span aria-hidden="true">&rarr;</span></a>
-                </div>
-                <a class="hero-readmore" href="#about">Read the full story <span aria-hidden="true">&darr;</span></a>
             </div>
             <div class="hero-resources">
                 <div class="hero-availability">
